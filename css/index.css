@@ -1,4 +1,28 @@
 body {
-  background-color: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #BEF0F0;
+  width: auto;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff6f6), to(#2aabd3));
+  background-image: linear-gradient(180deg, #fff6f6, #2aabd3);
+  background-repeat: no-repeat;
+  color: black;
+  padding-top: 15%;
+  padding-left: 35%;
+}
+
+.boxmain {
+  max-height: 75vh;
+  min-height: 65vh;
+  width: 75vh;
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(pink));
+  background-image: linear-gradient(90deg, black, pink);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.divh {
+  background-color: aqua;
 }
 /*# sourceMappingURL=index.css.map */
