@@ -1,6 +1,8 @@
 body {
   width: auto;
-  height: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff6f6), to(#2aabd3));
   background-image: linear-gradient(180deg, #fff6f6, #2aabd3);
   background-repeat: no-repeat;
@@ -28,7 +30,7 @@ body {
   justify-items: center;
   max-height: 75vh;
   min-height: 65vh;
-  width: 75vh;
+  max-width: 75vh;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(230, 227, 227, 0.745833)), to(rgba(245, 188, 197, 0.545833)));
   background-image: linear-gradient(0deg, rgba(230, 227, 227, 0.745833), rgba(245, 188, 197, 0.545833));
   -ms-flex-line-pack: center;
