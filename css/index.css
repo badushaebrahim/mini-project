@@ -1,28 +1,53 @@
 body {
   width: auto;
   height: auto;
-  display: -ms-grid;
-  display: grid;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff6f6), to(#2aabd3));
   background-image: linear-gradient(180deg, #fff6f6, #2aabd3);
   background-repeat: no-repeat;
   color: black;
-  padding-top: 15%;
-  padding-left: 35%;
 }
 
-.boxmain {
-  max-height: 75vh;
-  min-height: 65vh;
-  width: 75vh;
-  background-image: -webkit-gradient(linear, left top, right top, from(black), to(pink));
-  background-image: linear-gradient(90deg, black, pink);
+.wrp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.divh {
-  background-color: aqua;
+.boxmain {
+  display: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  max-height: 75vh;
+  min-height: 65vh;
+  width: 75vh;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(230, 227, 227, 0.745833)), to(rgba(245, 188, 197, 0.545833)));
+  background-image: linear-gradient(0deg, rgba(230, 227, 227, 0.745833), rgba(245, 188, 197, 0.545833));
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.buthold {
+  padding-bottom: 1%;
+}
+
+.h1k {
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+}
+
+.bts {
+  background-color: #dd8511;
+  padding: 1%;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=index.css.map */
