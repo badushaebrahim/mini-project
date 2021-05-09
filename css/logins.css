@@ -1,10 +1,8 @@
 body {
   width: auto;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff6f6), to(#2aabd3));
-  background-image: linear-gradient(180deg, #fff6f6, #2aabd3);
+  height: auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b6b58a), to(#2aabd3));
+  background-image: linear-gradient(90deg, #b6b58a, #2aabd3);
   background-repeat: no-repeat;
   color: black;
 }
@@ -62,4 +60,4 @@ body {
   -webkit-box-shadow: 0px   20px 8px #888888;
           box-shadow: 0px   20px 8px #888888;
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=logins.css.map */
