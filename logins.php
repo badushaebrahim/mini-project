@@ -1,3 +1,4 @@
+<?php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +17,11 @@
 </center>
 </div>
 
+
 </body>
 
 </html>
+?>
 
 <?php
 include 'fot.php'
