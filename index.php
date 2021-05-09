@@ -1,3 +1,4 @@
+<?php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +13,11 @@
 <body><div class="wrap">
   <center>
    <div class="boxmain">
-     <p class="h1k">hi, you are yo</p>  
+     <p class="h1k">hi, you are </p>  
      <br>
    <div class="buthold"> <center>
-     <input type="button" class="bts"value="STUDENT" name="hello"><br>
+     <a href="logins.html"><input type="button"  class="bts"value="STUDENT" name="hello"><br>
+      </a>
     </center></div>
    
    <div class="buthold"> <center>
@@ -30,3 +32,4 @@
 </center>
 </body>
 </html>
+?>
