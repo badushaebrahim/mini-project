@@ -1,3 +1,4 @@
+<?php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +16,12 @@
 </div>
 </center>
 </div>
+locale_lookup
 
 </body>
 
 </html>
+?>
 
 <?php
 include 'fot.php'
