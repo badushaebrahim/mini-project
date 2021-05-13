@@ -1,4 +1,4 @@
-<?php
+<?php>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +12,16 @@
   <center>
    <div class="boxmain">
     <p class="h1pk">Login Students</p>
+    <br>
+    Email:<br>
+    <input type="text" name="email" class="texts"><br>
+    Password<br>
+    <input type="passord" name="pass" class="texts">
 
 </div>
 </center>
 </div>
-locale_lookup
+
 
 </body>
 
