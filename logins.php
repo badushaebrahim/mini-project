@@ -12,12 +12,15 @@
     <body><div class="wrap">
   <center>
    <div class="boxmain">
-    <p class="h1pk">Login Students</p>
+    <p class="h1pk">Student Login</p>
     <br>
     Email:<br>
     <input type="text" name="email" class="texts"><br>
     Password<br>
     <input type="passord" name="pass" class="texts">
+    <br>
+    <a>Register</a><p class="voids">............</p><br>
+    <input type="button" class="bts" value="login">
 
 </div>
 </center>
