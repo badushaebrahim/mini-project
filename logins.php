@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <?php
 <?php>
+=======
+
+>>>>>>> de6698e (mak)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +45,7 @@ locale_lookup
 </body>
 
 </html>
-?>
+
 
 <?php
 include 'fot.php'

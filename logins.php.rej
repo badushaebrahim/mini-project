@@ -1,0 +1,9 @@
+diff a/logins.php b/logins.php	(rejected hunks)
+@@ -3,6 +3,7 @@
+ +<?php>
+ +=======
+  
+++>>>>>>> de6698e (mak)
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>

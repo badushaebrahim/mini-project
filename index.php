@@ -1,4 +1,7 @@
-<?php>
+<?php
+$test=245;
+log($test);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,5 +35,7 @@
 </center>
 </body>
 </html>
+
+<?php
+include './fot.php'
 ?>
-<
