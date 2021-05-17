@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<?php
-<?php>
-=======
-
->>>>>>> de6698e (mak)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,31 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/logins.css" rel="stylesheet" type="text/css">
-    <title>student login</title>
+    <title>student sighnup</title>
 </head>
     <body><div class="wrap">
   <center>
    <div class="boxmain">
     <p class="h1pk">Student Login</p>
     <br>
+    Name:<br>
+    <input type="text" name="name" class="texts"><br>
+    Cource:<br>
+    <input type="text" name="cource" class="texts"><br>
+    male <input type="radio" name="gender" value="male">
+    female <input type="radio" name="gender" value="female">
+    other <input type="radio" name="gender" value="other">
     Email:<br>
     <input type="text" name="email" class="texts"><br>
     Password<br>
     <input type="passord" name="pass" class="texts">
     <br>
-    <a href="sighnupstud.php">Register</a><p class="voids">............</p><br>
-    <input type="button" class="bts" value="login">
+    <a href="logins.php">Register</a><p class="voids">............</p><br>
+    <input type="button" class="bts" value="sign up" action="sighnup.inc.php">
 
 </div>
 </center>
-<<<<<<< HEAD
-</div>>>>sdb
-locale_lookup
-=======
+
 </div>
 
->>>>>>> origin/main
-=======
+</div>
 
 </div>
 </div>
@@ -46,7 +43,3 @@ locale_lookup
 
 </html>
 
-
-<?php
-include 'fot.php'
-?>
