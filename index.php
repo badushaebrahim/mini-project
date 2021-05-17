@@ -1,4 +1,4 @@
-<?php
+<?php>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +21,7 @@
     </center></div>
    
    <div class="buthold"> <center>
-    <input type="button" class="bts"value="PARENT" name="hello"><br>
+    <input type="button" class="bts" value="PARENT" name="hello"><br>
    </center></div>
   
   <div class="buthold"> <center>
@@ -33,3 +33,4 @@
 </body>
 </html>
 ?>
+<
