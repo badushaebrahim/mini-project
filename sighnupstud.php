@@ -23,13 +23,14 @@
     <input type="text" name="cource" class="texts" id="cource"><br>
     male <input type="radio" name="gender" value="male" onclick="">
     female <input type="radio" name="gender" value="female">
-    other <input type="radio" name="gender" value="other">
+    other <input type="radio" name="gender" value="other"><br>
     Email:<br>
     <input type="text" name="email" class="texts" id="email" i><br>
     Password<br>
     <input type="passord" name="pass" class="texts" id="pwd">
     <br>
-    <a href="logins.php">Register</a><p class="voids">............</p><br>
+    <br><br>
+    <a href="logins.php">login</a><p class="voids">............</p><br>
     <input type="button" class="bts" value="sign up" action="sighnup.inc.php">
 
 </div>
