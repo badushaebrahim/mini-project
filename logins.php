@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<?php
-<?php>
-=======
 
->>>>>>> de6698e (mak)
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,14 +24,9 @@
 
 </div>
 </center>
-<<<<<<< HEAD
-</div>>>>sdb
-locale_lookup
-=======
 </div>
 
->>>>>>> origin/main
-=======
+</div>
 
 </div>
 </div>

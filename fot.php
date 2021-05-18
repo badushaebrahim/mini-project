@@ -1,11 +1,17 @@
-<?php
+
 <head>
 <style>
 footer{
-    background-color:balck;
-    color:white;
+    
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  display: inline-block;background-color:yellow;
+    color:balck;
+    position: ab;
 }
-</style>
+
 .imgg{
     max-width:35%;
     max-height:35%;
@@ -19,4 +25,3 @@ footer{
 </footer>
 
 
-?>

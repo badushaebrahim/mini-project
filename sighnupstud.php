@@ -47,4 +47,7 @@
 </body>
 
 </html>
+<?php
+include 'fot.php'
+?>
 

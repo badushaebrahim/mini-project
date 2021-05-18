@@ -10,6 +10,7 @@ log($test);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/index.css"  rel="stylesheet" type="text/css">
+  <script src="js/jqsc.js"></script> 
   
     <title>landing page</title>
 </head>
@@ -19,7 +20,7 @@ log($test);
      <p class="h1k">hi, you are </p>  
      <br>
    <div class="buthold"> <center>
-     <a href="logins.html"><input type="button"  class="bts"value="STUDENT" name="hello"><br>
+     <a href="logins.php"><input type="button"  class="bts" value="STUDENT" name="hello"><br>
       </a>
     </center></div>
    
