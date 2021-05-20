@@ -1,6 +1,6 @@
 <?php
   
-$servername = "lo7pwdcalhost";
+$servername = "localhost";
 $username = "root";//default xamp user name
 $password = "";//
 $dbname = "test";
