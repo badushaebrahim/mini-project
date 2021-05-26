@@ -27,7 +27,7 @@
     Email:<br>
     <input type="text" name="email" class="texts" id="email" i><br>
     Password<br>
-    <input type="passord" name="pass" class="texts" id="pwd">
+    <input type="passord" name="pass" class="texts" id="pwd" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required="" placeholder="Your Password..">
     <br>
     <br><br>
     <a href="logins.php">login</a><p class="voids">............</p><br>
