@@ -2,7 +2,7 @@
   
 $servername = "localhost";
 $username = "root";//default xamp user name
-$password = "";//
+$password = "";//default pwd need to change if need in a configs conection
 $dbname = "test";
   
 // Create connection
@@ -20,9 +20,9 @@ if ($result = $mysqli->query("SHOW TABLES LIKE '".$table."'")) {
         echo "Table exists";
     }
 
-}else{
-    $sqlcr = "CREATE TABLE login Values(email varchar[90] not null ,cource varchar[50] not null,gender varchar[9] not null,pwd varchar[35] not null,uid integer primary key auto_increment); 
 }
-   
+else{
 
+   echo"<script>console.log("table not set need config");</script>";
+}
 ?>
