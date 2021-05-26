@@ -23,7 +23,8 @@ if ($result = $conn->query("SHOW TABLES LIKE '.$table.'")) {
 
 
 else{ echo"<script>console.log('table not set need config');</script>";
-    header("location: ../wrk/index.php");
+    $conn->query(CREATE TABLE STUDENT VALUE())
+   header("location: ../wrk/index.php");
     exit();
 }
   
