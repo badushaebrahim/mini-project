@@ -1,5 +1,6 @@
 
 <?php
+require_once './functionsphp/dbcheck.inc.php';
 function debug_to_console($data) {
     $output = $data;
     if (is_array($output))
@@ -55,5 +56,5 @@ debug_to_console($_POST['pass']);
 }
     }
 
-mysqli_close($conn);
+
    ?>
