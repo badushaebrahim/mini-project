@@ -30,7 +30,7 @@
     <a href="logins.php">login</a><p class="voids">............</p><br>
     <input type="submit" class="bts" value="sign up" name="submit"   >
     </form>
-</div>  
+</div>      
 </center>
 
 </div>
