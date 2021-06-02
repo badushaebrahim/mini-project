@@ -16,8 +16,9 @@
     <form method="post" action="sighnup.inc.php">
     Name:<br>
     <input type="text" name="name" class="texts" id="name"><br>
-    Cource:<br>
-    <input type="text" name="cource" class="texts" id="cource"><br>
+    Date of Birth:<br>
+    <input type="date" name="date" class="texts" id="cource"><br>
+    Gender <br>
     male <input type="radio" name="gender" value="male" >
     female <input type="radio" name="gender"  value="female">
     other <input type="radio" name="gender" value="other"><br>
@@ -45,43 +46,4 @@
 <?php
 include 'fot.php';
 ?>
-<?php
-/*
-function debug_to_console($data) {
-    $output = $data;
-    if (is_array($output))
-        $output = implode(',', $output);
 
-    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-    
-}
-echo"<script>alert('wrksmonus');</script>";
-    if(isset($_POST['name']))
-{
-echo "You have selected :".$_POST['name'];  //  Displaying Selected Value
-debug_to_console($_POST['name']);
-}    
-if(isset($_POST['cource']))
-{
-echo "You have selected :".$_POST['cource'];  //  Displaying Selected Value
-debug_to_console($_POST['cource']);
-}
-if(isset($_POST['gender']))
-{
-echo "You have selected :".$_POST['gender'];  //  Displaying Selected Value
-debug_to_console($_POST['gender']);
-}
-
-if(isset($_POST['email']))
-{
-echo "You have selected :".$_POST['email'];  //  Displaying Selected Value
-debug_to_console($_POST['email']);
-}
-if(isset($_POST['pass']))
-{
-echo "You have selected :".$_POST['pass'];  //  Displaying Selected Value
-debug_to_console($_POST['pass']);
-}
-  */  
-
-?>
