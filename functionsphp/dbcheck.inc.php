@@ -4,7 +4,7 @@ $servername = "localhost";
 $username = "root";//default xamp user name
 $password = "";//default pwd need to change if need in a configs conection
 $dbname = "test";
-$table="studentlogin";
+$table="studlog";
   
 // Create connection
 $conn = new mysqli($servername, 
@@ -23,8 +23,8 @@ if ($result = $conn->query("SHOW TABLES LIKE '.$table.'")) {
 
 
 else{ echo"<script>console.log('table not set need config');</script>";
-    $conn->query(CREATE TABLE STUDENT VALUE())
-   header("location: ../wrk/index.php");
+    echo"<script>console.log(fuk);</script>";
+  // header("location: ../wrk/index.php");
     exit();
 }
   
