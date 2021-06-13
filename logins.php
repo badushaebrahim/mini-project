@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,23 +19,14 @@
     <br>
     <a href="sighnupstud.php">Register</a><p class="voids">............</p><br>
     <input type="button" class="bts" value="login">
-
 </div>
 </center>
 </div>
-
-</div>
-
 </div>
 </div>
-
-
-
+</div>
 </body>
-
 </html>
-
-
 <?php
 include 'fot.php'
 ?>
