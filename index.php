@@ -17,7 +17,7 @@ log($test);
 <body><div class="wrap">
   <center>
    <div class="boxmain">
-     <p class="h1k">hi, you are </p>  
+     <p class="h1k">Hi, you are </p>  
      <br>
    <div class="buthold"> <center>
      <a href="logins.php"><input type="button"  class="bts" value="STUDENT" name="hello"><br>
@@ -25,13 +25,19 @@ log($test);
     </center></div>
    
    <div class="buthold"> <center>
-    <input type="button" class="bts" value="PARENT" name="hello"><br>
+    <a href="loginp.php"><input type="button" class="bts" value="PARENT" name="hello" ><br>
+   </a>
    </center></div>
   
   <div class="buthold"> <center>
-    <input type="button" class="bts"value="FACUTY" name="hello"><br>
-   </center></div>
+    <a href="loginf.php"><input type="button" class="bts"value="FACUTY" name="hello"><br>
+   </a></center></div>
+   <div class="buthold"> <center>
+    <a href="logina.php"><input type="button" class="bts"value="Admin" name="hello"><br>
+    </a></center></div>
   </div>
+  </div>
+  
   </div>
 </center>
 </body>
