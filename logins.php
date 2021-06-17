@@ -10,7 +10,7 @@
     <body><div class="wrap">
   <center>
    <div class="boxmain">
-    <p class="h1pk">Student Login</p>
+    <p class="h1k">Student Login</p>
     <br>
     Email:<br>
     <input type="text" name="email" class="texts"><br>

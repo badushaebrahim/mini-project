@@ -19,9 +19,9 @@
     Date of Birth:<br>
     <input type="date" name="date" class="texts" id="cource"><br>
     Gender <br>
-    male <input type="radio" name="gender" value="male" >
-    female <input type="radio" name="gender"  value="female">
-    other <input type="radio" name="gender" value="other"><br>
+    <input type="radio" name="gender" value="male" >Male
+    <input type="radio" name="gender"  value="female">Female
+     <input type="radio" name="gender" value="other">Other<br>
     Email:<br>
     <input type="text" name="email" class="texts" id="email" i><br>
     Password<br>
