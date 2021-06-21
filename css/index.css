@@ -3,8 +3,6 @@ body {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff6f6), to(#2aabd3));
-  background-image: linear-gradient(180deg, #fff6f6, #2aabd3);
   background-repeat: no-repeat;
   color: black;
 }
