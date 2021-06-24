@@ -1,0 +1,98 @@
+.navma {
+  background-color: #af1932;
+}
+
+.navra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: antiquewhite;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tx {
+  padding-right: 3vh;
+  background-color: transparent;
+  stroke: aqua;
+  padding-top: 3vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tx:hover {
+  background-color: aqua;
+}
+
+.tx:hover .hid {
+  visibility: visible;
+}
+
+.imgh {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+a {
+  stroke: aqua;
+  stroke-width: 10%;
+}
+
+.hid {
+  visibility: collapse;
+}
+
+.linka {
+  text-align: center;
+}
+
+.small {
+  width: 40ch;
+  height: 40ch;
+}
+
+.mainbod {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.imgho {
+  background-color: #9b9c9c;
+  padding-left: 3vh;
+  padding-top: 3vh;
+}
+
+.txts {
+  color: crimson;
+}
+
+.imgssml {
+  max-width: 75%;
+  max-width: 75%;
+}
+
+.imgssml:hover {
+  border: 0.6vh solid white;
+}
+/*# sourceMappingURL=home.css.map */

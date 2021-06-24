@@ -1,0 +1,77 @@
+.navma{
+	background-color: rgb(175, 25, 50) ;
+}
+
+.navra{
+	display: flex;
+	background-color: antiquewhite;
+	justify-content: space-between;
+
+}
+.mainholder{
+	display: flex;
+	justify-content: space-between;
+}
+.tx{	
+	//padding-left: 3vh;
+	padding-right: 3vh;
+	background-color: transparent;
+	stroke: aqua;
+	padding-top: 3vh;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+}
+.tx:hover{
+	
+	background-color: aqua;
+	.hid{
+		visibility: visible;
+	}
+}
+.imgh{
+	flex: 3;
+	align-content: center;
+
+}
+a{
+	stroke: aqua;
+	stroke-width: 10%;
+}
+.hid{
+	visibility: collapse;
+}
+.linka{
+	text-align: center;
+}
+
+.small{
+	width: 40ch;
+	height: 40ch;
+}
+
+.mainbod{//
+	display: flex;
+	flex-direction: row;
+}
+.imgho{
+	//max-width: 5%;
+	//max-width: 5%;
+	background-color: rgb(155, 156, 156);
+	//box-shadow: ;
+	padding-left: 3vh;
+	padding-top: 3vh;
+}
+
+.txts{
+	color: crimson;
+
+}
+
+.imgssml{
+	max-width: 75%;
+	max-width: 75%;
+}
+.imgssml:hover{
+	border: 0.6vh solid white ;
+}
