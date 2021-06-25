@@ -10,6 +10,7 @@
     <body><div class="wrap">
   <center>
    <div class="boxmain">
+       <form method="post" action="logincheckstud.inc.php">
     <p class="h1k">Student Login</p>
     <br>
     Email:<br>
@@ -18,7 +19,7 @@
     <input type="passord" name="pass" class="texts">
     <br>
     <a href="sighnupstud.php">Register</a><p class="voids">............</p><br>
-    <input type="button" class="bts" value="login">
+    <input type="button"  class="bts" value="login"></form>
 </div>
 </center>
 </div>
