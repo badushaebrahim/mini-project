@@ -24,13 +24,13 @@
     <input type="radio" name="gender"  value="female">Female
      <input type="radio" name="gender" value="other">Other<br>
     Email:<br>
-    <input type="text" name="email" class="texts" id="email" i><br>
+    <input type="email" name="email" class="texts" id="email" placeholder="Email here"><br>
     Password<br>
     <input type="password" name="pass" class="texts" id="pwd" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required="" placeholder="Your Password..">
     <br>
     <br><br>
     <a href="logins.php">login</a><p class="voids">............</p><br>
-    <input type="submit" class="bts" value="sign up" name="submit"   >
+    <input type="submit" class="bts" value="sign up" name="btnsubmit">
     </form>
 </div>      
 </center>
