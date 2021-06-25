@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/logins.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/logins.css" rel="stylesheet" type="text/css">-->
+    <link href="css/logs.css" rel="stylesheet" type="text/css">
     
     <title>student sighnup</title>
 </head>
     <body><div class="wrap">
   <center>
    <div class="boxmain">
-    <p class="h1pk">Student Login</p>
+    <p class="h1p">Student Login</p>
     <br>
     <form method="post" action="sighnup.inc.php">
     Name:<br>
@@ -19,9 +20,9 @@
     Date of Birth:<br>
     <input type="date" name="date" class="texts" id="cource"><br>
     Gender <br>
-    male <input type="radio" name="gender" value="male" >
-    female <input type="radio" name="gender"  value="female">
-    other <input type="radio" name="gender" value="other"><br>
+    <input type="radio" name="gender" value="male" >Male
+    <input type="radio" name="gender"  value="female">Female
+     <input type="radio" name="gender" value="other">Other<br>
     Email:<br>
     <input type="text" name="email" class="texts" id="email" i><br>
     Password<br>

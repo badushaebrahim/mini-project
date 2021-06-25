@@ -1,0 +1,53 @@
+:root {
+  --backgroundcolor: rgb(14, 15, 15);
+  --color: black;
+}
+
+@font-face {
+  font-family: fabold;
+  src: url("../css/fonts/SourceSansPro-Bold.ttf");
+}
+
+.h1p {
+  font-size: 5vh;
+  color: pink;
+  text-shadow: 0px 5px 4px #161313;
+}
+
+.boxmain {
+  display: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  max-height: 75vh;
+  min-height: 65vh;
+  max-width: 75vh;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(230, 227, 227, 0.445833)), to(rgba(245, 188, 197, 0.145833)));
+  background-image: linear-gradient(0deg, rgba(230, 227, 227, 0.445833), rgba(245, 188, 197, 0.145833));
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-radius: 15px;
+  -webkit-box-shadow: 10px 10px 4px #888888;
+          box-shadow: 10px 10px 4px #888888;
+  text-shadow: 0px 4px 4px #888888;
+  text-overflow: clip;
+}
+
+.voids {
+  visibility: hidden;
+}
+
+.wrp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=logs.css.map */
