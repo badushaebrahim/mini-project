@@ -28,17 +28,17 @@ if (!$row) {
     if($result->num_rows == 1) {
        // echo "Table exists";
         echo"<script>console.log('table exists');</script>";
-    }
+            }
 
-
-else{ echo"<script>console.log('table not set need config');</script>";
-    echo"<script>console.log('fuk');</script>";
-   // echo"<script>console.log('$result');</script>";
-  // header("location: ../wrk/index.php");
-    exit();
-}
+        }
+    else{ echo"<script>console.log('table not set need config');</script>";
+     // echo"<script>console.log('$result');</script>";
+    // header("location: ../wrk/index.php");
+      exit();
+      mysqli_close($conn);
+        }
   
 
-}
-//mysqli_close($conn);
+
+
 ?>
