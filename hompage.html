@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script href="js/jquery.js" type="x-javascript" ></script>
-	<script src="rum.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	
 	<link href="css/fonts/home.css"  rel="stylesheet" type="text/css">
 	<title>home page</title>
 </head>
@@ -46,13 +46,17 @@
 	</div> 
 	</div>
 	</div>
-<script>
-	$('#faq').on({
-		'click': function(){
-		    $('#sgs').attr('src','image/cls1.jpg');
-		    console.log("run");
-		}
-	    });</script>
+
+	    <script>
+		 $(".hid").hide(600); 
+		 $(".linka").hide(600);  
+	$(".inner").hover(function(){
+		$(".hid").show(600);
+		$(".btun").css("background-color","pink");
+		$(".linka").show(600);
+	});
+/*$("p").hide(500);
+$("p").show(500);*/</script>
 </body>
 
-</html>
+</html>   
