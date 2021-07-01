@@ -10,7 +10,7 @@
     <body><div class="wrap">
   <center>
    <div class="boxmain">
-       <form method="post" action="functionsphp/logincheckstud.inc.php">
+       <form method="post" action="logincheckstud.inc.php" >
     <p class="h1k">Student Login</p>
     <br>
     Email:<br>

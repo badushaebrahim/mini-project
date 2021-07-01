@@ -1,7 +1,7 @@
 <?php
 session_start();
-$_SESSION["favcolor"] = "yellow";
-echo "<h1>$_SESSION</h1>";
+$tes = $_SESSION["id"];
+echo "<h1>$$tes</h1>";
 
 
 ?>
