@@ -11,13 +11,14 @@
   <center>
    <div class="boxmain">
     <p class="h1k">Parent Login</p>
+    <form  method="POST" action="adver.php">
     <br>
-    Email:<br>
+    Email:<br> 
     <input type="text" name="email" class="texts"><br>
     Password<br>
     <input type="passord" name="pass" class="texts">
-    <br>
-    <input type="button" class="bts" value="login">
+    <br><br>
+    <input type="submit" name="submit" class="bts" value="login"></form>
 </div>
 </center>
 </div>

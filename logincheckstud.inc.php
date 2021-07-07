@@ -47,6 +47,7 @@ if(isset($_POST['sub']))
  	 else
  	 {
  	 	echo "PASSWORD IS INCORRECT";
+		  header("location: ../wrk/logins.php");
  	 }}	
  else
  {

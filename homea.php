@@ -7,7 +7,7 @@
 	<script src="js/jquery-2.1.4.min.js"></script>
 	
 	<link href="css/fonts/home2.css"  rel="stylesheet" type="text/css">
-	<title>home Students beta</title>
+	<title>home Admin beta</title>
 </head>
 <body>
 	<nav class="navma">

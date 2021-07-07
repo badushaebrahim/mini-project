@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2021 at 07:56 AM
+-- Generation Time: Jul 07, 2021 at 01:43 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.32
 
@@ -20,6 +20,24 @@ SET time_zone = "+00:00";
 --
 -- Database: `test`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admlog`
+--
+
+CREATE TABLE `admlog` (
+  `email` varchar(150) NOT NULL,
+  `pwds` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admlog`
+--
+
+INSERT INTO `admlog` (`email`, `pwds`) VALUES
+('badusha@admin.com', '123456789');
 
 -- --------------------------------------------------------
 
@@ -94,6 +112,12 @@ INSERT INTO `studlog` (`name`, `dob`, `gender`, `email`, `pwd`, `uid`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admlog`
+--
+ALTER TABLE `admlog`
+  ADD PRIMARY KEY (`email`);
 
 --
 -- Indexes for table `faclog`
