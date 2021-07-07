@@ -17,7 +17,6 @@
     Password<br>
     <input type="passord" name="pass" class="texts">
     <br>
-    <a href="sighnupstud.php">Register</a><p class="voids">............</p><br>
     <input type="button" class="bts" value="login">
 </div>
 </center>
