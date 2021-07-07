@@ -10,15 +10,16 @@
     <body><div class="wrap">
   <center>
    <div class="boxmain">
+   <form method="POST" action="adver.php">
     <p class="h1k">Admin Login</p>
     <br>
     Email:<br>
     <input type="text" name="email" class="texts"><br>
     Password<br>
-    <input type="passord" name="pass" class="texts">
+    <input type="password" name="pass" class="texts">
     <br>
     
-    <input type="button" class="bts" value="login">
+    <input type="submit" name="submit" class="bts" value="login"></form>
 </div>
 </center>
 </div>
