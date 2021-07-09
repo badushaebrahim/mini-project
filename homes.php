@@ -28,6 +28,17 @@
 	<div class="mainbod">
 	
 	<div class="sidebars">
+	
+	<div class="sidebarchild" id="inits">
+	<txt>hello</txt></div>
+	
+	
+	
+	<div class="sidebarchild">
+	hello</div>
+	<div class="sidebarchild">
+	hello</div>
+	</div>
 	</div>
 
 
