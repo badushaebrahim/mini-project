@@ -3,13 +3,12 @@
 include './functionsphp/dbcheck.inc.php';
 
 if(isset($_POST['btnsubmit']))
-{
-
-$Name=$_POST['name'];
-$DOB=$_POST['date'];
-$Gender=$_POST['gender'];
-$Email=$_POST['email'];
-$Password=$_POST['pass'];
+{$Name=$_POST['name'];
+  $DOB=$_POST['date'];
+  $Gender=$_POST['gender'];
+  $Email=$_POST['email'];
+  $Password=$_POST['pass'];
+  if((empty($name)==false)&&(empty($DOB)==false)&&(empty($Gender)==false)&&(empty($Email)==false)&&(empty($password)==false)){
 $q="select count(*) as count from studlog where Email='$Email'";
 $s=mysqli_query($conn,$q);
 $f=mysqli_fetch_array($s);
@@ -53,7 +52,11 @@ if($f['count']==0)
 else
 {
   echo "<script>alert('User already exist')</script>";
-  echo "<script>location.href='Sighnupstud.php'</script>";
+  //echo "<script>location.href='Sighnupstud.php'</script>";
+}}
+else{
+  echo "<script>alert('a field empty ')</script>";
+
 }
 }
 
