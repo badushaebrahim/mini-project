@@ -1,4 +1,4 @@
-  
+
 <?php
 include './functionsphp/dbcheck.inc.php';
 
