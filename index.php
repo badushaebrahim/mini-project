@@ -1,7 +1,3 @@
-<?php
-$test=245;
-log($test);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +6,7 @@ log($test);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/index.css"  rel="stylesheet" type="text/css">
-  <script src="js/jqsc.js"></script> 
+  <script src=""></script> 
   
     <title>landing page</title>
 </head>
