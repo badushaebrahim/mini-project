@@ -147,13 +147,18 @@ a:hover{
 .sidebars{
 	display: flex;
 	flex-direction: column;
-	background-color: #888888;
+	background-color: #f1ece5ab;
 	padding-left: 5%;
 	padding-right: 5%;
 	padding-top: 10%;
 	padding-bottom:10% ;
-	height: 10	0vh;
+	height: 30vh;
+	box-shadow: 10px 10px 4px #888888;
 
+}
+.sidewraper{
+	padding-top: 15%;
+	padding-bottom: 15%;
 }
 .sidebarchild{
 	display: flex;
@@ -214,5 +219,10 @@ txt{
 padding-right: 8vh;
 padding-left: 8vh;
 padding-bottom: 2vh;
-color: aquamarine;
+
+}
+.butss{
+	background-color: transparent;
+	stroke: none;
+	border: none;
 }

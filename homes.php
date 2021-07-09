@@ -31,25 +31,37 @@
 	
 	<div class="sidebarchild" id="inits">
 	<txt>hello</txt></div>
-	
+	<div class="sidewraper">
+	<div class="sidebarchild">
+	hello</div>
+	</div>
 	
 	
 	<div class="sidebarchild">
-	hello</div>
+	hello</div><div class="sidewraper">
 	<div class="sidebarchild">
 	hello</div>
+	</div>
+	<div class="sidewraper" id="closer">
+	<div class="sidebarchild" >
+	<input type="button" value="close" onclick="ping()" class="butss"></div>
 	</div>
 	</div>
 
 
 
     <script>
-	    $("#here").click(function(){
-		    
+    
+	    $(".slidebarchild").hover(function(){
+		    alert("jqwrks");
 	    })
- $("#out").click(function(){
+ $("#out").on("click",function(){
 	 location.href='index.php';
  })   
+ function ping(){
+	 alert("wrks");
+	 $(".sidebar").slideToggle(5000);
+ }
     </script>
 
 	   <!--<script>
