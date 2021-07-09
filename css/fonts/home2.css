@@ -171,8 +171,9 @@ a:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: colum;
-          flex-direction: colum;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #888888;
 }
 
 .sidebutonholder {
