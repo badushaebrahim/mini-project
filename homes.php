@@ -25,15 +25,13 @@
 			</div>
 		</div>
 	</nav>
-	<div class="mainbod"><!--
-		<div class="imgho"> <img class="imgssml" src="image/cls1.jpg" > </div>
+	<div class="mainbod">
 	
-	<div class="txts">
-		<div class="btnholder"><div class="btns"><center><a href="index.php"><input value="Login"  src="index.php" type="button" class="btun" ></a></center></div> <p class="hideen">...</p>
-		<div class="btns"><center><input value="Our Faculty" id="faq" type="button" class="btun" ></center></div>
-	</div> 
-	</div>-->
+	<div class="sidebars">
 	</div>
+
+
+
     <script>
 	    $("#here").click(function(){
 		    
