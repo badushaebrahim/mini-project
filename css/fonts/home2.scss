@@ -67,6 +67,7 @@ a{
 	//box-shadow: ;
 	padding-left: 3vh;
 	padding-top: 3vh;
+	
 }
 
 .txts{
@@ -145,7 +146,29 @@ a:hover{
 }*/
 .sidebars{
 	display: flex;
-	flex-direction: colum;
+	flex-direction: column;
+	background-color: #f1ece5ab;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 10%;
+	padding-bottom:10% ;
+	height: 30vh;
+	box-shadow: 10px 10px 4px #888888;
+
+}
+.sidewraper{
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
+.sidebarchild{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+
+  mix-blend-mode: multiply;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 2vh;
+  
 }
 .sidebutonholder{
 align-items: center   ;
@@ -185,4 +208,21 @@ align-items: center   ;
 #her2:hover{
 	background-color: white;
 	box-shadow: 5px 10px 8px #888888;
+}
+.sidewrap{
+	padding: 30%;
+}
+#inits{
+	//padding-top:%  ;
+}
+txt{
+padding-right: 8vh;
+padding-left: 8vh;
+padding-bottom: 2vh;
+
+}
+.butss{
+	background-color: transparent;
+	stroke: none;
+	border: none;
 }

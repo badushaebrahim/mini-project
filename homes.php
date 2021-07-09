@@ -25,22 +25,43 @@
 			</div>
 		</div>
 	</nav>
-	<div class="mainbod"><!--
-		<div class="imgho"> <img class="imgssml" src="image/cls1.jpg" > </div>
+	<div class="mainbod">
 	
-	<div class="txts">
-		<div class="btnholder"><div class="btns"><center><a href="index.php"><input value="Login"  src="index.php" type="button" class="btun" ></a></center></div> <p class="hideen">...</p>
-		<div class="btns"><center><input value="Our Faculty" id="faq" type="button" class="btun" ></center></div>
-	</div> 
-	</div>-->
+	<div class="sidebars">
+	
+	<div class="sidebarchild" id="inits">
+	<txt>hello</txt></div>
+	<div class="sidewraper">
+	<div class="sidebarchild">
+	hello</div>
 	</div>
+	
+	
+	<div class="sidebarchild">
+	hello</div><div class="sidewraper">
+	<div class="sidebarchild">
+	hello</div>
+	</div>
+	<div class="sidewraper" id="closer">
+	<div class="sidebarchild" >
+	<input type="button" value="close" onclick="ping()" class="butss"></div>
+	</div>
+	</div>
+
+
+
     <script>
-	    $("#here").click(function(){
-		    
+    
+	    $(".slidebarchild").hover(function(){
+		    alert("jqwrks");
 	    })
- $("#out").click(function(){
+ $("#out").on("click",function(){
 	 location.href='index.php';
  })   
+ function ping(){
+	 alert("wrks");
+	 $(".sidebar").slideToggle(5000);
+ }
     </script>
 
 	   <!--<script>
