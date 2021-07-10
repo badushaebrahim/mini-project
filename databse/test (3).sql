@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2021 at 01:43 PM
+-- Generation Time: Jul 10, 2021 at 07:02 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.32
 
@@ -37,7 +37,7 @@ CREATE TABLE `admlog` (
 --
 
 INSERT INTO `admlog` (`email`, `pwds`) VALUES
-('badusha@admin.com', '123456789');
+('admin@admin.com', '123456789');
 
 -- --------------------------------------------------------
 
@@ -54,6 +54,13 @@ CREATE TABLE `faclog` (
   `post` text NOT NULL,
   `tid` int(11) NOT NULL COMMENT 'AUTO_INCRIMRNT'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `faclog`
+--
+
+INSERT INTO `faclog` (`name`, `gender`, `dob`, `email`, `paswd`, `post`, `tid`) VALUES
+('et', 'male', '2021-07-10', 'et@et.com', 'Et@1231234', 'Profeser', 1);
 
 -- --------------------------------------------------------
 
@@ -148,7 +155,7 @@ ALTER TABLE `studlog`
 -- AUTO_INCREMENT for table `faclog`
 --
 ALTER TABLE `faclog`
-  MODIFY `tid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'AUTO_INCRIMRNT';
+  MODIFY `tid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'AUTO_INCRIMRNT', AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `parentlog`
@@ -160,7 +167,7 @@ ALTER TABLE `parentlog`
 -- AUTO_INCREMENT for table `studlog`
 --
 ALTER TABLE `studlog`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
