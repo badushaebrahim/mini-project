@@ -8,27 +8,27 @@ if(isset($_POST['btnsubmit']))
   $Gender=$_POST['gender'];
   $Email=$_POST['email'];
   $Password=$_POST['pass'];
+  $posts= $_POST['post'];
   
-$q="select count(*) as count from studlog where Email='$Email'";
+$q="select count(*) as count from faclog where Email='$Email'";
 $s=mysqli_query($conn,$q);
 $f=mysqli_fetch_array($s);
 function debug_to_console($data) {
     $output = $data;
     if (is_array($output))
         $output = implode(',', $output);
-
     echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
 }
 if($f['count']==0)
 {
-  $q="insert into studlog(name,dob,gender,email,pwd)values('$Name','$DOB','$Gender','$Email','$Password')";
+  $q="insert into faclog(name,gender,dob,email,paswd,post)values('$Name','$DOB','$Gender','$Email','$Password','$posts)";
   $s=mysqli_query($conn,$q);
   debug_to_console($name);
   debug_to_console($DOB);
   debug_to_console($Gender);
   if($s)
   {
-    $q="insert into studlog(Email,Password,user_type,status) values('$Email','$Password','user','1')";
+    $q="insert into faclog(Email,Password,user_type,status) values('$Email','$Password','user','1')";
     $s=mysqli_query($conn,$q);
     if(!$s)
     {
@@ -38,14 +38,14 @@ if($f['count']==0)
     } 
   else
    {
-    echo "<script>alert('Sorry Registration Error')</script>";
+    echo "<script>alert('Sorry Registration Error 1')</script>";
     echo "<script>location.href='index.php'</script>";
    }
   }
   else
   {
-    echo $q;
-     echo "<script>alert('Sorry Registration Error')</script>";
+    //echo $q;
+     echo "<script>alert('Sorry Registration Error 2')</script>";
     echo "<script>location.href='login.php'</script>";
   }
 }
