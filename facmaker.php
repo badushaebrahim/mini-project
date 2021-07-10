@@ -1,7 +1,5 @@
-
 <?php
 include './functionsphp/dbcheck.inc.php';
-
 if(isset($_POST['btnsubmit']))
 {$Name=$_POST['name'];
   $DOB=$_POST['date'];
@@ -9,52 +7,40 @@ if(isset($_POST['btnsubmit']))
   $Email=$_POST['email'];
   $Password=$_POST['pass'];
   $posts= $_POST['post'];
-  
-$q="select count(*) as count from faclog where Email='$Email'";
-$s=mysqli_query($conn,$q);
-$f=mysqli_fetch_array($s);
-function debug_to_console($data) {
+  function debug_to_console($data) {
     $output = $data;
     if (is_array($output))
-        $output = implode(',', $output);
-    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+      $output = implode(',', $output);
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";}
+$q="select count(*) as count from faclog where email='$Email'";
+if($s=mysqli_query($conn,$q)){
+//echo "<script>console.log('ok on query');</script>";
+  if($f=mysqli_fetch_array($s)){
+//echo "<script>console.log('$f[0]'+'already exists');</script>";
+}}
+else{
+//echo "<script>console.log('ok not on query');</script>";
 }
-if($f['count']==0)
-{
-  $q="insert into faclog(name,gender,dob,email,paswd,post)values('$Name','$DOB','$Gender','$Email','$Password','$posts)";
-  $s=mysqli_query($conn,$q);
-  debug_to_console($name);
+if($f['count']==0){
+  $q="insert into faclog (name,gender,dob,email,paswd,post)values('$Name','$Gender','$DOB','$Email','$Password','$posts')";
+  
+  if(($m=mysqli_query($conn,$q))){
+    echo"<script>console.log(''); ";/*
+  debug_to_console($Name);
   debug_to_console($DOB);
   debug_to_console($Gender);
-  if($s)
-  {
-    $q="insert into faclog(Email,Password,user_type,status) values('$Email','$Password','user','1')";
-    $s=mysqli_query($conn,$q);
-    if(!$s)
-    {
-      echo "<script>alert('Registration Successfull')</script>";
-      echo "<script>location.href='logins.php'</script>";
-      
-    } 
-  else
-   {
-    echo "<script>alert('Sorry Registration Error 1')</script>";
-    echo "<script>location.href='index.php'</script>";
-   }
+  debug_to_console($posts);
+  debug_to_console($password);
+  debug_to_console($Email);*/}
+  else{
+echo "<script>console.log('no insert');</script>";
+echo"<script>alert('user registration failed');";
+  }}
+  else{
+    echo"<script>alert('user registration failed');";
+    echo "<script>console.log('user already found');";
   }
-  else
-  {
-    //echo $q;
-     echo "<script>alert('Sorry Registration Error 2')</script>";
-    echo "<script>location.href='login.php'</script>";
-  }
+
 }
-else
-{
-  echo "<script>alert('User already exist')</script>";
-  //echo "<script>location.href='Sighnupstud.php'</script>";
-}}
 
-
-
-   ?>
+  ?>

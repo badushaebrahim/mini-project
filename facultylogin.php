@@ -1,18 +1,13 @@
 <?php
 include './functionsphp/dbcheck.inc.php';
 if(isset(($_POST['submit']))){
-	
-
 	$Email=$_POST['email'];
 	$Password=$_POST['pass'];
 	$q="select count(*) as count from faclog where Email='$Email'";    
  $s=mysqli_query($conn,$q);
  $f=mysqli_fetch_array($s);
- 
  if($f['count'] != 0)
  {
-	
-
  	 $q="select * from faclog where Email='$Email'";
 	  $s=mysqli_query($conn,$q);
  	 $row=mysqli_fetch_array($s);
@@ -31,7 +26,7 @@ if(isset(($_POST['submit']))){
 
 	}
 	else{
-		echo"<script>console.log('not exec');</script>";
+		echo"<script>console.log('user not found');</script>";
 		
 	}
 }
