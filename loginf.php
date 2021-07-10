@@ -10,15 +10,16 @@
     <body><div class="wrap">
   <center>
    <div class="boxmain">
-    <p class="h1k">Faculty Login</p><form method="POST" action="facultylogin.php">
+   <form method="POST" action="faclogin.php">
+    <p class="h1k">Faculty Login</p>
     <br>
     Email:<br>
     <input type="text" name="email" class="texts"><br>
     Password<br>
-    <input type="passord" name="pass" class="texts">
+    <input type="password" name="pass" class="texts">
     <br>
-    <a href="newfaculty.php">Register</a><p class="voids">............</p><br>
-    <input type="button" name="submit" class="bts" value="login"></form>
+    
+    <input type="submit" name="submit" class="bts" value="login"></form>
 </div>
 </center>
 </div>
