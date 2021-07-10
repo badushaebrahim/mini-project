@@ -8,7 +8,7 @@ if(isset(($_POST['submit']))){
  $f=mysqli_fetch_array($s);
  if($f['count'] != 0)
  {
- 	 $q="select * from faclog where Email='$Email'";
+ 	 $q="select email,paswd from faclog where Email='$Email'";
 	  $s=mysqli_query($conn,$q);
  	 $row=mysqli_fetch_array($s);
 	  echo"<script>console.log('$Email'+'$Password');</script>";
@@ -18,7 +18,7 @@ if(isset(($_POST['submit']))){
 		$_SESSION['name']=$row[0];
 		//echo "$_SESSION";
 		echo"<script>console.log('login ok');</script>";
-		header("location: ../wrk/homea.php");
+		echo "<script>location.href='homea.php'</script>";
 	  }
 	  else{
 			echo "<script>alert('invalid password');</.script>";

@@ -16,7 +16,10 @@ $q="select count(*) as count from faclog where email='$Email'";
 if($s=mysqli_query($conn,$q)){
 //echo "<script>console.log('ok on query');</script>";
   if($f=mysqli_fetch_array($s)){
-//echo "<script>console.log('$f[0]'+'already exists');</script>";
+echo "<script>console.log('$f[0]'+'already exists');</script>";
+echo"<script>alert('user registration failed');";
+echo "<script>console.log('user already found');";
+echo "<script>location.href='loginf.php'</script>";
 }}
 else{
 //echo "<script>console.log('ok not on query');</script>";
@@ -25,7 +28,8 @@ if($f['count']==0){
   $q="insert into faclog (name,gender,dob,email,paswd,post)values('$Name','$Gender','$DOB','$Email','$Password','$posts')";
   
   if(($m=mysqli_query($conn,$q))){
-    echo"<script>console.log(''); ";/*
+    echo "<script>alert('Registration Successfull')</script>";
+    echo "<script>location.href='loginf.php'</script>";/*
   debug_to_console($Name);
   debug_to_console($DOB);
   debug_to_console($Gender);
@@ -34,11 +38,14 @@ if($f['count']==0){
   debug_to_console($Email);*/}
   else{
 echo "<script>console.log('no insert');</script>";
-echo"<script>alert('user registration failed');";
+echo"<script>alert('user registration failed1');";
+echo "<script>location.href='newfaculty.php'</script>";
   }}
   else{
-    echo"<script>alert('user registration failed');";
-    echo "<script>console.log('user already found');";
+    echo"<script>alert('user registration failed2');</script>";
+    echo "<script>console.log('user already found');</script>";
+    echo "<script>location.href='loginf.php'</script>";
+
   }
 
 }
