@@ -52,7 +52,7 @@ if (r == true) {
 function addparents(){
 location.href='regparent.php';
 }
-}
+
  function notf(){
 	 alert("notification");
  }
@@ -70,25 +70,12 @@ location.href='regparent.php';
          }  
     }
 </script>
-=======
+
 	<div class="statholder">
 	
 	</div>
 	
 	</div>
 
-
-    
->>>>>>> 7140361f19ed1dafe3d281f4bb9a305b8df9e920
 </body>
 </html> 
-<!--<script>
-$(".hid").hide(600); 
-$(".linka").hide(600);  
-$(".inner").hover(function(){
-$("inner.hid").show(600);
-$(".btun").css("background-color","pink");
-$(".linka").show(600);
-});
-/*$("p").hide(500);
-$("p").show(500);*/</script>-->
