@@ -18,7 +18,8 @@
     Password<br>
     <input type="password" name="pass" class="texts">
     <br>
-    
+    <br>
+    <a href="newfaculty.php">Register</a><p class="voids">............</p><br>
     <input type="submit" name="submit" class="bts" value="login"></form>
 </div>
 </center>

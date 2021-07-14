@@ -28,7 +28,11 @@
 	<div class="sidebarchild">
 	<txt><input type="button" value="Message Faculty" onclick="ping()" class="butss"></txt></div><div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Sylabus" onclick="ping()" class="butss"></txt></div>
+	<txt><input type="button" value="Add Sylabus" onclick="ping()" class="butss"></txt></div>
+	</div>
+	<div class="sidewraper">
+	<div class="sidebarchild">
+	<txt><input type="button" value="Add Parents" onclick="ping()" class="butss"></txt></div>
 	</div>
 	<div class="sidewraper" id="closer">
 	<div class="sidebarchild" >
@@ -44,9 +48,11 @@ if (r == true) {
 	
 } else{
 	location.href='index.php';	
+}}
+function addparents(){
+location.href='regparent.php';
 }
-	 
- }
+}
  function notf(){
 	 alert("notification");
  }
