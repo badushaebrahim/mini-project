@@ -7,6 +7,20 @@
 	<script src="js/jquery-2.1.4.min.js"></script>
 	
 	<link href="css/fonts/home2.css"  rel="stylesheet" type="text/css">
+	<script>
+    
+	    $(".slidebarchild").hover(function(){
+		    alert("jqwrks");
+	    })
+ $("#out").on("click",function(){
+	 location.href='index.php';
+ })   
+ function ping(){
+	 alert("wrks");
+	 $(".sidebar").slideToggle(5000);
+ }
+    </script>
+
 	<title>home Students beta</title>
 </head>
 <body>
@@ -47,23 +61,14 @@
 	<input type="button" value="close" onclick="ping()" class="butss"></div>
 	</div>
 	</div>
+	<div class="statholder">
+	
+	</div>
+	
+	</div>
 
 
-
-    <script>
     
-	    $(".slidebarchild").hover(function(){
-		    alert("jqwrks");
-	    })
- $("#out").on("click",function(){
-	 location.href='index.php';
- })   
- function ping(){
-	 alert("wrks");
-	 $(".sidebar").slideToggle(5000);
- }
-    </script>
-
 	   <!--<script>
 		 $(".hid").hide(600); 
 		 $(".linka").hide(600);  
