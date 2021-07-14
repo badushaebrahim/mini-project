@@ -2,10 +2,31 @@
 <html lang="en">
 <head><meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<<<<<<< HEAD
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--<script src="js/jquery-2.1.4.min.js"></script>-->
 	<script src="js/jquery.js" ></script>
 	<link href="css/fonts/home2.css" rel="stylesheet" type="text/css">
+=======
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/jquery-2.1.4.min.js"></script>
+	
+	<link href="css/fonts/home2.css"  rel="stylesheet" type="text/css">
+	<script>
+    
+	    $(".slidebarchild").hover(function(){
+		    alert("jqwrks");
+	    })
+ $("#out").on("click",function(){
+	 location.href='index.php';
+ })   
+ function ping(){
+	 alert("wrks");
+	 $(".sidebar").slideToggle(5000);
+ }
+    </script>
+
+>>>>>>> 7140361f19ed1dafe3d281f4bb9a305b8df9e920
 	<title>home Students beta</title>
 </head>
 <body>
@@ -64,6 +85,26 @@ if (r == true) {
          }  
     }
 </script>
+=======
+	<div class="statholder">
+	
+	</div>
+	
+	</div>
+
+
+    
+	   <!--<script>
+		 $(".hid").hide(600); 
+		 $(".linka").hide(600);  
+	$(".inner").hover(function(){
+		$("inner.hid").show(600);
+		$(".btun").css("background-color","pink");
+		$(".linka").show(600);
+	});
+/*$("p").hide(500);
+$("p").show(500);*/</script>-->
+>>>>>>> 7140361f19ed1dafe3d281f4bb9a305b8df9e920
 </body>
 </html> 
 <!--<script>
