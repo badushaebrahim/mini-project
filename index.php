@@ -19,18 +19,18 @@
      <a href="logins.php"><input type="button"  class="bts" value="STUDENT" name="hello"><br>
       </a>
     </center></div>
-   
+    <br>
    <div class="buthold"> <center>
     <a href="loginp.php"><input type="button" class="bts" value="PARENT" name="hello" ><br>
    </a>
-   </center></div>
+   </center></div><br>
   
   <div class="buthold"> <center>
     <a href="loginf.php"><input type="button" class="bts"value="FACUTY" name="hello"><br>
-   </a></center></div>
+   </a></center></div><br>
    <div class="buthold"> <center>
     <a href="logina.php"><input type="button" class="bts"value="Admin" name="hello"><br>
-    </a></center></div>
+    </a></center></div><br>
   </div>
   </div>
   
