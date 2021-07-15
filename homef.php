@@ -32,7 +32,7 @@
 	</div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Add Parents" onclick="ping()" class="butss"></txt></div>
+	<txt><input type="button" value="Add Parents" onclick="addparents()" class="butss"></txt></div>
 	</div>
 	<div class="sidewraper" id="closer">
 	<div class="sidebarchild" >

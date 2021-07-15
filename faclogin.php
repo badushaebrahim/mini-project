@@ -21,11 +21,13 @@ if(isset(($_POST['submit']))){
 	  //echo"<script>console.log('$row[3]'+'$row[4]');</script>";
 	  $pwd = $row[4];
 	  if($Password == $pwd){
+		session_start();
 		$_SESSION['name']=$row[0];
-		//echo"<script>console.log('$_SESSION[name]');</script>";
+
+		echo"<script>console.log('$_SESSION[name]');</script>";
 		//echo "$_SESSION";
 		echo"<script>console.log('login ok');</script>";
-		echo"<script>console.log('$row[0]');</script>";
+		echo"<script>console.log('$_SESSION[name]');</script>";
 		header("location: ../wrk/homef.php");
 	  }
 	  else{
