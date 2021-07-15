@@ -9,7 +9,7 @@ if(isset($_POST['btnsubmit']))
   $Email=$_POST['email'];
   $Password=$_POST['pass'];
   
-$q="select count(*) as count from studlog where Email='$Email'";
+$q="select count(*) as count from studlog where email='$Email'";
 $s=mysqli_query($conn,$q);
 $f=mysqli_fetch_array($s);
 function debug_to_console($data) {

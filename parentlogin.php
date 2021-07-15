@@ -5,7 +5,7 @@ if(isset(($_POST['submit']))){
 
 	$Email=$_POST['email'];
 	$Password=$_POST['pass'];
-	$q="select count(*) as count from parentlog where Email='$Email'";
+	$q="select count(*) as count from parentlog where email='$Email'";
  $s=mysqli_query($conn,$q);
  $f=mysqli_fetch_array($s);
  
@@ -17,13 +17,13 @@ if(isset(($_POST['submit']))){
 	  $s=mysqli_query($conn,$q);
  	 $row=mysqli_fetch_array($s);
 	  echo"<script>console.log('$Email'+'$Password');</script>";
-	  echo"<script>console.log('$row[0]'+'$row[1]');</script>";
+	  echo"<script>console.log('$row[2]'+'$row[3]');</script>";
 	  $pwd = $row[1];
 	  if($Password == $pwd){
-		$_SESSION['name']=$row[0];
+		$_SESSION['pid']=$row[6];
 		//echo "$_SESSION";
 		echo"<script>console.log('login ok');</script>";
-		header("location: ../wrk/homea.php");
+		header("location: ../wrk/homep.php");
 	  }
 	  else{
 			echo "<script>alert('invalid password');</.script>";

@@ -23,28 +23,19 @@
 	<txt><input type="button" value="Account Settings" onclick="ping()" class="butss"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Examination" onclick="ping()" class="butss"></txt></div>
+	<txt><input type="button" value="Message faculty" onclick="ping()" class="butss"></txt></div>
 	</div>
 	<div class="sidebarchild">
-	<txt><input type="button" value="Message Faculty" onclick="ping()" class="butss"></txt></div><div class="sidewraper">
-	<div class="sidebarchild">
-	<txt><input type="button" value="Add Sylabus" onclick="ping()" class="butss"></txt></div>
-	</div>
-	<div class="sidewraper">
-	<div class="sidebarchild">
-	<txt><input type="button" value="Add Parents" onclick="addparents()" class="butss"></txt></div>
-	</div>
-	<div class="sidewraper" id="closer">
-	<div class="sidebarchild" >
-	<txt><input type="button" value="Xclose" onclick="showhide()" class="butss"></txt></div>
-	</div>
+	
+	
+	
 	</div>
     <script>
 	
  $("#out")  
  function ping(){
 	var r = confirm("Would you like to exit ");
-if (r != true) {
+if (r == true) {
 	
 } else{
 	location.href='index.php';	
