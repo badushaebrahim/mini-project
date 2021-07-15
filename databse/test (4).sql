@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2021 at 07:02 PM
+-- Generation Time: Jul 15, 2021 at 06:40 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.32
 
@@ -86,10 +86,17 @@ CREATE TABLE `parentlog` (
   `gender` text NOT NULL,
   `email` varchar(150) NOT NULL,
   `pass` text NOT NULL,
-  `childname` text NOT NULL,
-  `addedby` text NOT NULL,
+  `childname` int(11) NOT NULL,
+  `addedby` int(11) NOT NULL,
   `pid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `parentlog`
+--
+
+INSERT INTO `parentlog` (`name`, `gender`, `email`, `pass`, `childname`, `addedby`, `pid`) VALUES
+('tes', 'male', 'tes@gmail.com', 'Badu@1234', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -112,7 +119,7 @@ CREATE TABLE `studlog` (
 
 INSERT INTO `studlog` (`name`, `dob`, `gender`, `email`, `pwd`, `uid`) VALUES
 ('badu', '2021-05-21', 'male', 'badu12@gmail.com', 'mok@123', 3),
-('EBRAHIM BADUSHA O A', '2021-06-04', 'male', 'badushaebrahim62@gmail.com', 'asdgs@!!@122qqqq', 4),
+('EBRAHIM', '2021-06-04', 'male', 'badushaebrahim62@gmail.com', 'asdgs@!!@122qqqq', 4),
 ('EBRAHIM BADUSHA O A', '2021-06-10', 'male', 'demo@demo.com', 'MMMmmm@123', 5),
 ('godwin', '2021-05-21', 'male', 'godw@gmail.com', 'buck@123', 1);
 
@@ -161,7 +168,7 @@ ALTER TABLE `faclog`
 -- AUTO_INCREMENT for table `parentlog`
 --
 ALTER TABLE `parentlog`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `studlog`

@@ -17,8 +17,8 @@
     <form method="post" action="newparent.php">
     Name:<br>
     <input type="text" name="name" class="texts" id="name"><br>
-    Date of Birth:<br>
-    <input type="date" name="date" class="texts" id="cource"><br>
+    <!--Date of Birth:<br>
+    <input type="date" name="date" class="texts" id="cource"><br>-->
     Gender <br>
     <input type="radio" name="gender" value="male" >Male
     <input type="radio" name="gender"  value="female">Female
