@@ -8,7 +8,11 @@
 	<link href="css/fonts/home2.css" rel="stylesheet" type="text/css">
 	<title>home Students beta</title>
 </head>
-<body>
+<body><?php
+session_start();
+$t= $_SESSION['id'];
+echo"<script>console.log('$t');</script>";
+?>
 	<nav class="navma">
 	<div class="navra">
 	<div class="imh"><img class ="sgs" id="im"src="image/logo.svg"></div>
@@ -26,7 +30,7 @@
 	<txt><input type="button" value="Examination" onclick="ping()" class="butss"></txt></div>
 	</div>
 	<div class="sidebarchild">
-	<txt><input type="button" value="Message Faculty" onclick="ping()" class="butss"></txt></div><div class="sidewraper">
+	<txt><input type="button" value="Message Faculty" onclick="tomsg()" class="butss"></txt></div><div class="sidewraper">
 	<div class="sidebarchild">
 	<txt><input type="button" value="Sylabus" onclick="ping()" class="butss"></txt></div>
 	</div>
@@ -63,6 +67,9 @@ if (r == true) {
              div.style.visibility = "visible";  
          }  
     }
+    function tomsg(){
+	    location.href='senting.php';
+    }
 </script>
 =======
 	<div class="statholder">
@@ -72,8 +79,7 @@ if (r == true) {
 	</div>
 
 
-    
->>>>>>> 7140361f19ed1dafe3d281f4bb9a305b8df9e920
+
 </body>
 </html> 
 <!--<script>

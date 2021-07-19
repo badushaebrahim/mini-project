@@ -15,12 +15,12 @@ if(isset($_POST['sub']))
  	 $q="select * from studlog where Email='$Email'";
  	 $s=mysqli_query($conn,$q);
  	 $row=mysqli_fetch_array($s);
-	  echo "<script>console.log('$row[0]');</script>";
+	 /* echo "<script>console.log('$row[0]');</script>";
 	  echo "<script>console.log('$row[1]');</script>";
 	  echo "<script>console.log('$row[2]');</script>";
 	  echo "<script>console.log('$row[3]');</script>";
 	  echo "<script>console.log('$row[4]');</script>";
-	  echo "<script>console.log('$row[5]');</script>";
+	  echo "<script>console.log('$row[5]');</script>";*/
  	 	$pwd=$row[4];
  	 if($Password==$pwd)
  	 {$status = 1;
@@ -30,14 +30,15 @@ if(isset($_POST['sub']))
                             $s=mysqli_query($conn,$q);
                          $row=mysqli_fetch_array($s);
 			 echo "<script>console.log('second');</script>";
-			 echo "<script>console.log('$row[0]');</script>";
-	 
+			 echo "<script>console.log('ids'+'$row[0]');</script>";
+				session_start();	
 	  
 				echo"<h1> user found</h1>";
                             $_SESSION['id']=$row[0];
-	                          //echo "$_SESSION";
+	                          //echo "<script>alert('$_SESSION[id]');";
 				  header("location: ../wrk/homes.php");
 				  echo "<script>console.log('make done');</script>";
+				  echo "<script>console.log('sec'+'$_SESSION[id]');</script>";
  	 			
  	 			//echo "<script>location.href='homes.php'</script>";
  	 		}	
