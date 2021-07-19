@@ -1,0 +1,36 @@
+body{
+	background-color: rgb(59, 118, 230);
+	height:100%;
+	display: flex;
+	flex-direction: row;
+}
+.maincontainer{
+	display: flex;
+}
+.msgholder{
+	height: 70%;
+	flex: 4  ;
+}
+.butsholder{
+	display: flex;
+	justify-content: space-between;
+	background-color: aqua;
+}
+.tx{	
+	//padding-left: 3vh;
+	padding-right: 3vh;
+	background-color: transparent;
+	stroke: aqua;
+	padding-top: 3vh;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+	//font-size: 4.3vh;
+}
+.tx:hover{
+	
+	//background-color: yellow;
+	.hid{
+		visibility: visible;
+	}
+}
