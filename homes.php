@@ -45,9 +45,10 @@ echo"<script>console.log('$t');</script>";
  function ping(){
 	var r = confirm("Would you like to exit ");
 if (r == true) {
+	location.href='index.php';	
 	
 } else{
-	location.href='index.php';	
+	location.href='homes.php';	
 }
 	 
  }
