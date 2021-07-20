@@ -36,13 +36,11 @@ if(isset(($_POST['submit']))){
 
 	}
 	else{
-		echo"<script>console.log('not exec');</script>";
+		echo"<script>alert('user not found');</script>";
 		
 	}
 }
  else{
 	echo "<script>alert('invalid entry methood');</.script>";
  }
-
-
 ?>
