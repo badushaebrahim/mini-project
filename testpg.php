@@ -29,5 +29,3 @@ if (mysqli_query($conn, $sql)) {
 //</table>
 mysqli_close($conn);
 ?>
-<body><input type="button" value="te" onclick="run()"></body>
-</html>
