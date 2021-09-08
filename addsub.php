@@ -31,11 +31,7 @@ function ads(){
 }</script>
 </head>
 <body>
-<?php
-session_start();
-$t= $_SESSION['id'];
-echo"<script>console.log('$t');</script>";
-?>	
+	
 	<nav class="navma">
 	<div class="navra">
 	<div class="imh"><img class ="sgs" id="im"src="image/logo.svg"></div>
@@ -76,8 +72,8 @@ echo"<script>console.log('$t');</script>";
 <?php
  if(isset($_REQUEST['btnsubmit']))
 {
-
-$t= $_SESSION['id'];
+	session_start();
+$t= $_SESSION['tid'];
  $Subject_Name=$_REQUEST['txtsname'];
 //  $folder='img/';
 //        $file=$folder.basename($_FILES['img']['name']);
