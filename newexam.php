@@ -26,7 +26,8 @@ if (r2 != true) {
 }}
 function ads(){
 	location.href='addsub.php';
-}</script>
+}
+function bck(){location.href='addsub.php';}</script>
 </head>
 <body>
 	
@@ -34,7 +35,7 @@ function ads(){
 	<div class="navra">
 	<div class="imh"><img class ="sgs" id="im"src="image/logo.svg"></div>
 	<div class="mainholder" >
-		<div class="tx"><div id="here" class="inner">Exam Center</div></div>
+		<div class="tx"onclick="bck()" ><div id="here" class="inner">Back </a></div></div>
 				<div class="tx"><div id="her2"onclick="notf()" class="inner"><input type="button"  class="butss"value="Home"></div></div>
 		<div class="tx"><div id="her2"  id="out" class="inner"onclick="ping()"><input type="button"  class="butss"value="Sign out "></div></div>
 			</div></div></nav>
@@ -44,7 +45,7 @@ function ads(){
 	<txt><input type="button" value="Add New Subjects" onclick="ads()" class="butss"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Examination" onclick="ex()" class="butss"></txt></div>
+	<txt><input type="button" value="Exam Stats" onclick="ex()" class="butss"></txt></div>
 	</div>
 
 </div>
@@ -122,13 +123,13 @@ include './functionsphp/dbcheck.inc.php';?>
  $result=mysqli_query($conn,$q);
  echo "<table border=1><th>Exam name</th><th>Subject</th><th colspan='2'>Duration</th></tr>";
  while($row=mysqli_fetch_row($result))
- {  
+ {  echo"<script>console.log('$row[0] '+'$row[1] '+'$row[2] '+'$row[3] '+'$row[4] ');</script>";	
   echo "<tr>";
   
   echo "<td>"."$row[0]"."</td>";
   echo "<td>"."$row[4]"."</td>";
-  echo "<td>"."$row[3]"."</td>";
-  echo "<td><a class='high' href='addquestion.php?eid="."$row[0]"."'>Add Questions</a></td>";
+  echo "<td>"."$row[2]"."</td>";
+  echo "<td><a class='high' href='addquestion.php?eid="."$row[3]"."'>Add Questions</a></td>";
   echo "</tr>";
  }
 echo "</table><br><br>";
