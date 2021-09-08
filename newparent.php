@@ -34,8 +34,9 @@ if($f['count']==0){
   $q="insert into parentlog (name,gender,email,pass,childname,addedby)values('$Name','$Gender','$Email','$Password','$child','$sp')";
   
   if(($m=mysqli_query($conn,$q))){
-    echo "<script>alert('Registration Successfull')</script>";
-    echo "<script>location.href='loginp.php'</script>";/*
+    echo"<script>var r = confirm('registartion suscessfull want to add  more parents ');if (r == true) {location.href='regparent.php';} else{location.href='homef.php';	}</script>";
+/*
+    echo "<script>location.href='regpa.php'</script>";
   debug_to_console($Name);
   debug_to_console($DOB);
   debug_to_console($Gender);

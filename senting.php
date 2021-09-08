@@ -19,14 +19,15 @@
 <div class="butsholder">
 <?php
 include './functionsphp/dbcheck.inc.php';
-$q="select name from faclog";
+$q="select name,tid from faclog";
  $s=mysqli_query($conn,$q);
 echo "<select name='faculty' >";
 echo"<option  value=''>names of faculty</options>";
  while ($row =mysqli_fetch_array($s)) {
     unset($username);
     $username = $row['name'];
-    echo '<option value=" '.$username.'"  >'.$username.'</option>';
+    $tid = $row['tid'];
+    echo '<option value="'.$tid.'"  >'.$username.'</option>';
 }
 echo "</select>";
      ?>

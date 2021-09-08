@@ -26,15 +26,17 @@
      Name of student:<br><br>
      <?php
 include './functionsphp/dbcheck.inc.php';
-$q="select name from studlog";
+$q="select name,uid from studlog";
  $s=mysqli_query($conn,$q);
  
 echo "<select name='student' >";
 echo"<option  value=''>names of student</options>";
  while ($row =mysqli_fetch_array($s)) {
     unset($username);
+    unset($uid);
     $username = $row['name'];
-    echo '<option value=" '.$username.'"  >'.$username.'</option>';
+    $uid = $row['uid'];
+    echo '<option value=" '.$uid.'"  >'.$username.'</option>';
 }
 echo "</select>";
      ?><br>

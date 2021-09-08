@@ -34,43 +34,7 @@ echo"<script>console.log('$t');</script>";
 	<div class="sidebarchild">
 	<txt><input type="button" value="Sylabus" onclick="ping()" class="butss"></txt></div>
 	</div>
-	<div class="sidewraper" id="closer">
-	<div class="sidebarchild" >
-	<txt><input type="button" value="Xclose" onclick="showhide()" class="butss"></txt></div>
 	</div>
-	</div>
-    <script>
-	
- $("#out")  
- function ping(){
-	var r = confirm("Would you like to exit ");
-if (r == true) {
-	
-} else{
-	location.href='index.php';	
-}
-	 
- }
- function notf(){
-	 alert("notification");
- }
- function showhide()
-    {  
-         var div = document.getElementById("sidebars");  
-         if (div.style.visibility !== "none") 
-         {  
-		 console.log("ping");
-             div.style.visibility = "none";  
-         }  
-         else
-         {  
-             div.style.visibility = "visible";  
-         }  
-    }
-    function tomsg(){
-	    location.href='senting.php';
-    }
-</script>
 =======
 	<div class="statholder">
 	
@@ -79,7 +43,35 @@ if (r == true) {
 	</div>
 
 
-
+	<script>
+	
+	$("#out")  
+	function ping(){
+	       var r = confirm("Would you like to exit ");
+       if (r == true) {location.href='index.php';	 
+       } else{location.href='homes.php';	
+}	
+	}
+	function notf(){
+		alert("notification");
+	}
+	function showhide()
+	   {  
+		var div = document.getElementById("sidebars");  
+		if (div.style.visibility !== "none") 
+		{  
+			console.log("ping");
+		    div.style.visibility = "none";  
+		}  
+		else
+		{  
+		    div.style.visibility = "visible";  
+		}  
+	   }
+	   function tomsg(){
+		   location.href='senting.php';
+	   }
+       </script>
 </body>
 </html> 
 <!--<script>
