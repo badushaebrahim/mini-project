@@ -50,6 +50,7 @@ function ads(){
 </div>
 <div class="statholder">
 <?php
+//form here exam mod
 include './functionsphp/dbcheck.inc.php';?>
 <center>
 <br>
@@ -131,6 +132,7 @@ include './functionsphp/dbcheck.inc.php';?>
   echo "</tr>";
  }
 echo "</table><br><br>";
+//upto here if need for change
 ?>
 
 
