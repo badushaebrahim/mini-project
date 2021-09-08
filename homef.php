@@ -9,6 +9,10 @@
 	<title>home Students beta</title>
 </head>
 <body>
+<?php
+session_start();
+$t= $_SESSION['tid'];
+?>
 	<nav class="navma">
 	<div class="navra">
 	<div class="imh"><img class ="sgs" id="im"src="image/logo.svg"></div>
@@ -23,10 +27,10 @@
 	<txt><input type="button" value="Account Settings" onclick="ping()" class="butss"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Examination" onclick="ping()" class="butss"></txt></div>
+	<txt><input type="button" value="Examination" onclick="ex()" class="butss"></txt></div>
 	</div>
 	<div class="sidebarchild">
-	<txt><input type="button" value="Message Faculty" onclick="ping()" class="butss"></txt></div><div class="sidewraper">
+	<txt><input type="button" value="Message Faculty" onclick="tomsg()" class="butss"></txt></div><div class="sidewraper">
 	<div class="sidebarchild">
 	<txt><input type="button" value="Add Sylabus" onclick="ping()" class="butss"></txt></div>
 	</div>
@@ -52,7 +56,12 @@ if (r != true) {
 function addparents(){
 location.href='regparent.php';
 }
-
+function tomsg(){
+		   location.href='senting.php';
+	   }
+	   function ex(){
+		   location.href='newexam.php';
+	   }
  function notf(){
 	 alert("notification");
  }
