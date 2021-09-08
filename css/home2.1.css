@@ -1,0 +1,275 @@
+body {
+  overflow: auto;
+}
+
+.navra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fffefe;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(0, 255, 255, 0.808);
+  -webkit-box-shadow: 10px 10px 4px #888888;
+          box-shadow: 10px 10px 4px #888888;
+  text-shadow: 0px 4px 4px #888888;
+  text-overflow: clip;
+}
+
+.mainholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tx {
+  padding-right: 3vh;
+  background-color: transparent;
+  stroke: aqua;
+  padding-top: 3vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tx:hover .hid {
+  visibility: visible;
+}
+
+.imgh {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+a {
+  stroke: aqua;
+  stroke-width: 10%;
+}
+
+.linka {
+  text-align: center;
+}
+
+.small {
+  width: 40ch;
+  height: 40ch;
+}
+
+.mainbod {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.imgho {
+  padding-left: 3vh;
+  padding-top: 3vh;
+}
+
+.txts {
+  color: crimson;
+}
+
+.imgssml {
+  width: 75%;
+  width: 75%;
+  border: 0.6vh solid white;
+  border-radius: 10vh;
+}
+
+.btnholder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.btns {
+  padding-top: 30vh;
+  position: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btun {
+  width: 12xvh;
+  height: auto;
+  padding: 4vh;
+  border-radius: 3vh;
+  background-color: yellow;
+  border: .5vh solid yellow;
+}
+
+.btun:hover {
+  background-color: transparent;
+}
+
+.hideen {
+  visibility: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #fa1d00;
+}
+
+.hid:hover {
+  background-color: aqua;
+}
+
+.sgs {
+  width: 20vh;
+  height: 20vh;
+  background-color: aliceblue;
+}
+
+.imh {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: aliceblue;
+}
+
+/*.inner:hover{
+	background-color: white;
+	border-radius: 3vh;
+	padding: 30%;
+	margin: auto;
+	width: 50%;
+	
+	padding: 20px;
+}*/
+.sidebars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: transparent;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  height: 30vh;
+  -webkit-box-shadow: 10px 10px 4px #888888;
+          box-shadow: 10px 10px 4px #888888;
+  visibility: visible;
+}
+
+.sidewraper {
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.sidebarchild {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  mix-blend-mode: multiply;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 2vh;
+}
+
+.sidebutonholder {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerofside {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#here {
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 2vh;
+  -webkit-box-shadow: 5px 10px 8px #888888;
+          box-shadow: 5px 10px 8px #888888;
+  text-overflow: clip;
+}
+
+#her2 {
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 2vh;
+  padding-right: 20%;
+  text-overflow: clip;
+}
+
+#her2:hover {
+  background-color: white;
+  -webkit-box-shadow: 5px 10px 8px #888888;
+          box-shadow: 5px 10px 8px #888888;
+}
+
+.sidewrap {
+  padding: 30%;
+}
+
+txt {
+  padding-right: 8vh;
+  padding-left: 8vh;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+}
+
+.butss {
+  background-color: transparent;
+  stroke: none;
+  border: none;
+}
+
+.stastholder {
+  display: block;
+}
+
+.high {
+  color: #31c0c0;
+}
+/*# sourceMappingURL=home2.1.css.map */
