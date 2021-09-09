@@ -98,11 +98,11 @@ body{
     <!--<input type="text" value="<?php echo $st;?>" id="st" style="visibility: hidden;"><br><br>-->
     <label id="cd" style="visibility: hidden;"><?php echo $ddate ?></label><br><br>
     <input type="text" value="<?php echo $question[0];?>" style="visibility: hidden;" name="qno" ><br><br>
-    <label><?php echo $question[2] ?></label><br><br>
+    <label><?php echo $question[1] ?></label><br><br>
+    <input name="o1" type="radio" value="<?php echo $question[2];?>" required="required"><?php echo $question[2];?><br><br>
     <input name="o1" type="radio" value="<?php echo $question[3];?>" required="required"><?php echo $question[3];?><br><br>
     <input name="o1" type="radio" value="<?php echo $question[4];?>" required="required"><?php echo $question[4];?><br><br>
     <input name="o1" type="radio" value="<?php echo $question[5];?>" required="required"><?php echo $question[5];?><br><br>
-    <input name="o1" type="radio" value="<?php echo $question[6];?>" required="required"><?php echo $question[6];?><br><br>
     <input type="submit" name="btnsubmit" style="background-color: #049979; width: 150px; height: 30px; border-color: wheat; border-radius: 10px; color: white;" Value="Submit"><br><br>
     <p id="demo"></p>
         
@@ -113,7 +113,8 @@ if(isset($_REQUEST['btnsubmit']))
 {
 //    $dt=$dt+1;
     $qs=$_REQUEST['qno'];
-    $q="select answer from tblquestions where questionid='$qs'";
+    echo'<script>alert('.$qs.');</script>';
+    $q="select answer from tblquestion where questionid='$qs'";
     $s=  mysqli_query($conn, $q);
     $question=mysqli_fetch_array($s);
     $a=$question[0];
