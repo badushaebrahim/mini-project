@@ -27,7 +27,7 @@ echo"<script>console.log('$t');</script>";
 	<txt><input type="button" value="Account Settings" onclick="ping()" class="butss"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Examination" onclick="ping()" class="butss"></txt></div>
+	<txt onclick="ex()"><input type="button" value="Examination"  class="butss"></txt></div>
 	</div>
 	<div class="sidebarchild">
 	<txt><input type="button" value="Message Faculty" onclick="tomsg()" class="butss"></txt></div><div class="sidewraper">
@@ -70,6 +70,10 @@ echo"<script>console.log('$t');</script>";
 	   }
 	   function tomsg(){
 		   location.href='senting.php';
+	   }
+	   function ex(){
+		location.href='searchexam.php';
+
 	   }
        </script>
 </body>
