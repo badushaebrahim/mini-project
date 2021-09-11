@@ -10,7 +10,7 @@
 </head>
 <body><?php
 session_start();
-$t= $_SESSION['id'];
+$t= $_SESSION['sid'];
 echo"<script>console.log('$t');</script>";
 ?>
 	<nav class="navma">

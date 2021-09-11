@@ -5,35 +5,34 @@ p {
   margin-top: 0px;
 }
 body{
-    color:black;
-  background-image: url("./image/exam.jpg");
-
     background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color:black;
 }
 </style>
-
+<body background="./image/exam.jpg">
 <?php
    session_start();
-    include './functionsphp/dbcheck.inc.php';
+   include './functionsphp/dbcheck.inc.php';
+   
+    
 //   include 'userheader.php';
-   $uid=$_SESSION['id'];
+   $uid=$_SESSION['sid'];
 //  echo $uid;
    $eid=$_GET['eid'];
    $rid=$_GET['rid'];
   $dt=$_GET['dd'];
 // $st=0;
 //   $a="";
-   $q9="select count(*) from temp";
-        $s9= mysqli_query($conn, $q9);
-        $c9=mysqli_fetch_array($s9);
+   	
 //        $st=$c9[0];
  
         $q="select * from tbltime";
-        $s=mysqli_query($conn, $q);
+        $s=mysqli_query($conn, $q); 
         $m=mysqli_fetch_array($s);
         $ddate=$m[0];
+        echo"<script>console.log('$ddate');</script>";
         
    $q="select mark from tblresult where resultid='$rid'";
    $s=mysqli_query($conn, $q);
@@ -88,16 +87,17 @@ body{
        {
            echo '<script>alert("Your exam is over")</script>';
            echo '<script>location.href="userresult.php?rid='.$rid.'"</script>';
+           //echo '<script>location.href="homes.php"</script>';
        }
        
 ?>
     
-    <div style="margin:100px 10px 10px 800px; color: white; font-size: large;">
+    <div style="margin:100px 10px 10px 800px;  font-size: large;">
 
 <form method="POST">
     <!--<input type="text" value="<?php echo $st;?>" id="st" style="visibility: hidden;"><br><br>-->
-    <label id="cd" style="visibility: hidden;"><?php echo $ddate ?></label><br><br>
-    <input type="text" value="<?php echo $question[0];?>" style="visibility: hidden;" name="qno" ><br><br>
+    <label id="cd" style="visibility: hidden;"><?php echo "$ddate"; ?></label><br><br>
+    <input type="text" value="<?php echo $question[7];?>" style="visibility: hidden;" name="qno" ><br><br>
     <label><?php echo $question[2] ?></label><br><br>
     <input name="o1" type="radio" value="<?php echo $question[3];?>" required="required"><?php echo $question[3];?><br><br>
     <input name="o1" type="radio" value="<?php echo $question[4];?>" required="required"><?php echo $question[4];?><br><br>
@@ -113,7 +113,7 @@ if(isset($_REQUEST['btnsubmit']))
 {
 //    $dt=$dt+1;
     $qs=$_REQUEST['qno'];
-    $q="select answer from tblquestions where questionid='$qs'";
+    $q="select answer from tbquestion where questionid='$qs'";
     $s=  mysqli_query($conn, $q);
     $question=mysqli_fetch_array($s);
     $a=$question[0];
@@ -128,7 +128,7 @@ if(isset($_REQUEST['btnsubmit']))
         $m=mysqli_fetch_array($s);
         $mark=$m[0];
         $mark=$mark+1;
-        $q2="update tblresult set Mark='$mark' where Result_Id='$rid'";
+        $q2="update tblresult set mark='$mark' where resultid='$rid'";
         $s2=  mysqli_query($conn, $q2);
         $qno=$qno+1;
         
@@ -137,53 +137,31 @@ if(isset($_REQUEST['btnsubmit']))
     }
 }
 ?>
-<script>
 
-var n,countDownDate,st;
-//st=document.getElementById("st").value;
+<script>
 // Set the date we're counting down to
-//if(st==="0")
-//{
-// n=new Date();
-//n.setMinutes( n.getMinutes() + 1 );
-// countDownDate = new Date(n).getTime();
-// document.getElementById("cd").innerHTML=n;
-// }
-// else
-// {
-    d=document.getElementById("cd").innerHTML ;
-   // alert(d);
-     n=new Date(d);
-    n.setMinutes( n.getMinutes() + 10 );
- countDownDate = new Date(n).getTime();
-// }
+var countDownDate = document.getElementById("cd").innerHTML; 
+var count2 = countDownDate;
+console.log(countDownDate);
+var cou=60;
+var m=count2;
 // Update the count down every 1 second
 var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-     
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
- // var days = Math.floor(distance / (1000 * 60 * 60 * 24));
- // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
- // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-//  + minutes + "m " + seconds + "s ";
-  document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-//  if (distance < 0) {
-//    clearInterval(x);
-//    //document.getElementById("demo").innerHTML = "EXPIRED";
-//    alert("Your exam is over");
-//    location.href="userresult.php?rid=<?php echo $rid?>";
-//  }
+	cou--;
+if(cou==0){
+	cou=60;
+m--;
+}
+	
+document.getElementById("demo").innerHTML =m +"min"+ cou+"sec";
+  // If the count down is finished, write some text
+  if (m==0) {
+    //clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+	//location.href='homes.php';	
+   //   location.href="userresult.php?rid='.$rid.'"'; 
+  }
 }, 1000);
+</script>
 </script>
 </body>
