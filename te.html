@@ -1,0 +1,30 @@
+<html>
+</body>
+<p id="jok" value="10" >10</p>
+<!-- Display the countdown timer in an element -->
+<p id="demo"></p>
+<script>
+// Set the date we're counting down to
+var countDownDate = document.getElementById("jok").innerHTML; 
+var count2 = countDownDate;
+console.log(countDownDate);
+var cou=60;
+var m=count2;
+// Update the count down every 1 second
+var x = setInterval(function() {
+	cou--;
+if(cou==0){
+	cou=60;
+m--;
+}
+	
+document.getElementById("demo").innerHTML =m +"min"+ cou+"sec"
+  // If the count down is finished, write some text
+ /*	 if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }*/
+}, 250);
+</script>
+</body>
+</html>

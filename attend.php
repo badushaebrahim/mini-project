@@ -2,8 +2,10 @@
  session_start();
 
 include './functionsphp/dbcheck.inc.php';
+
  $eid=$_GET['eid'];
-    $uid=$_SESSION['id'];
+
+    $uid=$_SESSION['sid'];
 
     $d=date("Y-m-d h:i:s");
   
@@ -15,16 +17,20 @@ include './functionsphp/dbcheck.inc.php';
         $rid=$r[0];
         $q="delete from temp";
         $result=mysqli_query($conn,$q);
-        $q="delete from tbltime";
-        $result=mysqli_query($conn,$q);
+        
 //        $date=$_REQUEST['date'];
-        $q="insert into tbltime(ttime) values((select sysdate()))";
+$du="select duration from tlbexam where examid='$eid' ";
+$du2=mysqli_query($conn, $du);
+$du3=  mysqli_fetch_array($du2);
+echo"<script>console.log('time 24 $du3[0]');</script>";
+
+        $q="insert into tbltime(ttime) values($du3[0])";
         $s=mysqli_query($conn, $q);
 //    if(isset($_REQUEST["btnsubmit"]))
 //    {
-//        $q="insert into tblresult (User_Id,Exam_Id,Exam_Date,Mark) values('$uid','$eid',(select sysdate()),'0')";
+//        $q="insert into tblresult (userid,examid,examdate,Mark) values('$uid','$eid',(select sysdate()),'0')";
 //        $s=  mysqli_query($conn, $q);
-//        $q="select max(Result_Id) from tblresult";
+//        $q="select max(resultid) from tblresult";
 //        $s=  mysqli_query($conn, $q);
 //        $r=  mysqli_fetch_array($s);
 //        $rid=$r[0];
@@ -42,13 +48,7 @@ include './functionsphp/dbcheck.inc.php';
 //        }
 //    }
 ?>
-<style>
-body{
-  background-image: url("./image/pc.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-}</style>
-
+<body background="./image/c.gif">
 <center>
 <form method="POST">
     <div style="font-size: x-large; margin: 200px 50px 100px 50px; color: white; ">
@@ -101,7 +101,7 @@ var x = setInterval(function() {
     location.href="attendexam.php?rid=<?php echo $rid?>&eid=<?php echo $eid;?>&dd=0"
   }
   
-}, 1000);
+}, 250);
  
  
  
