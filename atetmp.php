@@ -46,7 +46,7 @@ body{
        $qo="select * from tbquestion where examid='$eid'";
        $s3= mysqli_query($conn, $qo);
            
-   $co=0;
+   $co;
    $ans=array();
     while($qe=mysqli_fetch_row($s3))
     { 

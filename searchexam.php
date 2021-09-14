@@ -72,9 +72,9 @@ if($f[0]>0)
 	while($row=mysqli_fetch_array($s))
 	{
             echo "<tr>";
-            echo '<td>'.$row[1].'</td>';
+            echo '<td>'.$row[0].'</td>';
             echo '<td>'.$row[3].'</td>';
-            echo '<td><a href="attend.php?eid='.$row[0].'">Attend exam</a></td>';
+            echo '<td><a href="attend.php?eid='.$row[1].'">Attend exam</a></td>';
             echo "</tr>";
 	}
 	echo "</table>";
