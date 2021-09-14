@@ -66,11 +66,11 @@ body{
    $q="select count(*) from temp where qid='$no'";
    $s= mysqli_query($conn, $q);
    $c=mysqli_fetch_array($s);
-   $ups="SELECT * FROM `nokeper` ";
+  /* $ups="SELECT * FROM `nokeper` ";
    $re=mysqli_query($conn,$ups);
    $cou=mysqli_fetch_array($re);
-        $cou[0]=$cou[0]+1;
-   $q1="INSERT INTO `nokeper`(`totalqs`) VALUES ($cou[0])";
+        $cou[0]=$cou[0]+1;*/
+   $q1="INSERT INTO `nokeper`(`totalqs`) VALUES (1)";
         $re=mysqli_query($conn,$q1);
    if($c[0]>0)
    {
