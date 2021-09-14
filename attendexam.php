@@ -10,6 +10,16 @@ body{
   background-size: cover;
   color:white;
 }
+.sidebarchild{
+    color: #fff;
+  margin: 40px auto;
+  background-color: rgba(255,255,255,0.00);
+  border: 1px solid rgba(255,255,255,0.1);
+  width: 50%;
+  border-radius: 15px;
+  padding: 12px;
+  backdrop-filter: blur(10px);
+}
 </style>
 <body background="./image/exam.jpg">
 <?php
@@ -97,7 +107,7 @@ body{
        }
        
 ?>
-    <div class="sidebarchild"><p id="demo"></p></div> n     
+    <div class="sidebarchild"><p id="demo"></p></div> n
     <div style="margin:100px 10px 10px 800px;  font-size: large;">
 
 <form method="POST">

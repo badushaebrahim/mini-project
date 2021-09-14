@@ -52,7 +52,7 @@ $ups="SELECT count(*) FROM `nokeper` where totalqs= 1";
    $cou=mysqli_fetch_array($re);
         $result=mysqli_query($conn,$q);
 	$qq="delete from nokeper";
-        $result=mysqli_query($conn,$qq);z	
+        $result=mysqli_query($conn,$qq);	
 $rid=$_GET['rid2'];
 
 //echo"<script>console.log('.$rid.');</script>";
