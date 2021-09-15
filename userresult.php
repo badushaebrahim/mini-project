@@ -47,19 +47,19 @@ function bck(){location.href='searchexam.php';}
 
 include './functionsphp/dbcheck.inc.php';
 $q="delete from tbltime";
-$ups="SELECT count(*) FROM `nokeper` where totalqs= 1";
-   $re=mysqli_query($conn,$ups);
-   $cou=mysqli_fetch_array($re);
+
         $result=mysqli_query($conn,$q);
-	$qq="delete from nokeper";
-        $result=mysqli_query($conn,$qq);	
+		
 $rid=$_GET['rid2'];
 
 //echo"<script>console.log('.$rid.');</script>";
 $q="select * from tblresult where resultid='$rid'";
+
 if($s=  mysqli_query($conn, $q)){
 $r=  mysqli_fetch_array($s);
-
+$sql = "SELECT count(*) FROM `tbquestion` WHERE examid= '$s[2]'";
+        $co=mysqli_query($conn,$qq);
+	$r=  mysqli_fetch_array($s);
 echo '<br><br><br><center><h3 id="da">You Got: '.$r[4].'/'.$cou[0].'</h3></center><br><br><br><br><br><br><br>';}
 else{
         echo"<h3>No go</h3>";
