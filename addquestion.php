@@ -47,6 +47,7 @@ echo"<script>alert('$id);</script>";
 </center>
 <br>
 <center>
+<h3>only max 10 questions allowed</h3>
 <form  method="POST">
 <table>
 	<tr>

@@ -17,6 +17,10 @@ include './functionsphp/dbcheck.inc.php';
         $rid=$r[0];
         $q="delete from temp";
         $result=mysqli_query($conn,$q);
+        $qq="delete from nokepr";
+        $resut=mysqli_query($conn,$qq);
+        $q1="INSERT INTO `nokeper`(`totalqs`) VALUES (0)";
+        $re=mysqli_query($conn,$q1);
         
 //        $date=$_REQUEST['date'];
 $du="select duration from tlbexam where examid='$eid' ";
@@ -24,7 +28,7 @@ $du2=mysqli_query($conn, $du);
 $du3=  mysqli_fetch_array($du2);
 echo"<script>console.log('time 24 $du3[0]');</script>";
 
-        $q="insert into tbltime(ttime) values($du3[0])";
+        $q="INSERT INTO `tbltime`(`tttime`) VALUES ($du3[0])";
         $s=mysqli_query($conn, $q);
 //    if(isset($_REQUEST["btnsubmit"]))
 //    {
@@ -101,7 +105,7 @@ var x = setInterval(function() {
     location.href="attendexam.php?rid=<?php echo $rid?>&eid=<?php echo $eid;?>&dd=0"
   }
   
-}, 250);
+}, 20);
  
  
  
