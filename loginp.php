@@ -134,6 +134,7 @@ if(isset(($_POST['submit']))){
 	  $pwd = $row[3];
 	  if($Password == $pwd){
 		$_SESSION['pid']=$row[6];
+    $_SESSION['t']=1;
 		//echo "$_SESSION";
 		echo"<script>console.log('login ok');</script>";
 		//header("location: ../wrk/homep.php");

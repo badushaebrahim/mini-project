@@ -23,6 +23,7 @@ if(isset(($_POST['submit']))){
 	  if($Password == $pwd){
 		session_start();
 		$_SESSION['tid']=$row[6];
+		$_SESSION['t']=3;
 
 		echo"<script>console.log('$_SESSION[name]');</script>";
 		//echo "$_SESSION";
