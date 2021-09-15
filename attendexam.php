@@ -107,7 +107,7 @@ body{
        }
        
 ?>
-    <div class="sidebarchild"><p id="demo"></p></div> n
+    <div class="sidebarchild"><p id="demo"></p></div> 
     <div style="margin:100px 10px 10px 800px;  font-size: large;">
 
 <form method="POST">
