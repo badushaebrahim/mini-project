@@ -3,7 +3,7 @@
 <?php
 include './functionsphp/dbcheck.inc.php';
 $pid = 1;
-$rm="select childname   from parentlog where pid='$pid'";
+$rm="select childname from parentlog where pid='$pid'";
 $coo=mysqli_query($conn,$rm);
 	$rom=  mysqli_fetch_array($coo);
 	//$rm="select childname   from parentlog where userid='$rom[0]'";
@@ -23,7 +23,7 @@ $ql = "SELECT * FROM `tblresult` WHERE userid = '$rom[0]' ORDER BY examdate";
 		$l = "SELECT name FROM `faclog` WHERE tid ='$sq21[1]'";//subject name
 		$l1=mysqli_query($conn,$l);
 		$l2 =mysqli_fetch_array($l1);
-		echo"<tr><td>$sl3[0]</td>$sq21[0]<td>$l2[0]</td><td>$row[3]</td> <td>$row[4]</td> </tr>";
+		echo"<tr><td>$sl3[0]</td><td>s$sq21[0]</td> 	<td>$l2[0]</td><td>$row[3]</td> <td>$row[4]</td> </tr>";
 		
 	    }
 	    
