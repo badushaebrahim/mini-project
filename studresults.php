@@ -2,7 +2,7 @@
 	<tr><th>Exam Name</th><th>subject Name</th><th>Teacher name</th><th>Date</th><th>mark</th></tr>
 <?php
 include './functionsphp/dbcheck.inc.php';
-$pid = 1;
+$pid = $_GET['pid'];
 $rm="select childname from parentlog where pid='$pid'";
 $coo=mysqli_query($conn,$rm);
 	$rom=  mysqli_fetch_array($coo);

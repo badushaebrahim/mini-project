@@ -24,15 +24,15 @@ echo"<script>console.log('$t');</script>";
 	<div class="mainbod">
 	<div class="sidebars">
 	<div class="sidebarchild" id="inits">
-	<txt><input type="button" value="Account Settings" onclick="ping()" class="butss"></txt></div>
+	<txt><input type="button" value="Account Settings" onclick="ping()" class="butss2"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt onclick="ex()"><input type="button" value="Examination"  class="butss"></txt></div>
+	<txt onclick="ex()"><input type="button" value="Examination"  class="butss2"></txt></div>
 	</div>
 	<div class="sidebarchild">
-	<txt><input type="button" value="Message Faculty" onclick="tomsg()" class="butss"></txt></div><div class="sidewraper">
+	<txt><input type="button" value="Message Faculty" onclick="tomsg()" class="butss2"></txt></div><div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Sylabus" onclick="ping()" class="butss"></txt></div>
+	<txt><input type="button" value="Sylabus" onclick="ping()" class="butss2"></txt></div>
 	</div>
 	</div>
 =======
