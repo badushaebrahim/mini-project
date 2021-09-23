@@ -12,7 +12,7 @@
     <body><div class="wrap">
   <center>
    <div class="boxmain">
-    <p class="h1p">Student Login</p>
+    <p class="h1p">Parent Registration</p>
     <br>
     <form method="post" action="newparent.php">
     Name:<br>

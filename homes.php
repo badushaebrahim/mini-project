@@ -10,7 +10,7 @@
 </head>
 <body><?php
 session_start();
-$t= $_SESSION['id'];
+$t= $_SESSION['sid'];
 echo"<script>console.log('$t');</script>";
 ?>
 	<nav class="navma">
@@ -24,54 +24,17 @@ echo"<script>console.log('$t');</script>";
 	<div class="mainbod">
 	<div class="sidebars">
 	<div class="sidebarchild" id="inits">
-	<txt><input type="button" value="Account Settings" onclick="ping()" class="butss"></txt></div>
+	<txt><input type="button" value="Account Settings" onclick="ping()" class="butss2"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Examination" onclick="ping()" class="butss"></txt></div>
+	<txt onclick="ex()"><input type="button" value="Examination"  class="butss2"></txt></div>
 	</div>
 	<div class="sidebarchild">
-	<txt><input type="button" value="Message Faculty" onclick="tomsg()" class="butss"></txt></div><div class="sidewraper">
+	<txt><input type="button" value="Message Faculty" onclick="tomsg()" class="butss2"></txt></div><div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Sylabus" onclick="ping()" class="butss"></txt></div>
-	</div>
-	<div class="sidewraper" id="closer">
-	<div class="sidebarchild" >
-	<txt><input type="button" value="Xclose" onclick="showhide()" class="butss"></txt></div>
+	<txt><input type="button" value="Sylabus" onclick="ping()" class="butss2"></txt></div>
 	</div>
 	</div>
-    <script>
-	
- $("#out")  
- function ping(){
-	var r = confirm("Would you like to exit ");
-if (r == true) {
-	location.href='index.php';	
-	
-} else{
-	location.href='homes.php';	
-}
-	 
- }
- function notf(){
-	 alert("notification");
- }
- function showhide()
-    {  
-         var div = document.getElementById("sidebars");  
-         if (div.style.visibility !== "none") 
-         {  
-		 console.log("ping");
-             div.style.visibility = "none";  
-         }  
-         else
-         {  
-             div.style.visibility = "visible";  
-         }  
-    }
-    function tomsg(){
-	    location.href='senting.php';
-    }
-</script>
 =======
 	<div class="statholder">
 	
@@ -80,7 +43,39 @@ if (r == true) {
 	</div>
 
 
+	<script>
+	
+	$("#out")  
+	function ping(){
+	       var r = confirm("Would you like to exit ");
+       if (r == true) {location.href='index.php';	 
+       } else{location.href='homes.php';	
+}	
+	}
+	function notf(){
+		alert("notification");
+	}
+	function showhide()
+	   {  
+		var div = document.getElementById("sidebars");  
+		if (div.style.visibility !== "none") 
+		{  
+			console.log("ping");
+		    div.style.visibility = "none";  
+		}  
+		else
+		{  
+		    div.style.visibility = "visible";  
+		}  
+	   }
+	   function tomsg(){
+		   location.href='senting.php';
+	   }
+	   function ex(){
+		location.href='searchexam.php';
 
+	   }
+       </script>
 </body>
 </html> 
 <!--<script>

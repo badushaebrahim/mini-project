@@ -1,80 +1,141 @@
+/*body{
+    width: auto;
+    height: auto;
+      
+ //background-image: linear-gradient(90deg, rgb(182, 181, 138), rgb(42, 171, 211));
+ background-image: url("/exam.jpg");
+ background-repeat: no-repeat;
+ color:black;
+ }
+ .wrp{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+ }
+ .boxmain{
+     display: inherit;
+     justify-content: center;
+     justify-items: center;
+     /*max-height: 75vh;
+     min-height: 65vh;
+     max-width: 75vh;
+     background-image: linear-gradient(0deg,rgba(230, 227, 227,0.4458333675266982),rgba(245, 188, 197,0.1458333675266982));  
+     align-content: center;
+     border-radius: 15px;
+    // mix-blend-mode: passthrough;
+     box-shadow: 10px 10px 4px #888888;
+     text-shadow: 0px 4px 4px #888888;
+     text-overflow: clip;*/
+/*margin: 40px auto;
+	background-color: rgba(255,255,255,0.00);
+	border: 1px solid rgba(255,255,255,0.1);
+	width: 50%;
+	border-radius: 15px;
+	padding: 12px;
+	backdrop-filter: blur(10px);
+ }
+ .buthold{
+    
+    // background-color: aquamarine; 
+     padding-bottom: 1%;
+ }
+ .h1k{
+     font-size: 3rem;
+     color: rgb(0, 0, 0);
+     text-align: center;
+     
+ }
+ .bts{
+     background-color: rgb(221, 133, 17);
+     padding: 1%;
+     font-size: 1rem;
+     border-radius: 15px;
+     width: 10rem;
+     mix-blend-mode: passthrought;
+     box-shadow: 0px   20px 8px #888888;
+ }
+.texts{
+    background-color: aliceblue;
+    color: black;
+    max-width: 75%;
+    width: auto;
+} 
+.text:onhover{
+    background-color: blue;
+    color:red;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.voids{
+    visibility: hidden;
+}*/
+.glass-panel {
+  color: #fff;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  border-radius: 15px;
+  padding: 32px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.glass-button {
+  display: inline-block;
+  padding: 24px 32px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.glass-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 body {
-  width: auto;
-  height: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(#b6b58a), to(#2aabd3));
-  background-image: linear-gradient(90deg, #b6b58a, #2aabd3);
-  background-repeat: no-repeat;
-  color: black;
-}
-
-.wrp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.boxmain {
-  display: inherit;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  justify-items: center;
-  max-height: 75vh;
-  min-height: 65vh;
-  max-width: 75vh;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(230, 227, 227, 0.445833)), to(rgba(245, 188, 197, 0.145833)));
-  background-image: linear-gradient(0deg, rgba(230, 227, 227, 0.445833), rgba(245, 188, 197, 0.145833));
-  -ms-flex-line-pack: center;
-      align-content: center;
-  border-radius: 15px;
-  -webkit-box-shadow: 10px 10px 4px #888888;
-          box-shadow: 10px 10px 4px #888888;
-  text-shadow: 0px 4px 4px #888888;
-  text-overflow: clip;
-}
-
-.buthold {
-  padding-bottom: 1%;
-}
-
-.h1k {
-  font-size: 3rem;
-  color: black;
+  background: url("lo.jpg") no-repeat center center fixed;
+  background-size: cover;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.bts {
-  background-color: #dd8511;
-  padding: 1%;
-  font-size: 1rem;
-  border-radius: 15px;
-  width: 10rem;
-  mix-blend-mode: passthrought;
-  -webkit-box-shadow: 0px   20px 8px #888888;
-          box-shadow: 0px   20px 8px #888888;
+.glass-panel {
+  max-width: 600px;
 }
 
-.texts {
-  background-color: aliceblue;
-  color: black;
-  max-width: 75%;
-  width: auto;
+.glass-button {
+  margin: 15px;
+  margin-top: 40px;
 }
 
-.text:onhover {
-  background-color: blue;
-  color: red;
-  font-family: Arial, Helvetica, sans-serif;
+h1, h1 a {
+  min-height: 120px;
+  width: 90%;
+  max-width: 700px;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #fff;
+  padding-top: 60px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.voids {
-  visibility: hidden;
+p {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 32px;
+  color: rgba(255, 255, 255, 0.6);
 }
 /*# sourceMappingURL=logins.css.map */

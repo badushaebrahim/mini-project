@@ -34,7 +34,8 @@ if(isset($_POST['sub']))
 				session_start();	
 	  
 				echo"<h1> user found</h1>";
-                            $_SESSION['id']=$row[0];
+                            $_SESSION['sid']=$row[0];
+			    $_SESSION['t']=2;
 	                          //echo "<script>alert('$_SESSION[id]');";
 				  header("location: ../wrk/homes.php");
 				  echo "<script>console.log('make done');</script>";

@@ -18,15 +18,17 @@ if(isset(($_POST['submit']))){
 	  $s=mysqli_query($conn,$q);
  	 $row=mysqli_fetch_array($s);
 	 //echo"<script>console.log('$Email'+'$Password');</script>";
-	  //echo"<script>console.log('$row[3]'+'$row[4]');</script>";
+	  echo"<script>console.log('$row[5]'+'$row[6]');</script>";
 	  $pwd = $row[4];
 	  if($Password == $pwd){
 		session_start();
-		$_SESSION['name']=$row[0];
+		$_SESSION['tid']=$row[6];
+		$_SESSION['t']=3;
 
 		echo"<script>console.log('$_SESSION[name]');</script>";
 		//echo "$_SESSION";
 		echo"<script>console.log('login ok');</script>";
+		
 		//echo"<script>console.log('$_SESSION[name]');</script>";
 		header("location: ../wrk/homef.php");
 	  }

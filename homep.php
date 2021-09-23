@@ -1,5 +1,11 @@
+<?php
+session_start();
+$t= $_SESSION['pid'];
+$u= $_SESSION['t'];?>	
+
 <!DOCTYPE html>
 <html lang="en">
+ 
 <head><meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,18 +26,23 @@
 	<div class="mainbod">
 	<div class="sidebars">
 	<div class="sidebarchild" id="inits">
-	<txt><input type="button" value="Account Settings" onclick="ping()" class="butss"></txt></div>
+	<txt><input type="button" value="Result"  onclick="ping2()" class="butss2"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Message faculty" onclick="ping()" class="butss"></txt></div>
+	<txt><input type="button" value="Message faculty" onclick="ping()" class="butss2"></txt></div>
 	</div>
-	<div class="sidebarchild">
 	
-	
+   
+
+	<div class="statholder">
 	
 	</div>
-    <script>
 	
+	</div>
+
+
+	<script>
+
  $("#out")  
  function ping(){
 	var r = confirm("Would you like to exit ");
@@ -40,6 +51,10 @@ if (r == true) {
 } else{
 	location.href='index.php';	
 }}
+function ping2(){
+
+	location.href="studresults.php?pid='$t'";		
+}
 function addparents(){
 location.href='regparent.php';
 }
@@ -61,12 +76,5 @@ location.href='regparent.php';
          }  
     }
 </script>
-
-	<div class="statholder">
-	
-	</div>
-	
-	</div>
-
 </body>
 </html> 
