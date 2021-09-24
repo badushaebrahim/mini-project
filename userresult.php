@@ -57,10 +57,10 @@ $q="select * from tblresult where resultid='$rid'";
 
 if($s=  mysqli_query($conn, $q)){
 $r=  mysqli_fetch_array($s);
-$sql = "SELECT count(*) FROM `tbquestion` WHERE examid= '$s[2]'";
-        $co=mysqli_query($conn,$qq);
-	$r=  mysqli_fetch_array($s);
-echo '<br><br><br><center><h3 id="da">You Got: '.$r[4].'/'.$cou[0].'</h3></center><br><br><br><br><br><br><br>';}
+$sql = "SELECT count(*) FROM `tbquestion` WHERE examid= '$r[2]'";
+        $co=mysqli_query($conn,$sql);
+	$r2=  mysqli_fetch_array($co);
+echo '<br><br><br><center><h3 id="da">You Got: '.$r[4].'/'.$r2[0].'</h3></center><br><br><br><br><br><br><br>';}
 else{
         echo"<h3>No go</h3>";
 }
