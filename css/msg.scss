@@ -9,7 +9,8 @@ body{
 }
 .msgholder{
 	height: 70%;
-	flex: 4  ;
+	width: 100%;
+	flex-direction: column;
 }
 .butsholder{
 	display: flex;
@@ -33,4 +34,10 @@ body{
 	.hid{
 		visibility: visible;
 	}
+}
+.msgss{
+	color: black;
+}
+.ms{
+	background-color: azure;
 }

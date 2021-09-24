@@ -29,7 +29,7 @@ $u= $_SESSION['t'];?>
 	<txt><input type="button" value="Result"  onclick="ping2()" class="butss2"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Message faculty" onclick="ping()" class="butss2"></txt></div>
+	<txt><input type="button" value="Message faculty" onclick="ping4()" class="butss2"></txt></div>
 	</div>
 	
    
@@ -44,12 +44,12 @@ $u= $_SESSION['t'];?>
 	<script>
 
  $("#out")  
- function ping(){
+ function ping4(){
 	var r = confirm("Would you like to exit ");
 if (r == true) {
 	
 } else{
-	location.href='index.php';	
+	location.href='sentpar.php';	
 }}
 function ping2(){
 
