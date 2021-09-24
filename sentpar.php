@@ -8,11 +8,26 @@
 	<script src="./js/jquery-2.1.4.min.js">
 	</script>
     <link href="css/msg.css" rel="stylesheet" type="text/css">
+<?php include './functionsphp/dbcheck.inc.php'; ?>
 	
 </head>
 <body>
 	<div class="maincontainer">
 <div class="msgholder">
+<?php
+$re=$_SESSION['pid'];
+ $l = "SELECT * FROM `msgholder` WHERE `reciverid`='$re' and `sendertype`=6";
+ $sop=mysqli_query($conn,$l);
+echo "<div class ='ms'> "; 
+ while ($row2 =mysqli_fetch_array($sop)) {
+    unset($username);echo"<divclass='msgss'>";
+    $username = $row2['message'];
+    $tid = $row2['uid'];
+    echo '<h3>'.$username.'</h3></div><br>';
+}
+
+echo"<div>";
+?>
 </div>
 
 <br>
