@@ -18,9 +18,11 @@ body {
 
 .msgholder {
   height: 70%;
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .butsholder {
@@ -47,5 +49,13 @@ body {
 
 .tx:hover .hid {
   visibility: visible;
+}
+
+.msgss {
+  color: black;
+}
+
+.ms {
+  background-color: azure;
 }
 /*# sourceMappingURL=msg.css.map */
