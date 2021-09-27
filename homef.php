@@ -32,7 +32,7 @@ $t= $_SESSION['tid'];
 	<div class="sidebarchild">
 	<txt><input type="button" value="Message Center" onclick="tomsg()" class="butss2"></txt></div><div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Add Sylabus" onclick="ping()" class="butss2"></txt></div>
+	<txt onclick="ping()"><input type="button" value="classRoom"  class="butss2"></txt></div>
 	</div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
