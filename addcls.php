@@ -14,7 +14,7 @@
    <div class="boxmain">
     <p class="h1p">Student Login</p>
     <br>
-    <form method="post" action="sighnup.inc.php">
+    <form method="post" >
      Class Name:<br>
     <input type="text" name="name" class="texts" id="name"><br>
     
@@ -27,15 +27,15 @@ include './functionsphp/dbcheck.inc.php';
                     while($r=  mysqli_fetch_array($s))
                     {
 			    
-                        echo '<option id="subs" value="'.$r[2].'">'.$r[0].'</option>';
+                        echo '<option id="subs" name="subs value="'.$r[2].'">'.$r[0].'</option>';
                     }
                     ?></select><br>
 
 
     Start time :<br>
-    <input type="sdate" name="date" class="texts" id="cource"><br>
+    <input type="datetime-local" name="sdate"  id="sdate"><br>
     End time :<br>
-    <input type="edate" name="date" class="texts" id="cource"><br>
+    <input type="datetime-local" name="edate" id="edate"><br>
    
     <br><br>
     <a href="addSub.php">Add Subject</a><p class="voids">............</p><br>
@@ -61,12 +61,12 @@ if(isset($_REQUEST['btnsubmit']))
 {$Name=$_REQUEST['name'];
   $st=$_REQUEST['sdate'];
   $End=$_REQUEST['edate'];
-  $Sub=$_POST['subs'];
-  $Password=$_POST['pass'];
+  $Sub=$_POST['subject'];
+  //$Password=$_POST['pass'];
   
 $q1="select count(*) as count from claspool where timeofcls='$st' and timeofclose='$End'";
 $s1=mysqli_query($conn,$q1);
-$f1=mysqli_fetch_array($s1);
+$f1=mysqli_fetch_row($s1);
 function debug_to_console($data) {
     $output = $data;
     if (is_array($output))
@@ -76,32 +76,40 @@ function debug_to_console($data) {
 }
 if($f1['count']==0)
 {
-  $q="INSERT INTO `classpool`(`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `crid`, `statusofcls`) VALUES ($subs,,[value-3],[value-4],[value-5],[value-6],[value-7])";
-  $s=mysqli_query($conn,$q);
-  debug_to_console($name);
-  debug_to_console($DOB);
-  debug_to_console($Gender);
+  session_start();
+  $ti=$_SESSION['tid'];
+  $l="SELECT * FROM `tblsubject`  WHERE sid='$sub'";
+  $s5=mysqli_query($conn,$l);
+  $r9=  mysqli_fetch_array($s5);
+
+  if($End<$st){
+  $q="INSERT INTO `classpool`(`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `statusofcls`) VALUES ($r9[0],$subs,$ti,$st,$End,77)";
+  $s=mysqli_query($conn,$q);}
+  else{//echo "<script>location.href='addcls.php'</script>";
+    echo"<script></script>";
+  }
+ 
   if($s)
   {
-    $q="insert into studlog(Email,Password,user_type,status) values('$Email','$Password','user','1')";
+    $q="insert into classpool(`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `statusofcls`) values($r9[0],$subs,$ti,$st,$End,77)";
     $s=mysqli_query($conn,$q);
     if(!$s)
     {
-      echo "<script>alert('Registration Successfull')</script>";
-      echo "<script>location.href='logins.php'</script>";
+      echo "<script>alert('Class sheduled Successfull')</script>";
+     // echo "<script>location.href='clsroom.php'</script>";
       
     } 
   else
    {
     echo "<script>alert('Sorry Registration Error')</script>";
-    echo "<script>location.href='index.php'</script>";
+   // echo "<script>location.href='addcls.php'</script>";
    }
   }
   else
   {
     echo $q;
      echo "<script>alert('Sorry Registration Error')</script>";
-    echo "<script>location.href='login.php'</script>";
+   // echo "<script>location.href='addcls.php'</script>";
   }
 }
 else

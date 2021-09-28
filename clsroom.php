@@ -25,7 +25,7 @@ if (r2 != true) {
 	location.href='homef.php';	
 }}
 function ads(){
-	location.href='addsub.php';
+	location.href='addcls.php';
 }
 function bck(){location.href='addsub.php';}</script>
 </head>
