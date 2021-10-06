@@ -42,6 +42,7 @@ include './functionsphp/dbcheck.inc.php';
     <a href="addSub.php">Add Subject</a><p class="voids">............</p><br>
     <a href="https://meet.google.com/">Create link</a><p class="voids">............</p><br>
     <input type="submit" class="bts" value="sign up" name="btnsubmit">
+    <a href="clsroom.php">back</a><p class="voids">............</p><br>
     </form>
 </div>      
 </center>

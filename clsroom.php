@@ -5,7 +5,7 @@
 
 ?>	
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" http-equiv="refresh" content="30">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>exam control</title>
 	<link href="css/home2.1.css" rel="stylesheet" type="text/css">
@@ -27,6 +27,9 @@ if (r2 != true) {
 function ads(){
 	location.href='addcls.php';
 }
+setTimeout(function() {
+location. reload();
+}, 30000);
 function oops(){alert("Scession has ended");}function oops0(){alert("Scession has not started yet");}
 function bck(){location.href='addsub.php';}</script>
 <style>.done{background-color: lightblue;} .not{background-color: orange;} </style>
@@ -83,16 +86,15 @@ else{
   echo "<td>"."$row[3]"."</td>";
   echo "<td>"."$row[4]"."</td>";
  // echo "<td>"."$row[5]"."</td>";
-  if($row[6]==1){echo "<td>"."Class started"."</td>";}elseif($row[6]==0){{echo "<td>"."Class Not Started"."</td>";}}else{{echo "<td>"."Class Over"."</td>";}
+  if($row[5]==0){echo "<td>"."Class started"."</td>";}elseif($row[5]==1){echo "<td>"."Class has Not Started Wait"."</td>";}else{echo "<td>"."Class Over"."</td>";}
  //echo "<td><a class='high'href='update.php?id="."$row[0]"."'> Update</a></td>";
- if($row[3]>$row[4]){echo"<td>error in start and end</td> ";}else{//echo"<td>fineshed</td>";
-}
+ if($row[3]>$row[4]){echo"<td>error in start and end</td> ";}else{/*echo"<td>fineshed</td>";*/}
 if($row[5]==0){echo"<td><a href='$row[7]'><button class='done' value='Attend'>Attend</a></td>";}elseif($row[5]==1){echo"<td><button class='not' onclick='oops0()'  value='Attend'>Attend</td>";}	else{echo"<td><button onclick='oops()'  value='Attend'>Attend</td>";}
  echo "</tr>";
  //echo"<td><a href='$row[7]'><button class='done' value='Attend'>Attend</a></td>";
 
  }}echo "</table><br><br>";
-}
+
 
 ?>
 </center>
