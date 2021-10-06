@@ -100,4 +100,4 @@ if($row[5]==0){echo"<td><a href='$row[7]'><button class='done' value='Attend'>At
 </center>
 </div></div></body></html>
 
-<!-- sttus code for cls 1:going to start /0:ongoing /2:finished--> 
+<!-- sttus code for cls 1:going to start /0:ongoing /2:finished updated--> 
