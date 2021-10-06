@@ -27,7 +27,7 @@ include './functionsphp/dbcheck.inc.php';
                     while($r=  mysqli_fetch_array($s))
                     {
 			    
-                        echo '<option id="subs" name="subs value="'.$r[2].'">'.$r[0].'</option>';
+                        echo '<option id="subs" name="subs" value="'.$r[2].'">'.$r[0].'</option>';
                     }
                     ?></select><br>
 
@@ -55,6 +55,13 @@ include './functionsphp/dbcheck.inc.php';
 </html>
 
 <?php
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
 
 
 if(isset($_REQUEST['btnsubmit']))
@@ -64,35 +71,27 @@ if(isset($_REQUEST['btnsubmit']))
   $Sub=$_POST['subject'];
   //$Password=$_POST['pass'];
   
-$q1="select count(*) as count from claspool where timeofcls='$st' and timeofclose='$End'";
-$s1=mysqli_query($conn,$q1);
-$f1=mysqli_fetch_row($s1);
-function debug_to_console($data) {
-    $output = $data;
-    if (is_array($output))
-        $output = implode(',', $output);
 
-    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-}
-if($f1['count']==0)
-{
+//if($f1['count']==0)
+//{
+  Debug_to_console($Sub);
   session_start();
   $ti=$_SESSION['tid'];
-  $l="SELECT * FROM `tblsubject`  WHERE sid='$sub'";
-  $s5=mysqli_query($conn,$l);
+  $l1="SELECT * FROM `tblsubject`  WHERE subjectname='$sub'";
+  $s5=mysqli_query($conn,$l1);
   $r9=  mysqli_fetch_array($s5);
 
-  if($End<$st){
+  //if($End<$st){
   $q="INSERT INTO `classpool`(`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `statusofcls`) VALUES ($r9[0],$subs,$ti,$st,$End,77)";
-  $s=mysqli_query($conn,$q);}
-  else{//echo "<script>location.href='addcls.php'</script>";
-    echo"<script></script>";
-  }
+  //}
+  //else{//echo "<script>location.href='addcls.php'</script>";
+    //echo"<script></script>";
+  //}
  
-  if($s)
+  if($s=mysqli_query($conn,$q))
   {
-    $q="insert into classpool(`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `statusofcls`) values($r9[0],$subs,$ti,$st,$End,77)";
-    $s=mysqli_query($conn,$q);
+    $q44="INSERT INTO `classpool`(`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `statusofcls`) VALUES ('$Name', $Sub,$tid,'$st','$End',1)";
+    $s=mysqli_query($conn,$q44);
     if(!$s)
     {
       echo "<script>alert('Class sheduled Successfull')</script>";
@@ -111,12 +110,12 @@ if($f1['count']==0)
      echo "<script>alert('Sorry Registration Error')</script>";
    // echo "<script>location.href='addcls.php'</script>";
   }
-}
-else
+//}
+/*else
 {
   echo "<script>alert('User already exist')</script>";
   //echo "<script>location.href='Sighnupstud.php'</script>";
-}}
+}*/}
 
 
 
