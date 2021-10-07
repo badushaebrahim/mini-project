@@ -106,7 +106,7 @@ p {
     
   <div class="glass-toolbar">
     <input type="submit" name="submit" value="login" class="glass-button"></button><br><br> </form>
-    <!--<a href="https://superdevresources.com/glassmorphism-ui-css/" target="_blank" class="glass-button">Glass Link Button</a>-->
+    
   </div>
 </div>	
 </body>
