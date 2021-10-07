@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2021 at 07:00 PM
+-- Generation Time: Oct 07, 2021 at 12:51 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.32
 
@@ -49,11 +49,19 @@ CREATE TABLE `classpool` (
   `sujectname` text NOT NULL,
   `sibjectid` int(11) NOT NULL,
   `createdby` int(11) NOT NULL,
-  `timeofcls` datetime NOT NULL,
+  `timeofcls` datetime NOT NULL DEFAULT current_timestamp(),
   `timeofclose` datetime NOT NULL,
+  `statusofcls` int(1) NOT NULL,
   `crid` int(11) NOT NULL,
-  `statusofcls` varchar(1) NOT NULL
+  `gcls` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `classpool`
+--
+
+INSERT INTO `classpool` (`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `statusofcls`, `crid`, `gcls`) VALUES
+('test1', 1, 1, '2021-10-06 22:39:00', '2021-10-06 22:42:00', 2, 1, 'https://meet.google.com/ndi-rfhi-wmx');
 
 -- --------------------------------------------------------
 
@@ -178,6 +186,19 @@ CREATE TABLE `questholer` (
   `answer` text NOT NULL,
   `questionid` int(11) NOT NULL,
   `connter` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `studattends`
+--
+
+CREATE TABLE `studattends` (
+  `clsid` int(11) NOT NULL,
+  `studentid` int(11) NOT NULL,
+  `time` datetime NOT NULL,
+  `gid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -418,6 +439,12 @@ ALTER TABLE `questholer`
   ADD PRIMARY KEY (`connter`);
 
 --
+-- Indexes for table `studattends`
+--
+ALTER TABLE `studattends`
+  ADD PRIMARY KEY (`gid`);
+
+--
 -- Indexes for table `studlog`
 --
 ALTER TABLE `studlog`
@@ -462,7 +489,7 @@ ALTER TABLE `tlbexam`
 -- AUTO_INCREMENT for table `classpool`
 --
 ALTER TABLE `classpool`
-  MODIFY `crid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `crid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `faclog`
@@ -501,10 +528,16 @@ ALTER TABLE `questholer`
   MODIFY `connter` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `studattends`
+--
+ALTER TABLE `studattends`
+  MODIFY `gid` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `studlog`
 --
 ALTER TABLE `studlog`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `stuentnotificpoll`
