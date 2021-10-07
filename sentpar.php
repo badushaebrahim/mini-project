@@ -16,7 +16,7 @@
 <div class="msgholder">
 <?php
 $re=$_SESSION['pid'];
- $l = "SELECT * FROM `msgholder` WHERE `reciverid`='$re' and `sendertype`=6";
+ $l = "SELECT * FROM `msgholder` WHERE `reciverid`='$re' and `sendertype`=7";
  $sop=mysqli_query($conn,$l);
 echo "<div class ='ms'> "; 
  while ($row2 =mysqli_fetch_array($sop)) {

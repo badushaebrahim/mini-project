@@ -32,10 +32,9 @@ echo"<script>console.log('$t');</script>";
 	<div class="sidebarchild">
 	<txt><input type="button" value="Message Faculty" onclick="tomsg()" class="butss2"></txt></div><div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Sylabus" onclick="ping()" class="butss2"></txt></div>
+	<txt><input type="button" value="Classroom" onclick="cl()" class="butss2"></txt></div>
 	</div>
 	</div>
-=======
 	<div class="statholder">
 	
 	</div>
@@ -69,11 +68,12 @@ echo"<script>console.log('$t');</script>";
 		}  
 	   }
 	   function tomsg(){
-		   location.href='senting.php';
+		   location.href='split.php';
 	   }
 	   function ex(){
 		location.href='searchexam.php';
-
+	   }function cl(){
+		location.href='studcls.php';
 	   }
        </script>
 </body>

@@ -58,7 +58,7 @@ function cls(){
 location.href='clsroom.php';
 }
 function tomsg(){
-		   location.href='senting.php';
+		   location.href='split.php';
 	   }
 	   function ex(){
 		   location.href='newexam.php';

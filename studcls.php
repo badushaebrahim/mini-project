@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+	
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" http-equiv="refresh" content="5">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" http-equiv="refresh" content="10"><!--content reload-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>exam control</title>
 	<link href="css/home2.1.css" rel="stylesheet" type="text/css">
@@ -20,7 +20,7 @@ function notf(){
 if (r2 != true) {
 	
 } else{
-	location.href='homef.php';	
+	location.href='homes.php';	
 }}
 function ads(){
 	location.href='addcls.php';
@@ -29,7 +29,7 @@ setTimeout(function() {
 location. reload();
 }, 30000);
 function oops(){alert("Scession has ended");}function oops0(){alert("Scession has not started yet");}
-function bck(){location.href='addsub.php';}</script>
+function bck(){location.href='homes.php';}</script>
 <style>.done{background-color: lightblue;} .not{background-color: orange;} </style>
 </head>
 <body>
@@ -45,10 +45,10 @@ function bck(){location.href='addsub.php';}</script>
 			<div class="mainbod">
 	<div class="sidebars">
 	<div class="sidebarchild" id="inits">
-	<txt><input type="button" value="Add New Classroom" onclick="ads()" class="butss"></txt></div>
+	<txt><input type="button" value="Syllabus" onclick="ads()" class="butss"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Detailed report" onclick="ex()" class="butss"></txt></div>
+	<txt><input type="button" value="Report" onclick="ex()" class="butss"></txt></div>
 	</div>
 
 </div>
@@ -67,11 +67,11 @@ else{
 	$sl = "SELECT * FROM `classpool`";
  $result2=mysqli_query($conn,$sl);
  echo "<table border=1><th>Scession Name</th><th>Teacher </th><th >Subject name</th><th> time of class</th><th>time of class end  3</th><th >Status</th><th >Action</th></tr>";
- echo'<h1>Questions uploaded</h1>';
+ echo'<h1>Class Room</h1>';
  echo'<br>';
  while($row=mysqli_fetch_row($result2))
  {  
-	echo"<script>console.log('$row[0]'+'$row[1]'+'$row[2]'+'$row[3]'+'ststu'+'$row[5]'+'crid'+'$row[6]'+'$row[7]');</script>";
+	//echo"<script>console.log('$row[0]'+'$row[1]'+'$row[2]'+'$row[3]'+'ststu'+'$row[5]'+'crid'+'$row[6]'+'$row[7]');</script>";
   echo "<tr>";
   echo "<td>"."$row[0]"."</td>";
  $p = "SELECT * FROM faclog where tid='$row[2]'";$result3=mysqli_query($conn,$p);
@@ -95,6 +95,7 @@ if($row[5]==0){echo"<td><a href='$row[7]'><button class='done' value='Attend'>At
 
 
 ?>
+hellosfdgdfkbxfnxbnxklbclkbncklbn
 </center>
 </div></div></body></html>
 
