@@ -12,28 +12,22 @@
     <body><div class="wrap">
   <center>
    <div class="boxmain">
-    <p class="h1p">Student Login</p>
+    <p class="h1p">Class createion</p>
     <br>
-    <form method="POST" >
+    <form method="post" >
      Class Name:<br>
     <input type="text" name="name" class="texts" id="name"><br>
     
 Select subject:<br>
                         <select name="subject">
-			<?php function debug_to_console($data) {
-    $output = $data;
-    if (is_array($output))
-        $output = implode(',', $output);
-
-    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-}
+			<?php
 include './functionsphp/dbcheck.inc.php';
                     $q="select * from tblsubject";
                     $s=  mysqli_query($conn, $q);
                     while($r=  mysqli_fetch_array($s))
                     {
-                       // Debug_to_console($r[2]);
-                        echo'<option id="subs" value="'.$r[2].'">'.$r[0].'</option>';
+			    
+                        echo '<option id="subs" name="subs" value="'.$r[2].'">'.$r[0].'</option>';
                     }
                     ?></select><br>
 
@@ -42,10 +36,13 @@ include './functionsphp/dbcheck.inc.php';
     <input type="datetime-local" name="sdate"  id="sdate"><br>
     End time :<br>
     <input type="datetime-local" name="edate" id="edate"><br>
-   
+    Class links:<br>
+    <input type="text" name="link" class="texts" id="link"><br>
     <br><br>
     <a href="addSub.php">Add Subject</a><p class="voids">............</p><br>
+    <a href="https://meet.google.com/">Create link</a><p class="voids">............</p><br>
     <input type="submit" class="bts" value="sign up" name="btnsubmit">
+    <a href="clsroom.php">back</a><p class="voids">............</p><br>
     </form>
 </div>      
 </center>
@@ -61,63 +58,59 @@ include './functionsphp/dbcheck.inc.php';
 </html>
 
 <?php
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
+
+
 if(isset($_REQUEST['btnsubmit']))
 {$Name=$_REQUEST['name'];
   $st=$_REQUEST['sdate'];
   $End=$_REQUEST['edate'];
   $Sub=$_POST['subject'];
-  //$Password=$_POST['pass'];
+  $link=$_POST['link'];
   
 
-
+//if($f1['count']==0)
+//{
   Debug_to_console($Sub);
   session_start();
-  $tid=3;
-  $l1= "SELECT * FROM `tblsubject` WHERE `sid2`=$Sub";
+  $tid=$_SESSION['tid'];
+  /*$l1="SELECT * FROM `tblsubject`  WHERE subjectname='$sub'";
   $s5=mysqli_query($conn,$l1);
-  $r9=  mysqli_fetch_array($s5);
-  if (!$r9) {
-    printf("Error: %s\n", mysqli_error($con));
-    exit();
-}
+  $r9=  mysqli_fetch_array($s5);*/
 
-if($st<$End){}
   //if($End<$st){
-  $q44="INSERT INTO `classpool`(`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `statusofcls`) VALUES ('$Name', $Sub,$tid,'$st','$End',1)";
-  Debug_to_console($tid);
-  Debug_to_console(0);
-  Debug_to_console($End);
-  Debug_to_console($st);
-  Debug_to_console($Sub);
-  Debug_to_console($Name);
-  
+  //$q="INSERT INTO `classpool`(`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `statusofcls`) VALUES ($r9[0],$subs,$ti,$st,$End,77)";
   //}
   //else{//echo "<script>location.href='addcls.php'</script>";
     //echo"<script></script>";
   //}
  
-  if($s7=mysqli_query($conn,$q44))
+  if($st<$End)
   {
-   
+    $q44="INSERT INTO `classpool`(`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `statusofcls`,`gcls`) VALUES ('$Name', $Sub,$tid,'$st','$End',1,'$link')";
+
+    if($s=mysqli_query($conn,$q44))
+    {
       echo "<script>alert('Class sheduled Successfull')</script>";
      // echo "<script>location.href='clsroom.php'</script>";
       
     } 
   else
    {
-    echo "<script>alert('Sorry Registration Error1')</script>";
-    if (!$s7) {
-      printf("Error: %s\n", mysqli_error($conn));
-      exit();
-  }
+    echo "<script>alert('Sorry Registration Error')</script>";
    // echo "<script>location.href='addcls.php'</script>";
    }
-   
   }
   else
   {
-   
-     echo "<script>alert('i error')</script>";
+    echo $q;
+     echo "<script>alert('Sorry Registration Error1')</script>";
    // echo "<script>location.href='addcls.php'</script>";
   }
 //}
@@ -125,7 +118,8 @@ if($st<$End){}
 {
   echo "<script>alert('User already exist')</script>";
   //echo "<script>location.href='Sighnupstud.php'</script>";
-}*///}
+}*/}
+
 
 
    ?>

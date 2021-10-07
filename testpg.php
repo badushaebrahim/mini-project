@@ -1,6 +1,6 @@
-<html>
+<!--<html>
 <script href='test.js'>
-<?php 
+</*?php 
 $servername="localhost";
 $username="root";
 $password="";
@@ -28,4 +28,28 @@ if (mysqli_query($conn, $sql)) {
 
 //</table>
 mysqli_close($conn);
+?>*/
+
+-->
+<?php
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
+include './functionsphp/dbcheck.inc.php';
+include './up.php';
+$sub=2;
+$sql = "SELECT * FROM `classpool` ";
+  $s5=mysqli_query($conn,$sql);
+  $r9=  mysqli_fetch_array($s5);
+  if (!$r9) {
+    printf("Error: %s\n", mysqli_error($con));
+    exit();
+}
+  Debug_to_console($r9[5]);
+  Debug_to_console($r9[1]);
+  Debug_to_console($r9[2]);
 ?>
