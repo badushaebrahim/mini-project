@@ -2,7 +2,8 @@
 	<tr><th>Exam Name</th><th>subject Name</th><th>Teacher name</th><th>Date</th><th>mark</th></tr>
 <?php
 include './functionsphp/dbcheck.inc.php';
-$pid = $_GET['pid'];
+session_start();
+$pid = $_SESSION["pid2"];
 $rm="select childname from parentlog where pid='$pid'";
 $coo=mysqli_query($conn,$rm);
 	$rom=  mysqli_fetch_array($coo);
@@ -10,7 +11,7 @@ $coo=mysqli_query($conn,$rm);
 //$coo=mysqli_query($conn,$rm);
 	//$rom=  mysqli_fetch_array($coo);
 	
-$ql = "SELECT * FROM `tblresult` WHERE userid = '$rom[0]' ORDER BY examdate";
+$ql = "SELECT * FROM `tblresult` WHERE userid = '$rom[0]' ORDER BY examdate ASC";
         $co=mysqli_query($conn,$ql);
 	
 	while ($row =mysqli_fetch_array($co)) {

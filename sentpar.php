@@ -16,7 +16,7 @@
 <div class="msgholder">
 <?php
 $re=$_SESSION['pid'];
- $l = "SELECT * FROM `msgholder` WHERE `reciverid`='$re' and `sendertype`=7";
+ $l = "SELECT * FROM `msgholder` WHERE `reciverid`='$re' and `sendertype`=6";
  $sop=mysqli_query($conn,$l);
 echo "<div class ='ms'> "; 
  while ($row2 =mysqli_fetch_array($sop)) {
@@ -81,5 +81,5 @@ else{
 
 }
 
-echo"<script>var r = confirm('message sent Would you like to sent more ');if (r == true) {location.href='senting.php';} else{location.href='homes.php';	}</script>";
+// echo"<script>var r = confirm('message sent Would you like to sent more ');if (r == true) {location.href='senting.php';} else{location.href='homes.php';	}</script>";
  ?>
