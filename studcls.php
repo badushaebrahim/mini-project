@@ -29,7 +29,11 @@ setTimeout(function() {
 location. reload();
 }, 30000);
 function oops(){alert("Scession has ended");}function oops0(){alert("Scession has not started yet");}
-function bck(){location.href='homes.php';}</script>
+function bck(){location.href='homes.php';}
+
+
+
+</script>
 <style>.done{background-color: lightblue;} .not{background-color: orange;} </style>
 </head>
 <body>
@@ -57,6 +61,7 @@ function bck(){location.href='homes.php';}</script>
 <?php
 include './functionsphp/dbcheck.inc.php';
 include './up.php';
+
 $sql = "SELECT count(*) FROM `classpool`";
 $result=mysqli_query($conn,$sql);
 $s=  mysqli_fetch_array($result);
@@ -87,16 +92,33 @@ else{
   if($row[5]==0){echo "<td>"."Class started"."</td>";}elseif($row[5]==1){echo "<td>"."Class has Not Started Wait"."</td>";}else{echo "<td>"."Class Over"."</td>";}
  //echo "<td><a class='high'href='update.php?id="."$row[0]"."'> Update</a></td>";
  if($row[3]>$row[4]){echo"<td>error in start and end</td> ";}else{/*echo"<td>fineshed</td>";*/}
-if($row[5]==0){echo"<td><a href='$row[7]'><button class='done' value='Attend'>Attend</a></td>";}elseif($row[5]==1){echo"<td><button class='not' onclick='oops0()'  value='Attend'>Attend</td>";}	else{echo"<td><button onclick='oops()'  value='Attend'>Attend</td>";}
+if($row[5]==0){echo"<form method='POST'><td>$row[7]<div name='cls' value='$row[6]'></div><div name='s1' value='$row[2]'></div><div name='im' value='$row[7]'></div><div><button class='done' name='lo'  >Attend</form></td>";}elseif($row[5]==1){echo"<td><button class='not' onclick='oops0()'  value='Attend'>Attend</td>";}	else{echo"<td><button onclick='oops()'  value='Attend'>Attend</td>";}
  echo "</tr>";
  //echo"<td><a href='$row[7]'><button class='done' value='Attend'>Attend</a></td>";
 
  }}echo "</table><br><br>";
-
+ function joins($cl,$s1){ 
+}
 
 ?>
-hellosfdgdfkbxfnxbnxklbclkbncklbn
+
 </center>
 </div></div></body></html>
-
+<?php 	
+	if(isset($_POST['lo'])){
+	$cl=$_POST['cls'];
+	$s1=$_POST['s1'];
+	$links=$_POST['links'];
+	date_default_timezone_set("Asia/Calcutta");
+include './functionsphp/dbcheck.inc.php';
+	
+	
+	$da= date('Y-m-d H:i:s'); $in="INSERT INTO `studattends`(`clsid`, `studentid`, `time``) VALUES ($cl,$s1,'$da')"; 
+	if($rumba=mysqli_query($conn,$in)){
+		echo"<script>console.log(''ok ashanea)</script>";
+		header("links");
+	}	
+	
+}
+	?>
 <!-- sttus code for cls 1:going to start /0:ongoing /2:finished updated--> 

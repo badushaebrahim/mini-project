@@ -1,7 +1,7 @@
 
 
 <?php
-/*student sent*/
+/*parent sent*/
 include './functionsphp/dbcheck.inc.php';
 $msg = $_POST['msg'];
 $reciveris = $_POST['faculty'];

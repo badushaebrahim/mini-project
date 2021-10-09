@@ -51,7 +51,7 @@ if (r == true) {
 	location.href='sentpar.php';	
 }}
 function ping2(){
-	
+	location.href='studresults.php';
 	   		
 }
 
@@ -77,3 +77,6 @@ location.href='sentpar.php';
 </script>
 </body>
 </html> 
+<?php
+
+?>
