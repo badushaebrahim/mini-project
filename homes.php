@@ -34,6 +34,9 @@ echo"<script>console.log('$t');</script>";
 	<div class="sidebarchild">
 	<txt><input type="button" value="Classroom" onclick="cl()" class="butss2"></txt></div>
 	</div>
+	<div class="sidebarchild">
+	<txt><input type="button" value="marks" onclick="marks()" class="butss2"></txt></div>
+	</div>
 	</div>
 	<div class="statholder">
 	
@@ -74,7 +77,7 @@ echo"<script>console.log('$t');</script>";
 		location.href='searchexam.php';
 	   }function cl(){
 		location.href='studcls.php';
-	   }
+	   }function marks(){location.href='childresult.php';}
        </script>
 </body>
 </html> 
