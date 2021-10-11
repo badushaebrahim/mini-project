@@ -85,7 +85,7 @@
 		        options: {
 		            scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
 		            tooltips:{mode: 'index'},
-		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
+		            legend:{display: true, position: 'top', labels: {fontColor: 'white', fontSize: 16}}
 		        }
 		    });
 			</script>
