@@ -6,7 +6,8 @@
 	<!--<script src="js/jquery-2.1.4.min.js"></script>-->
 	<script src="js/jquery.js" ></script>
 	<link href="css/fonts/home2.css" rel="stylesheet" type="text/css">
-	<title>home Students beta</title>
+	<title>home Students beta</title><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
 </head>
 <body>
 <?php
@@ -40,7 +41,7 @@ $t= $_SESSION['tid'];
 	</div>
 	<div class="sidewraper" id="closer">
 	
-	</div>
+	</div></div>
     <script>
 	
  $("#out")  
@@ -79,13 +80,13 @@ function tomsg(){
              div.style.visibility = "visible";  
          }  
     }
+    
 </script>
 
 	<div class="statholder">
 	
-	</div>
-	
-	</div>
+	</div><div><iframe src="tests.php" width="300%" height=100% style="border:1px solid black;"></div>
+</iframe>
 
 </body>
 </html> 
