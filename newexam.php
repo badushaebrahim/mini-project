@@ -45,7 +45,7 @@ function bck(){location.href='addsub.php';}</script>
 	<txt><input type="button" value="Add New Subjects" onclick="ads()" class="butss"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Exam Stats" onclick="ex()" class="butss"></txt></div>
+	<txt><input type="button" value="Exam Result" onclick="location.href='viewres.php'" class="butss"></txt></div><!--resusabe at admin-->
 	</div>
 
 </div>
@@ -78,14 +78,14 @@ include './functionsphp/dbcheck.inc.php';?>
                     </select></td>
 	</tr>
         <tr>
-		<td>Duration in minutes</td>
+		<td>Duration in minutes <br>for each Question</td>
                 <td><input type="number" id="duration" name="duration"></td>
 	</tr>
 	<tr>
 		<td></td>
 		<td><input type="submit" name="btnsubmit" value="Upload"></td>
 	</tr>
-</table>
+</table><br>
 </form>
 
 <?php
