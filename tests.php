@@ -5,7 +5,7 @@
 
 	$data1 = '';
 	$data2 = '';
-	$buildingName = '';
+	$belowlabel = '';
 
 	$query = "SELECT  * from tblresult";
 	
@@ -20,12 +20,12 @@
     $rum = mysqli_query($conn, $rsvp);
 
     $roms = mysqli_fetch_array($rum);
-		$buildingName = $buildingName . '"'. ucwords($roms['name']) .'",';
+		$belowlabel = $belowlabel . '"'. ucwords($roms['name']) .'",';
 	}
 
 	$data1 = trim($data1,",");
 	$data2 = trim($data2,",");
-	$buildingName = trim($buildingName,",");
+	$belowlabel = trim($belowlabel,",");
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +63,7 @@
     			var myChart = new Chart(ctx, {
         		type: 'bar',
 		        data: {
-		            labels: [<?php echo $buildingName; ?>],
+		            labels: [<?php echo $belowlabel; ?>],
 		            datasets: 
 		            [{
 		                label: 'mark',
