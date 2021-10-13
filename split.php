@@ -13,10 +13,10 @@ location.href="sentfac1.php";
 location.href="sentfac2.php";}		
 </script>
 </head>
-<body><center>
-	<button onclick="stud()">parent</button>
+<body><center><div>
+	<button class="learn-more" onclick="stud()">parent</button>
 	<button onclick="parent()">student</button>
-	
+	</div>
 	</center>
 	</body>
 </html>

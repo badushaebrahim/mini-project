@@ -78,7 +78,7 @@ h1, h1, a{
 }
 a:hover{
   text-shadow: 0 0 3px #FF0000;
-  max-width: ;
+  
 }
 texts{
   box-shadow: 12px 12px 2px 1px rgba(255, 255, 255, 10);

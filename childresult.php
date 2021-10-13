@@ -8,7 +8,7 @@
 </head>
 <body>
 <table>
-	<tr><th>Exam Name</th><th>subject Name</th><th>Teacher name</th><th>Date</th><th>mark</th></tr>
+	<tr><th>Exam Name</th><th>subject Name</th><th>Teacher name</th><th>Date</th><th>mark</th><th>total</th></tr>
 <?php
 include './functionsphp/dbcheck.inc.php';
 session_start();
@@ -31,7 +31,7 @@ $ql = "SELECT * FROM `tblresult` WHERE userid = '$pid' ORDER BY examdate DESC";
 		$l = "SELECT name FROM `faclog` WHERE tid ='$sq21[1]'";//subject name
 		$l1=mysqli_query($conn,$l);
 		$l2 =mysqli_fetch_array($l1);
-		echo"<tr><td>$sl3[0]</td><td>$sq21[0]</td> 	<td>$l2[0]</td><td>$row[3]</td> <td>$row[4]</td> </tr>";
+		echo"<tr><td>$sl3[0]</td><td>$sq21[0]</td> 	<td>$l2[0]</td><td>$row[3]</td> <td>$row[4]</td> <td>$row[5]</td> </tr>";
 		
 	    }
 	    

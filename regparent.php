@@ -23,8 +23,7 @@
     <input type="radio" name="gender" value="male" >Male
     <input type="radio" name="gender"  value="female">Female
      <input type="radio" name="gender" value="other">Other<br><br>
-     Name of student:<br><br>
-     <?php
+     Name of student:<br><br><?php
 include './functionsphp/dbcheck.inc.php';
 $q="select name,uid from studlog";
  $s=mysqli_query($conn,$q);
@@ -40,6 +39,7 @@ echo"<option  value=''>names of student</options>";
 }
 echo "</select>";
      ?><br>
+     <br>
      
      <br>
     Email:<br>

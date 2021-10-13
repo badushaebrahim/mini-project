@@ -24,8 +24,8 @@ $link=$_SESSION['link'];
 		$ch22=mysqli_query($conn,$check2);
 		$loki2=mysqli_fetch_row($ch22);
 
-		$mok="UPDATE `studattends` SET `time`=$da WHERE `gid`= $loki2['gid']";
-		if($ch24=mysqli_query($conn,$mok)){
+		$mok2="UPDATE `studattends` SET `time`=$da WHERE `gid`= '$loki2[gid]'";
+		if($ch24=mysqli_query($conn,$mok2)){
 			echo"<script>console.log('done')</script>";
 		}else{echo"<script>console.log('fail')</script>";}
 	}
