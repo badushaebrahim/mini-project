@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php
 
-?>	
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" http-equiv="refresh" content="30">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" http-equiv="refresh" content="5">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>exam control</title>
 	<link href="css/home2.1.css" rel="stylesheet" type="text/css">
@@ -26,6 +24,8 @@ if (r2 != true) {
 }}
 function ads(){
 	location.href='addcls.php';
+}function ex(){
+	location.href='atenreport.php';
 }
 setTimeout(function() {
 location. reload();
@@ -54,7 +54,7 @@ function bck(){location.href='addsub.php';}</script>
 	</div>
 
 </div>
-<div class="statholder">
+<div class="statholder"></div><div class="push"> 
 <center>
 <?php
 include './functionsphp/dbcheck.inc.php';
@@ -97,7 +97,7 @@ if($row[5]==0){echo"<td><a href='$row[7]'><button class='done' value='Attend'>At
 
 
 ?>
-</center>
+</center><style>.push{padding-left: 3vh;}</style>
 </div></div></body></html>
 
 <!-- sttus code for cls 1:going to start /0:ongoing /2:finished updated--> 

@@ -1,7 +1,6 @@
 <?php
-session_start();
-$t= $_SESSION['pid'];
-$u= $_SESSION['t'];?>	
+
+?>	
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +28,7 @@ $u= $_SESSION['t'];?>
 	<txt><input type="button" value="Result"  onclick="ping2()" class="butss2"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Message faculty" onclick="ping4()" class="butss2"></txt></div>
+	<txt><input type="button" value="Message faculty" onclick="msgp()" class="butss2"></txt></div>
 	</div>
 	
    
@@ -39,7 +38,11 @@ $u= $_SESSION['t'];?>
 	</div>
 	
 	</div>
-
+<?php
+session_start();
+$exh= $_SESSION['pid2'];
+echo"<script>console.log($exh)</script>";
+?>
 
 	<script>
 
@@ -52,17 +55,17 @@ if (r == true) {
 	location.href='sentpar.php';	
 }}
 function ping2(){
-
-	location.href="studresults.php?pid='$t'";		
-}
-function addparents(){
-location.href='regparent.php';
+	location.href='studresults.php';
+	   		
 }
 
+function msgp(){
+location.href='sentpar.php';
+}
  function notf(){
 	 alert("notification");
  }
- function showhide()
+ /*function showhide()
     {  
          var div = document.getElementById("sidebars");  
          if (div.style.visibility !== "none") 
@@ -74,7 +77,10 @@ location.href='regparent.php';
          {  
              div.style.visibility = "visible";  
          }  
-    }
+    }*/
 </script>
 </body>
 </html> 
+<?php
+
+?>

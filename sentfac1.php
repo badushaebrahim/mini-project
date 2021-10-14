@@ -16,7 +16,8 @@
 	<div class="maincontainer">
 <div class="msgholder">
 <?php
-$re=['tid'];
+session_start();
+$re=$_SESSION['tid'];
  $l = "SELECT * FROM `msgholder` WHERE `reciverid`='$re' and `sendertype`=6";
  $sop=mysqli_query($conn,$l);
 echo "<div class ='ms'> "; 

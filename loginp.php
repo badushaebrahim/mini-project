@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,15 +131,17 @@ if(isset(($_POST['submit']))){
 	  $s=mysqli_query($conn,$q);
  	 $row=mysqli_fetch_array($s);
 	  echo"<script>console.log('$Email'+'$Password');</script>";
-	  echo"<script>console.log('$row[2]'+'$row[3]');</script>";
+	  echo"<script>console.log('ids+$row[6]');</script>";
 	  $pwd = $row[3];
 	  if($Password == $pwd){
-		$_SESSION['pid']=$row[6];
-    $_SESSION['t']=1;
-		//echo "$_SESSION";
-		echo"<script>console.log('login ok');</script>";
+     
+	$_SESSION['pid2']=$row[6];
+    
+		echo "<script>console.log($_SESSION[pid2])</script>";
+		echo"<script>console.log('login ok..');</script>";
+		//echo"<script>console.log('$_SESSION[pid2]');</script>";
 		//header("location: ../wrk/homep.php");
-    echo"<script>location.href='homep.php'</script>";
+   echo"<script>location.href='homep.php'</script>";
 	  }
 	  else{
 			echo "<script>alert('invalid password');</.script>";
@@ -155,4 +158,4 @@ if(isset(($_POST['submit']))){
  }
 
 
-?>
+?>  

@@ -1,5 +1,5 @@
 <?php
-include './functionsphp/dbcheck.inc.php'
+include './functionsphp/dbcheck.inc.php';
 
 ?>
 <head>

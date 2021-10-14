@@ -96,8 +96,12 @@ if(isset($_REQUEST['btnsubmit']))
     $q44="INSERT INTO `classpool`(`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `statusofcls`,`gcls`) VALUES ('$Name', $Sub,$tid,'$st','$End',1,'$link')";
 
     if($s=mysqli_query($conn,$q44))
-    {
-      echo "<script>alert('Class sheduled Successfull')</script>";
+    {date_default_timezone_set("Asia/Calcutta");
+      $da= date('Y-m-d H:i:s');
+      $not="INSERT INTO `stuentnotificpoll`(`about`, `corespondinglink`, `addedby`, `madeat`) VALUES ('NEW CLASS-$Name','studcls.php',$tid,$da)";
+      if($snot=mysqli_query($conn,$not)){
+
+      echo "<script>alert('Class sheduled Successfull')</script>";}
      // echo "<script>location.href='clsroom.php'</script>";
       
     } 

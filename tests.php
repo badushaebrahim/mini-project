@@ -1,132 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link href="css/logins.css" rel="stylesheet" type="text/css">-->
-    <link href="css/logs.css" rel="stylesheet" type="text/css">
-    
-    <title>New Class</title>
-</head>
-    <body><div class="wrap">
-  <center>
-   <div class="boxmain">
-    <p class="h1p">Student Login</p>
-    <br>
-    <form method="POST" >
-     Class Name:<br>
-    <input type="text" name="name" class="texts" id="name"><br>
-    
-Select subject:<br>
-                        <select name="subject">
-			<?php function debug_to_console($data) {
-    $output = $data;
-    if (is_array($output))
-        $output = implode(',', $output);
-
-    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-}
-include './functionsphp/dbcheck.inc.php';
-                    $q="select * from tblsubject";
-                    $s=  mysqli_query($conn, $q);
-                    while($r=  mysqli_fetch_array($s))
-                    {
-                       // Debug_to_console($r[2]);
-                        echo'<option id="subs" value="'.$r[2].'">'.$r[0].'</option>';
-                    }
-                    ?></select><br>
-
-
-    Start time :<br>
-    <input type="datetime-local" name="sdate"  id="sdate"><br>
-    End time :<br>
-    <input type="datetime-local" name="edate" id="edate"><br>
-   
-    <br><br>
-    <a href="addSub.php">Add Subject</a><p class="voids">............</p><br>
-    <input type="submit" class="bts" value="sign up" name="btnsubmit">
-    </form>
-</div>      
-</center>
-
-</div>
-
-</div>
-
-</div>
-</div>
-</body>
-
-</html>
-
 <?php
-if(isset($_REQUEST['btnsubmit']))
-{$Name=$_REQUEST['name'];
-  $st=$_REQUEST['sdate'];
-  $End=$_REQUEST['edate'];
-  $Sub=$_POST['subject'];
-  //$Password=$_POST['pass'];
-  
+	/* Database connection settings */
+	include './functionsphp/dbcheck.inc.php';
 
 
-  Debug_to_console($Sub);
-  session_start();
-  $tid=3;
-  $l1= "SELECT * FROM `tblsubject` WHERE `sid2`=$Sub";
-  $s5=mysqli_query($conn,$l1);
-  $r9=  mysqli_fetch_array($s5);
-  if (!$r9) {
-    printf("Error: %s\n", mysqli_error($con));
-    exit();
-}
+	$data1 = '';
+	$data2 = '';
+	$belowlabel = '';
 
-if($st<$End){}
-  //if($End<$st){
-  $q44="INSERT INTO `classpool`(`sujectname`, `sibjectid`, `createdby`, `timeofcls`, `timeofclose`, `statusofcls`) VALUES ('$Name', $Sub,$tid,'$st','$End',1)";
-  Debug_to_console($tid);
-  Debug_to_console(0);
-  Debug_to_console($End);
-  Debug_to_console($st);
-  Debug_to_console($Sub);
-  Debug_to_console($Name);
-  
-  //}
-  //else{//echo "<script>location.href='addcls.php'</script>";
-    //echo"<script></script>";
-  //}
- 
-  if($s7=mysqli_query($conn,$q44))
-  {
-   
-      echo "<script>alert('Class sheduled Successfull')</script>";
-     // echo "<script>location.href='clsroom.php'</script>";
-      
-    } 
-  else
-   {
-    echo "<script>alert('Sorry Registration Error1')</script>";
-    if (!$s7) {
-      printf("Error: %s\n", mysqli_error($conn));
-      exit();
-  }
-   // echo "<script>location.href='addcls.php'</script>";
-   }
-   
-  }
-  else
-  {
-   
-     echo "<script>alert('i error')</script>";
-   // echo "<script>location.href='addcls.php'</script>";
-  }
-//}
-/*else
-{
-  echo "<script>alert('User already exist')</script>";
-  //echo "<script>location.href='Sighnupstud.php'</script>";
-}*///}
+	$query = "SELECT  * from tblresult";
+	
+    $runQuery = mysqli_query($conn, $query);
 
+	while ($row = mysqli_fetch_array($runQuery)) {
 
-   ?>
+		$data1 = $data1 . '"'. $row['mark'].'",';
+		$data2 = $data2 . '"'. $row['total'] .'",';
+    $test=$row['userid'];
+    $rsvp="SELECT * from studlog where uid=$test";
+    $rum = mysqli_query($conn, $rsvp);
 
+    $roms = mysqli_fetch_array($rum);
+		$belowlabel = $belowlabel . '"'. ucwords($roms['name']) .'",';
+	}
+
+	$data1 = trim($data1,",");
+	$data2 = trim($data2,",");
+	$belowlabel = trim($belowlabel,",");
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="js/chart.js"></script>
+		<title>Line Chart using PHP MySQL and Chart JS</title>
+
+		<style type="text/css">			
+			body{
+				font-family: Arial;
+			    color: white;
+			    text-align: center;
+			    background: white;
+			}
+
+			.container {
+				color: #E8E9EB;
+				background: #222;
+				border: #555652 1px solid;
+			
+			}
+		</style>
+
+	</head>
+
+	<body>	   
+	    <div class="container">	
+	    <h1>live student marks vs total</h1>       
+			<canvas id="chart" style="width: 100%; height: 65vh; background: #222; border:  #white; margin-top: 10px;"></canvas>
+
+			<script>
+				var ctx = document.getElementById("chart").getContext('2d');
+    			var myChart = new Chart(ctx, {
+        		type: 'bar',
+		        data: {
+		            labels: [<?php echo $belowlabel; ?>],
+		            datasets: 
+		            [{
+		                label: 'mark',
+		                data: [<?php echo $data1; ?>],
+		                bbackgroundColor: 'transparent',
+		                borderColor:'rgba(255,99,132)',
+		                borderWidth: 3
+		            },
+
+		            {
+		            	label: 'total',
+		                data: [<?php echo $data2; ?>],
+		                backgroundColor: 'transparent',
+		                borderColor:'rgba(0,255,255)',
+		                borderWidth: 3	
+		            }]
+		        },
+		     
+		        options: {
+		            scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
+		            tooltips:{mode: 'index'},
+		            legend:{display: true, position: 'top', labels: {fontColor: 'white', fontSize: 16}}
+		        }
+		    });
+			</script>
+	    </div>
+	    
+	</body>
+</html>
