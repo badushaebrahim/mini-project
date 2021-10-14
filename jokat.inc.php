@@ -8,17 +8,18 @@ $link=$_SESSION['link'];
 	//echo"<script>console.log($cl+$link+$studidfs)</script>";
 	date_default_timezone_set("Asia/Calcutta");
 	$da= date('Y-m-d H:i:s');
-	$check="select count(*) from `studattends` where	`clsid`=$cl, `studentid`=$studidfs ";
+	$check="select count(*) from `studattends` where `clsid`=$cl, `studentid`=$studidfs ";
 	$ch2=mysqli_query($conn,$check);
-	$loki=mysqli_fetch_array($ch2);
-	if($loki[0]!=0){
+	//$loki=mysqli_fetch_array($ch2);
+	
+	if($ch2==false){
 	 $in="INSERT INTO `studattends`(`clsid`, `studentid`, `time`) VALUES ($cl,$studidfs,'$da')"; 
-	 echo"$da<br>$in";
+	 echo"$da <script>in</script>in<br>$in";
 	if($rumba=mysqli_query($conn,$in)){
 		echo"<h1>in</h1>";
 		
 		echo"<script>window.open('$link')</script>";
-		header("location: ../wrk/studcls.php");
+		//header("location: ../wrk/studcls.php");
 	}	}
 	else{$check2="select * from `studattends` where	`clsid`=$cl, `studentid`=$studidfs ";
 		$ch22=mysqli_query($conn,$check2);
@@ -29,6 +30,6 @@ $link=$_SESSION['link'];
 			echo"<script>console.log('done')</script>";
 		}else{echo"<script>console.log('fail')</script>";}
 	}
-	echo"<button onclick='loaction.href='studcls.php''>ok</button>";
+	echo"<button class='btn' onclick='loaction.href='studcls.php''>go Back</button>";
 
 	?>

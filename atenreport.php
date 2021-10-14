@@ -97,6 +97,7 @@ if(isset($_POST['bt'])){$co=1;
 	    $nu="SELECT COUNT(*) FROM studlog";
 	    $na12=mysqli_query($conn,$nu);
 	    $ff2 =mysqli_fetch_array($na12);
+	    $co--;
 	    echo"<tr><th>number of Student attended:$co/$ff2[0]</th></tr>";
 	    echo"</table>";
 	    echo"<center><input type='button' class='button' value='generate Report' onclick='print()' ></center>";
