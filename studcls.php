@@ -3,7 +3,7 @@
 <head>
 	
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" http-equiv="refresh" content="10"><!--content reload-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" http-equiv="refresh" content="5"><!--content reload-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>exam control</title>
 	<link href="css/home2.1.css" rel="stylesheet" type="text/css">
@@ -56,20 +56,20 @@ function bck(){location.href='homes.php';}
 	</div>
 
 </div>
-<div class="statholder">
+<div class="rake">
 <center>
 <?php
 include './functionsphp/dbcheck.inc.php';
 include './up.php';
 
-$sql = "SELECT count(*) FROM `classpool`";
-$result=mysqli_query($conn,$sql);
-$s=  mysqli_fetch_array($result);
+$sql12 = "SELECT count(*) FROM `classpool`  ";
+$result226=mysqli_query($conn,$sql12);
+$s=  mysqli_fetch_array($result226);
 if($s[0]==0){
 	echo"<h1>no thing found</h1>";
 }
 else{
-	$sl = "SELECT * FROM `classpool`";
+	$sl = "SELECT * FROM `classpool` ORDER by `timeofcls` DESC ";
  $result2=mysqli_query($conn,$sl);
  echo "<table border=1><th>Scession Name</th><th>Teacher </th><th >Subject name</th><th> time of class</th><th>time of class end  3</th><th >Status</th><th >Action</th></tr>";
  echo'<h1>Class Room</h1>';
@@ -92,7 +92,7 @@ else{
   if($row[5]==0){echo "<td>"."Class started"."</td>";}elseif($row[5]==1){echo "<td>"."Class has Not Started Wait"."</td>";}else{echo "<td>"."Class Over"."</td>";}
  //echo "<td><a class='high'href='update.php?id="."$row[0]"."'> Update</a></td>";
  if($row[3]>$row[4]){echo"<td>error in start and end</td> ";}else{/*echo"<td>fineshed</td>";*/}
-if($row[5]==0){echo"<form method='POST'><td>$row[7]<div name='cls' value='$row[6]'></div><div name='s1' value='$row[2]'></div><div name='im' value='$row[7]'></div><div><button class='done' name='lo'  >Attend</form></td>";}elseif($row[5]==1){echo"<td><button class='not' onclick='oops0()'  value='Attend'>Attend</td>";}	else{echo"<td><button onclick='oops()'  value='Attend'>Attend</td>";}
+if($row[5]==0){session_start();$_SESSION['link']=$row[7];$_SESSION['clid']=$row[6]; echo"<div><a href='jokat.inc.php'><button class='done' onclick='attn($row[6])' name='lo'  >Attend</a></td>";}elseif($row[5]==1){echo"<td><button class='not' onclick='oops0()'  value='Attend'>Attend</td>";}	else{echo"<td><button onclick='oops()'  value='Attend'>Attend</td>";}
  echo "</tr>";
  //echo"<td><a href='$row[7]'><button class='done' value='Attend'>Attend</a></td>";
 
@@ -103,22 +103,19 @@ if($row[5]==0){echo"<form method='POST'><td>$row[7]<div name='cls' value='$row[6
 ?>
 
 </center>
-</div></div></body></html>
-<?php 	
-	if(isset($_POST['lo'])){
-	$cl=$_POST['cls'];
-	$s1=$_POST['s1'];
-	$links=$_POST['links'];
-	date_default_timezone_set("Asia/Calcutta");
-include './functionsphp/dbcheck.inc.php';
+</div></body><script>function attn( dac){
 	
+//var result ="
+//document.write(result);
+}</script></html>
+<?php 
+
+function at($cl){	
 	
-	$da= date('Y-m-d H:i:s'); $in="INSERT INTO `studattends`(`clsid`, `studentid`, `time``) VALUES ($cl,$s1,'$da')"; 
-	if($rumba=mysqli_query($conn,$in)){
-		echo"<script>console.log(''ok ashanea)</script>";
-		header("links");
-	}	
+
+  
 	
 }
-	?>
+
+	?><style>.rake{padding-left: 3vh;}  </style>
 <!-- sttus code for cls 1:going to start /0:ongoing /2:finished updated--> 

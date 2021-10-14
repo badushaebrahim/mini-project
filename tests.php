@@ -5,7 +5,7 @@
 
 	$data1 = '';
 	$data2 = '';
-	$buildingName = '';
+	$belowlabel = '';
 
 	$query = "SELECT  * from tblresult";
 	
@@ -20,12 +20,12 @@
     $rum = mysqli_query($conn, $rsvp);
 
     $roms = mysqli_fetch_array($rum);
-		$buildingName = $buildingName . '"'. ucwords($roms['name']) .'",';
+		$belowlabel = $belowlabel . '"'. ucwords($roms['name']) .'",';
 	}
 
 	$data1 = trim($data1,",");
 	$data2 = trim($data2,",");
-	$buildingName = trim($buildingName,",");
+	$belowlabel = trim($belowlabel,",");
 ?>
 
 <!DOCTYPE html>
@@ -38,18 +38,16 @@
 		<style type="text/css">			
 			body{
 				font-family: Arial;
-			    margin: 80px 100px 10px 100px;
-			    padding: 0;
 			    color: white;
 			    text-align: center;
-			    background: #555652;
+			    background: white;
 			}
 
 			.container {
 				color: #E8E9EB;
 				background: #222;
 				border: #555652 1px solid;
-				padding: 10px;
+			
 			}
 		</style>
 
@@ -65,7 +63,7 @@
     			var myChart = new Chart(ctx, {
         		type: 'bar',
 		        data: {
-		            labels: [<?php echo $buildingName; ?>],
+		            labels: [<?php echo $belowlabel; ?>],
 		            datasets: 
 		            [{
 		                label: 'mark',
@@ -87,7 +85,7 @@
 		        options: {
 		            scales: {scales:{yAxes: [{beginAtZero: false}], xAxes: [{autoskip: true, maxTicketsLimit: 20}]}},
 		            tooltips:{mode: 'index'},
-		            legend:{display: true, position: 'top', labels: {fontColor: 'rgb(255,255,255)', fontSize: 16}}
+		            legend:{display: true, position: 'top', labels: {fontColor: 'white', fontSize: 16}}
 		        }
 		    });
 			</script>

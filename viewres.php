@@ -61,7 +61,7 @@ while ($row =mysqli_fetch_array($co)) {
 	$l = "SELECT name FROM `studlog` WHERE uid ='$row[1]'";//Student n name
 	$l1=mysqli_query($conn,$l);
 	$l2 =mysqli_fetch_array($l1);
-	echo"<tr><td>$sl3[0]</td><td>$sq21[0]</td> 	<td>$l2[0]</td><td>$row[3]</td> <td>$row[4]</td> <td>$row[5]</td></tr>";
+	echo"<tr><td>$sl3[0]</td><td>$sq21[0]</td> <td>$l2[0]</td><td>$row[3]</td> <td>$row[4]</td> <td>$row[5]</td></tr>";
 	
     }
 ?>

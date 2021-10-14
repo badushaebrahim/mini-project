@@ -38,7 +38,11 @@
 	</div>
 	
 	</div>
-
+<?php
+session_start();
+$exh= $_SESSION['pid2'];
+echo"<script>console.log($exh)</script>";
+?>
 
 	<script>
 

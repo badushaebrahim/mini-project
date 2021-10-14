@@ -85,7 +85,7 @@ function tomsg(){
 
 	<div class="statholder">
 	
-	</div><div><iframe src="tests.php" width="300%" height=100% style="border:1px solid black;"></div>
+	</div><div><br><br><iframe src="tests.php" width="300%" height=100% style="border:none	solid black;"></div>
 </iframe>
 
 </body>
