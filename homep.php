@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+$lo=$_GET['lo'];
+echo"<script>console.log('$lo');</script>";
 ?>	
 
 <!DOCTYPE html>
@@ -38,11 +42,7 @@
 	</div>
 	
 	</div>
-<?php
-session_start();
-$exh= $_SESSION['pid2'];
-echo"<script>console.log($exh)</script>";
-?>
+
 
 	<script>
 
@@ -52,15 +52,15 @@ echo"<script>console.log($exh)</script>";
 if (r == true) {
 	
 } else{
-	location.href='sentpar.php';	
+	location.href='sentpar.php?pid2=<?php echo"$lo";  ?>';	
 }}
 function ping2(){
-	location.href='studresults.php';
+	location.href='studresults.php?pid2=<?php echo"$lo";   ?>';
 	   		
 }
 
 function msgp(){
-location.href='sentpar.php';
+location.href='sentpar.php?pid2=<?php $lo  ?>';
 }
  function notf(){
 	 alert("notification");

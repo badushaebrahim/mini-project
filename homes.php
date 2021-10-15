@@ -11,7 +11,9 @@
 <body><?php
 session_start();
 $t= $_SESSION['sid'];
-echo"<script>console.log('$t');</script>";
+
+
+echo"<script>console.log('$t,$lo');</script>";
 ?>
 	<nav class="navma">
 	<div class="navra">

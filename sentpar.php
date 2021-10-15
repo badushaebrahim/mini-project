@@ -16,7 +16,7 @@
 <div class="msgholder">
 <?php
 session_start();
-$re=$_SESSION['pid2'];
+$re=$_GET['pid2'];
  $l = "SELECT * FROM `msgholder` WHERE `reciverid`='$re' and `sendertype`=6";
  $sop=mysqli_query($conn,$l);
 echo "<div class ='ms'> "; 
@@ -50,7 +50,7 @@ echo"<option  value=''>names of faculty</options>";
 }
 echo "</select>";
      ?>
-<div><input type="textbox"name="msg" ></div>
+<div><input type="textbox" name="msg" ></div>
 </div>
 <div><input type="submit"name="submit"></div>
 	</div></form>

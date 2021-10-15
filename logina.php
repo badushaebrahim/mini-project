@@ -9,17 +9,19 @@
 </head>
     <body><div class="wrap">
   <center>
-   <div class="boxmain">
-   <form method="POST" action="adver.php">
-    <p class="h1k">Admin Login</p>
-    <br>
+  <div class="glass-panel">
+  <h1><a  target="_blank">Admin Login</a></h1>
+  <form method="POST" action="adver.php">
     Email:<br>
-    <input type="text" name="email" class="texts"><br>
+    <input class="box" type="text" name="email" class="texts"><br>
     Password<br>
-    <input type="password" name="pass" class="texts">
+    <input type="password"  name="pass" class="texts">
+    <br>
     <br>
     
-    <input type="submit" name="submit" class="bts" value="login"></form>
+    
+  <div class="glass-toolbar">
+    <input type="submit" name="submit" value="login" class="glass-button"></button><br><br>
 </div>
 </center>
 </div>
@@ -28,6 +30,5 @@
 </div>
 </body>
 </html>
-<?php
-include 'fot.php'
-?>
+
+   
