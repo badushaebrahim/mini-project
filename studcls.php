@@ -92,7 +92,7 @@ else{
   if($row[5]==0){echo "<td>"."Class started"."</td>";}elseif($row[5]==1){echo "<td>"."Class has Not Started Wait"."</td>";}else{echo "<td>"."Class Over"."</td>";}
  //echo "<td><a class='high'href='update.php?id="."$row[0]"."'> Update</a></td>";
  if($row[3]>$row[4]){echo"<td>error in start and end</td> ";}else{/*echo"<td>fineshed</td>";*/}
-if($row[5]==0){session_start();$_SESSION['link']=$row[7];$_SESSION['clid']=$row[6]; echo"<div><a href='jokat.inc.php'><button class='done' onclick='attn($row[6])' name='lo'  >Attend</a></td>";}elseif($row[5]==1){echo"<td><button class='not' onclick='oops0()'  value='Attend'>Attend</td>";}	else{echo"<td><button onclick='oops()'  value='Attend'>Attend</td>";}
+if($row[5]==0){session_start();$_SESSION['link']=$row[7];$_SESSION['clid']=$row[6]; echo"<td><div><a href='jokat.inc.php'><button class='done' onclick='attn($row[6])' name='lo'  >Attend</a></td>";}elseif($row[5]==1){echo"<td><button class='not' onclick='oops0()'  value='Attend'>Attend</td>";}	else{echo"<td><button onclick='oops()'  value='Attend'>Attend</td>";}
  echo "</tr>";
  //echo"<td><a href='$row[7]'><button class='done' value='Attend'>Attend</a></td>";
 

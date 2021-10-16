@@ -72,7 +72,7 @@ h1, h1, a{
   margin: 0 auto;
   text-decoration: none;
   color: rgba(255, 255, 255, 50);
-  padding-top: 60px;
+  padding-bottom: 60px;
   color: rgba(255,255,255,0.8);
   
 }
