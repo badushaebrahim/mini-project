@@ -147,6 +147,7 @@ if(isset(($_POST['submit']))){
 		header("location: ../wrk/homef.php");}
 		else{
 			echo "<script>alert('Contact Admin & Wait ');</script>";
+      
 		}
 	  }
 	  else{

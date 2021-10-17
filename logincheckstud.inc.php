@@ -23,8 +23,8 @@ if(isset($_POST['sub']))
 	  echo "<script>console.log('$row[5]');</script>";*/
  	 	$pwd=$row[4];
  	 if($Password==$pwd)
- 	 {$status = 1;
- 	 	if($status=='1')
+ 	 {$status = $row[6];
+ 	 	if($status==0)
  	 	{
  			$q="select uid from studlog where Email='$Email'";
                             $s=mysqli_query($conn,$q);
@@ -42,7 +42,8 @@ if(isset($_POST['sub']))
 				  echo "<script>console.log('sec'+'$_SESSION[id]');</script>";
  	 			
  	 			//echo "<script>location.href='homes.php'</script>";
- 	 		}	
+ 	 		}
+			  else{echo "<script>alert('Contact Admin & Wait ');</script>";}	
  	 	}
 
  	 
