@@ -133,7 +133,7 @@ if(isset(($_POST['submit']))){
 	  echo"<script>console.log('$Email'+'$Password');</script>";
 	  echo"<script>console.log('ids+$row[6]');</script>";
 	  $pwd = $row[3];
-	  if($Password == $pwd){if($row[7]==1){
+	  if($Password == $pwd){if($row[7]==0){
      
 	$_SESSION['usr']=$row[6];
 	$_SESSION['badu']="Badusha";

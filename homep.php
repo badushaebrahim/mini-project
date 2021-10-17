@@ -32,7 +32,7 @@ echo"<script>console.log('$lo');</script>";
 	<txt><input type="button" value="Result"  onclick="ping2()" class="butss2"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Message faculty" onclick="msgp()" class="butss2"></txt></div>
+	<txt><input type="button" value="Message faculty" onclick="ping4()" class="butss2"></txt></div>
 	</div>
 	
    
@@ -52,16 +52,14 @@ echo"<script>console.log('$lo');</script>";
 if (r == true) {
 	
 } else{
-	location.href='sentpar.php?pid2=<?php echo"$lo";  ?>';	
+	location.href='sentpar.php?pid2=<?php echo"$lo";   ?>';	
 }}
 function ping2(){
 	location.href='studresults.php?pid2=<?php echo"$lo";   ?>';
 	   		
 }
 
-function msgp(){
-location.href='sentpar.php?pid2=<?php $lo  ?>';
-}
+
  function notf(){
 	 alert("notification");
  }
