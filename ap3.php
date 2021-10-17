@@ -34,7 +34,7 @@
 	$lo=mysqli_query($conn,$r);
 	while($row=mysqli_fetch_array($lo)){
 		echo"<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td><td>$row[4]</td><td>$row[5]</td>";
-		echo"<td>";if($row[6]==0){echo"<a>Remove</a>";}elseif($row[6]==1){echo"<a>Approve</a>";}echo"</td><tr>";
+		echo"<td>";if($row[6]==0){echo"<asrc='noapp.php?id=$row[6]&ty=2'>Remove</a>";}elseif($row[6]==1){echo"<a src='approve.php?id=$row[5]&ty=2'>Approve</a>";}echo"</td><tr>";
 	}
 	?></center></table>
 	</div>
