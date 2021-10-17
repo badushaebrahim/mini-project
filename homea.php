@@ -57,19 +57,19 @@ $("p").show(500);*/</script>-->
 
 	<div class="sidebars">
 	<div class="sidebarchild" id="inits">
-	<txt><input type="button" value="Faculty" onclick="ping()" class="butss2"></txt></div>
+	<a href="ap.php";><txt><input type="button" value="Faculty"  class="butss2"></txt></div></a>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Student" onclick="ex()" class="butss2"></txt></div>
+	<a href="ap3.php";><txt><input type="button" value="Student"class="butss2"></txt></div></a>
 	</div>
 	<div class="sidebarchild">
-	<txt><input type="button" value="Parents" onclick="tomsg()" class="butss2"></txt></div><div class="sidewraper">
+	<a href="ap2.php";><txt><input type="button" value="Parents"  class="butss2"></txt></div></a><div class="sidewraper">
 	<div class="sidebarchild">
-	<txt onclick="cls()"><input type="button" value="ClassReport"  class="butss2"></txt></div>
+	<a href="atenreport.php"><txt ><input type="button" value="ClassReport"  class="butss2"></txt></div></a>
 	</div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Results" onclick="addparents()" class="butss2"></txt></div>
+	<a href="viewres.php"><txt><input type="button" value="Results"  class="butss2"></txt></div></a>
 	</div>
 	<div class="sidewraper" id="closer">
 	
@@ -120,10 +120,10 @@ function tomsg(){
 
 	<div class="statholder">
 	
-	</div><div id="lo"><br><br><iframe src="tests.php" width="300%" height=100% style="border:none	solid black;"></div>
+	</div><div id="lo"></div><div><br><br><iframe src="tests.php" width="300%" height=100% style="border:none	solid black;"></div>
 </iframe>
 
-<style> </style>
+<style> #lo{padding-left:4vh;}</style>
 
 
 
