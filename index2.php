@@ -33,7 +33,7 @@
 						<div class="hero-copy">
 	                        <h1 class="hero-title mt-0">Student Teacher Portal</h1>
 	                        <p class="hero-paragraph">We provide an efficient way to interact with our faculties and we are building various Educational Assesments to replenish our student career .</p>
-	                        <div class="hero-cta"><a class="button button-primary" href="index.php">login Now</a><a class="button" href="#">Get in touch</a></div>
+	                        <div class="hero-cta"><a class="button button-primary" href="index.php">login Now</a><a class="button" href="goduz.php">Get in touch</a></div>
 						</div>
 						<div class="hero-figure anime-element">
 							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
@@ -149,7 +149,7 @@
 						<h3 class="section-title mt-0">Never let the time tell you to stop....... 
                             Explore the limitless world of education</h3>
 						<div class="cta-cta">
-							<a class="button button-primary button-wide-mobile" href="index.php">Get in touch</a>
+							<a class="button button-primary button-wide-mobile" href="goduz.php">Get in touch</a>
 						</div>
 					</div>
 				</div>
