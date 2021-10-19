@@ -32,10 +32,12 @@ echo"<script>console.log('$lo');</script>";
 	<txt><input type="button" value="Result"  onclick="ping2()" class="butss2"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Message faculty" onclick="ping4()" class="butss2"></txt></div>
+	<txt><input type="button" value="Message faculty" onclick="ping4()" class="butss2"></txt></div><br>
+	<div class="sidebarchild">
+	<a href="editdet.php?id='<?php echo"$lo";?>&ty=3'"><txt><input type="button" value="Edit account"  class="butss2"></txt></div></a>
 	</div>
 	
-   
+	
 
 	<div class="statholder">
 	

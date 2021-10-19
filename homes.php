@@ -11,9 +11,7 @@
 <body><?php
 session_start();
 $t= $_SESSION['sid'];
-
-
-echo"<script>console.log('$t,$lo');</script>";
+echo"<script>console.log('$t');</script>";
 ?>
 	<nav class="navma">
 	<div class="navra">
@@ -26,7 +24,7 @@ echo"<script>console.log('$t,$lo');</script>";
 	<div class="mainbod">
 	<div class="sidebars">
 	<div class="sidebarchild" id="inits">
-	<txt><input type="button" value="Account Settings" onclick="ping()" class="butss2"></txt></div>
+	<a href="editdet.php?id='<?php echo"$t"; ?>'&ty=1"><txt><input type="button" value="Account Settings"  class="butss2"></txt></div></a>
 	<div class="sidewraper">
 	<div class="sidebarchild">
 	<txt onclick="ex()"><input type="button" value="Examination"  class="butss2"></txt></div>
@@ -73,7 +71,7 @@ echo"<script>console.log('$t,$lo');</script>";
 		}  
 	   }
 	   function tomsg(){
-		   location.href='split.php';
+		   location.href='senting.php';
 	   }
 	   function ex(){
 		location.href='searchexam.php';

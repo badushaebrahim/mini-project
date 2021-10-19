@@ -7,7 +7,7 @@ $reciveris = $_POST['faculty'];
 //$reciveris2 = $_GET['faculty'];
 session_start();
 $me=$_SESSION['tid'];
-$type=4;
+$type=6;
 echo "<script>console.log('$me')</script>";
 echo "<script>console.log('$msg')</script>";
 echo "<script>console.log('reciver'+'$reciveris')</script>";

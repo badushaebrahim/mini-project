@@ -73,7 +73,7 @@ session_start();
 $re = $_GET["pid2"];
 $me=$re;
 //$me=$_GET['pid2'];
-$type=6;
+$type=2;
 echo "<script>console.log('$me')</script>";
 echo "<script>console.log('$msg2')</script>";
 echo "<script>console.log('reciver'+'$reciveris')</script>";

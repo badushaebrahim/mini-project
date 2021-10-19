@@ -18,7 +18,7 @@
 session_start();
 $tid=$_SESSION['tid'];
 echo"<script>console.log($tid);</script>";  
- $l = "SELECT * FROM `msgholder` WHERE `reciverid`='$tid' and `sendertype`=2";
+ $l = "SELECT * FROM `msgholder` WHERE `reciverid`='$tid' and `sendertype`=1";
  $sop=mysqli_query($conn,$l);
 echo "<div class ='ms'> "; 
  while ($row2 =mysqli_fetch_array($sop)) {

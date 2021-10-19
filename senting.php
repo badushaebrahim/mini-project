@@ -13,6 +13,26 @@
 <body>
 	<div class="maincontainer">
 <div class="msgholder">
+<?php
+include './functionsphp/dbcheck.inc.php';
+session_start();
+$re=$_SESSION['sid'];
+echo"<script>console.log($re'hai')</script>";
+
+ $l = "SELECT * FROM `msgholder` WHERE `reciverid`='$re' and `sendertype`=3";
+ $sop=mysqli_query($conn,$l);
+echo "<div class ='ms'> "; 
+ while ($row2 =mysqli_fetch_array($sop)) {
+echo "<script>console.log('ping')</script>";
+
+    unset($username);echo"<divclass='msgss'>";
+    $username = $row2['message'];
+    $tid = $row2['uid'];
+    echo '<h3>'.$username.'</h3></div><br>';
+}
+
+echo"<div>";
+?>
 </div>
 
 <br>

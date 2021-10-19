@@ -67,8 +67,8 @@ location.href="sentfac2.php";}
 <br><br><br>
 <div>
 <h1>Contact Here....</h1>
-<button class="button button5" onclick="stud()"><span>Student </span></button>
-<button class="button button5" onclick="parent()"><span>Parent</span></button>
+<button class="button button5" onclick="stud()"><span>Parent </span></button>
+<button class="button button5" onclick="parent()"><span>Student</span></button>
 </div></center>
 </body>
 </html
