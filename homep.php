@@ -3,6 +3,7 @@
 session_start();
 
 $lo=$_GET['lo'];
+$_SESSION['bang']=$lo;
 echo"<script>console.log('$lo');</script>";
 ?>	
 
@@ -44,7 +45,8 @@ echo"<script>console.log('$lo');</script>";
 	</div>
 	
 	</div>
-
+	<div><br><br><iframe src="testforp.php" width="300%" height=100% style="border:none	solid black;"></div>
+</iframe>
 
 	<script>
 

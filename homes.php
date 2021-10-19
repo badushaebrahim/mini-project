@@ -24,7 +24,7 @@ echo"<script>console.log('$t');</script>";
 	<div class="mainbod">
 	<div class="sidebars">
 	<div class="sidebarchild" id="inits">
-	<a href="editdet.php?id='<?php echo"$t"; ?>'&ty=1"><txt><input type="button" value="Account Settings"  class="butss2"></txt></div></a>
+	<a href="editdet.php?id=<?php echo"$t"; ?>&ty=1"><txt><input type="button" value="Account Settings"  class="butss2"></txt></div></a>
 	<div class="sidewraper">
 	<div class="sidebarchild">
 	<txt onclick="ex()"><input type="button" value="Examination"  class="butss2"></txt></div>
@@ -37,14 +37,15 @@ echo"<script>console.log('$t');</script>";
 	<div class="sidebarchild">
 	<txt><input type="button" value="marks" onclick="marks()" class="butss2"></txt></div>
 	</div>
-	</div>
+	
 	<div class="statholder">
 	
-	</div>
+	<br><br><iframe src="testfors.php" width="300%" height=100% style="border:none	solid black;"></div>
+</iframe>
 	
 	</div>
 
-
+	</div>
 	<script>
 	
 	$("#out")  
