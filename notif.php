@@ -1,29 +1,35 @@
+
 <?php
 include './functionsphp/dbcheck.inc.php';
 echo"
 <div class='wrapper'><center><h1 class='yo'> Notification</h1></center>";
-$sql = "SELECT * FROM `stuentnotificpoll` ";
-if($no=mysqli_query($conn,$sql))
-{$row=mysqli_fetch_assoc($no);
-echo"<a href='$row[corespondinglink]'>
+$sql = "SELECT * FROM `stuentnotificpoll` ";$co=1;
+$no=mysqli_query($conn,$sql);
+while($row=mysqli_fetch_assoc($no))
+{
+echo"
     <div class='toast success'>
-        <div class='outer-container'> <i class='fas fa-check-circle'></i> </div>
+        <a href='$row[corespondinglink]'><div class='outer-container'> <i class='fas fa-check-circle'></i> </div>
         <div class='inner-container'>
-	
-           <p><h6>$row[about]</h6>  
-            </p>
-        </div> </a>
+	<ul><p></p>
+           <li><p><h6>$co   $row[about]</h6>  
+            </p></li></ul>
+        </div>  </div>
     
     
-    ";}
-    echo"
-    </div>
-</div>";
+    ";
+$co++;
+}
+    echo" </div>";
 
 
 ?>
-
-
+</a><div onclick="goBack()">
+<h1 class="yo2" >x</h1>
+</div>
+<script>function goBack() {
+  window.history.back();
+}</script>
 
 
 
@@ -36,6 +42,13 @@ echo"<a href='$row[corespondinglink]'>
 .yo{
 	font-size: 5vh;
 	padding: 4vh;
+}.yo2{
+	font-size: 5vh;
+	padding: 4vh;
+}
+h1:hover{
+    
+    font-size: 9vh;
 }
 
 * {

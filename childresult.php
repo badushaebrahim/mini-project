@@ -7,7 +7,8 @@
 	<title>Student Result module</title>
 </head>
 <body>
-<table>
+	<center>
+<table><caption><h1>Results</h1></caption>
 	<tr><th>Exam Name</th><th>subject Name</th><th>Teacher name</th><th>Date</th><th>mark</th><th>total</th></tr>
 <?php
 include './functionsphp/dbcheck.inc.php';
@@ -37,12 +38,28 @@ $ql = "SELECT * FROM `tblresult` WHERE userid = '$pid' ORDER BY examdate DESC";
 	    
 
 ?>
-</table>
+</table><br><input class="button" type="button" value="Print" onclick="print()">   <input class="button"  type="button" value="Back " onclick="goBack()"></center>
+
 <style>
     td,th{
         padding:10px 10px 10px 10px;
 	border: solid;
     }
+   .button{
+	background-color: lightblue;
+	border-radius: 1vh;
+	padding: 1vh;
+   }
+   .button:hover{
+	   padding: 2vh;
+   } 
+    @media print {
+.button{
+	display: none;
+}}
 </style>
 </body>
 </html>
+<script>function goBack() {
+  window.history.back();
+}</script>

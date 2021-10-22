@@ -78,7 +78,7 @@ echo"<script>console.log('$t');</script>";
 }	
 	}
 	function notf(){
-		alert("notification");
+		location.href="notif.php";
 	}
 	function showhide()
 	   {  

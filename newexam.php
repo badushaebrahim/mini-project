@@ -108,7 +108,7 @@ include './functionsphp/dbcheck.inc.php';?>
     if($s)
         {session_start();
 		$tid=$_SESSION['tid'];
-		$new="INSERT INTO `stuentnotificpoll`(`about`, `corespondinglink`, `addedby`,`madeat`) VALUES('New Exam Sheduled','searchexam.php','$tid','0:0:0')";
+		$new="INSERT INTO `stuentnotificpoll`(`about`, `corespondinglink`, `addedby`,`madeat`) VALUES('New Exam Sheduled at','searchexam.php','$tid','0:0:0')";
 		if($push=mysqli_query($conn,$new)){
           echo "<script>alert('Exam insertion successful')</script>";}
         }
