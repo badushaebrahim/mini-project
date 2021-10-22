@@ -7,7 +7,7 @@
 	<title>mesage</title>
 	<script src="./js/jquery-2.1.4.min.js">
 	</script>
-    <link href="css/msg.css" rel="stylesheet" type="text/css">
+    
 	
 </head>
 <body>
@@ -54,9 +54,35 @@ echo"<option  value=''>names of faculty</options>";
 }
 echo "</select>";
      ?>
-<div><input type="textbox"name="msg" ></div>
-</div>
-<div><input type="submit"name="submit"></div>
+          <input type="textbox"name="msg" >
+<input type="submit"name="submit">    <input type="button"value="back" onclick="goBack()"></div>
 	</div></form>
 </body>
 </html>
+<style>
+body{
+    background-color: wheat;
+    display: flex;
+}
+.maincontainer{
+    flex-direction: row;
+    background-color: blue;
+}
+.msgholder{
+    flex-direction: column;
+    background-color: pink;
+}
+.butsholder{
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 1vh;
+    flex-direction: column;
+}
+button{
+    padding: 6vh;
+}
+</style><script>
+function goBack() {
+  window.history.back();
+}
+</script>

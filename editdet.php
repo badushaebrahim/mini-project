@@ -85,8 +85,8 @@ session_start();
 							}
 							break;
 				case 3:
-					$fc24="SELECT * FROM `parentlog` WHERE `pid`=$id";
-					$l2=mysqli_query($conn,$fc24);
+					$fc1="SELECT * FROM   `parentlog` WHERE `pid`=$id";
+					$l2=mysqli_query($conn,$fc1);
 		echo"<script>console.log('$l2');</script>";
 
 					$row2=mysqli_fetch_assoc($l2);
@@ -99,7 +99,7 @@ session_start();
 					echo"</form></table>";
 					if(isset($_POST['but'])){
 						$name=$_POST['name'];
-						$dob=$_POST['dob'];
+						//$dob=$_POST['dob'];
 						$gen=$_POST['gen'];
 						$em=$_POST['email'];
 						$pwd=$_POST['pwd'];
