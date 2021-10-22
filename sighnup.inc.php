@@ -21,7 +21,7 @@ function debug_to_console($data) {
 }
 if($f['count']==0)
 {
-  $q="insert into studlog(name,dob,gender,email,pwd)values('$Name','$DOB','$Gender','$Email','$Password')";
+  $q="insert into studlog(name,dob,gender,email,pwd,status)values('$Name','$DOB','$Gender','$Email','$Password',1)";
   $s=mysqli_query($conn,$q);
   debug_to_console($name);
   debug_to_console($DOB);

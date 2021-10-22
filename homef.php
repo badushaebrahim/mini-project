@@ -6,7 +6,7 @@
 	<!--<script src="js/jquery-2.1.4.min.js"></script>-->
 	<script src="js/jquery.js" ></script>
 	<link href="css/fonts/home2.css" rel="stylesheet" type="text/css">
-	<title>home Students beta</title><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+	<title>home Faculty beta</title><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </script>
 </head>
 <body>
@@ -25,7 +25,7 @@ $t= $_SESSION['tid'];
 	<div class="mainbod">
 	<div class="sidebars">
 	<div class="sidebarchild" id="inits">
-	<txt><input type="button" value="Account Settings" onclick="ping()" class="butss2"></txt></div>
+	<a href="editdet.php?id='<?php echo"$t"; ?>'&ty=2"><txt><input type="button" value="Account Settings" onclick="ping()" class="butss2"></txt></div></a>
 	<div class="sidewraper">
 	<div class="sidebarchild">
 	<txt><input type="button" value="Examination" onclick="ex()" class="butss2"></txt></div>

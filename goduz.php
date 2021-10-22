@@ -58,7 +58,7 @@ if(isset($_POST['submit'])){
   $email = $_POST['email'];
   $q="insert into feadlog(email,fed)values('$email','$feadback')";
   if($s=mysqli_query($conn,$q)){
-    echo"<script>var r = confirm('message sent Would you like to sent more ');if (r == true) {location.href='goduz.php';} else{location.href='home.php';	}</script>";
+    echo"<script>var r = confirm('message sent Would you like to sent more ');if (r == true) {location.href='goduz.php';} else{location.href='index2.php';	}</script>";
   }
   else{
     echo"<script>alert('senting error')</script>";

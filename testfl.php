@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><style></style>
-<meta charset="UTF-8">
+<head>
+	<meta charset="UTF-8">
 	<title>Profile and Notifications Dropdowns</title>
 	
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
@@ -29,38 +29,22 @@
 		});
 	</script>
 </head>
-<script></script>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="js/jquery-2.1.4.min.js"></script>
-	
-	<link href="css/fonts/home2.css"  rel="stylesheet" type="text/css">
-	<title>home Admin beta</title>
-</head>
 <body>
-	<nav class="navma" >
-		<div class="navra" id="lol24">
-			<div class="imh"><img class ="sgs" id="im"src="image/logo.svg"></div>
-			<div class="mainholder" >
-				<!-- -->
-				
-				<div class="tx"><div id="here" class="inner">home</div></div>
-				
-				<div class="tx"><div id="her2" id="out" class="inner">Sign out</div></div>
-				<div class="navbar">
-				<?php	echo"
+
+<div class="wrapper">
+  <div class="navbar">
+	<?php	echo"
 <!--base-->
-   
+    <div class='navbar_right'>
       <div class='notifications'>
-        <div class='icon_wrap'><i id='bella' class='far fa-bell'></i></div>
+        <div class='icon_wrap'><i class='far fa-bell'></i></div>
         
-        <div class='notification_dd'><ul class='notification_ul'>";include './functionsphp/dbcheck.inc.php';
+        <div class='notification_dd'>";include './functionsphp/dbcheck.inc.php';
 	$sql = "SELECT * FROM `feadlog`";
 	$ge=mysqli_query($conn,$sql);$co=1;
 	while($row=mysqli_fetch_assoc($ge)){
 	echo"
-            
+            <ul class='notification_ul'>
                <a href = 'mailto: $row[email]'> <li class='starbucks success'>
                     <div class='notify_icon'>
                          
@@ -69,137 +53,69 @@
                         <div class='title'>
                             NO:$co
                         </div>
-                        <div id='col' class='sub_title'>
+                        <div class='sub_title'>
                          $row[fed]
                       </div>
                     </div>
                     
-                </li> </a> <!--test to complnent-->";$co++;}
-                /*<li class='show_all'>
-                    <p class='link'>Show All Activities</p>*/
-            echo"    
+                </li> </a> <!--test to complnent-->";}
+                
+            echo"    <li class='show_all'>
+                    <p class='link'>Show All Activities</p>
                 </li> 
             </ul>
         </div>
         
-      ";
-			?>	
-			</div>
-		</div>
-	</nav>
-	<div class="mainbod"><!--
-		<div class="imgho"> <img class="imgssml" src="image/cls1.jpg" > </div>
-	
-	<div class="txts">
-		<div class="btnholder"><div class="btns"><center><a href="index.php"><input value="Login"  src="index.php" type="button" class="btun" ></a></center></div> <p class="hideen">...</p>
-		<div class="btns"><center><input value="Our Faculty" id="faq" type="button" class="btun" ></center></div>
-	</div> 
-	</div>-->
-	
-    <script>
-	    $("#here").click(function(){
-		    
-	    })
- $("#out").click(function(){
-	 location.href='index.php';
- })   
-    </script>
-
-	   <!--<script>
-		 $(".hid").hide(600); 
-		 $(".linka").hide(600);  
-	$(".inner").hover(function(){
-		$("inner.hid").show(600);
-		$(".btun").css("background-color","pink");
-		$(".linka").show(600);
-	});
-/*$("p").hide(500);
-$("p").show(500);*/</script>-->
-
-	<div class="sidebars">
-	<div class="sidebarchild" id="inits">
-	<a href="ap.php";><txt><input type="button" value="Faculty"  class="butss2"></txt></div></a>
-	<div class="sidewraper">
-	<div class="sidebarchild">
-	<a href="ap3.php";><txt><input type="button" value="Student"class="butss2"></txt></div></a>
-	</div>
-	<div class="sidebarchild">
-	<a href="ap2.php";><txt><input type="button" value="Parents"  class="butss2"></txt></div></a><div class="sidewraper">
-	<div class="sidebarchild">
-	<a href="atenreport.php"><txt ><input type="button" value="ClassReport"  class="butss2"></txt></div></a>
-	</div>
-	<div class="sidewraper">
-	<div class="sidebarchild">
-	<a href="viewres.php"><txt><input type="button" value="Results"  class="butss2"></txt></div></a>
-	</div>
-	<div class="sidewraper" id="closer">
-	
-	</div></div>
-    <script>
-	var div = document.getElementsById("lol24");
-  div.style.Color= "pink";
-
-
- $("#out")  
- function ping(){
-	var r = confirm("Would you like to exit ");
-if (r != true) {
-	
-} else{
-	location.href='index.php';	
-}}
-function addparents(){
-location.href='regparent.php';
-}
-function cls(){
-location.href='clsroom.php';
-}
-function tomsg(){
-		   location.href='split.php';
-	   }
-	   function ex(){
-		   location.href='newexam.php';
-	   }
- function notf(){
-	 alert("notification");
- }
- function showhide()
-    {  
-         var div = document.getElementById("sidebars");  
-         if (div.style.visibility !== "none") 
-         {  
-		 console.log("ping");
-             div.style.visibility = "none";  
-         }  
-         else
-         {  
-             div.style.visibility = "visible";  
-         }  
-    }
-    
-</script>
-
-	<div class="statholder">
-	
-	</div><div id="lo"></div><div><br><br><iframe src="tests.php" width="300%" height=100% style="border:none	solid black;"></div>
-</iframe>
-
-<style> #lo{padding-left:4vh;}</style>
-
-
-
-
+      </div>";
+      
+  echo"
+  <div class='popup'>
+    <div class='shadow'></div>
+    <div class='inner_popup'>
+        <div class='notification_dd'>
+            <ul class='notification_ul'>
+                <li class='title'>
+                    <p>All Notifications</p>";
+		    $co=1;
+	while($row=mysqli_fetch_assoc($ge)){
+		    echo"
+                    <p class='close'><i class='fas fa-times' aria-hidden='true'></i></p>
+                </li> 
+                <li class='starbucks success'>
+                    <div class='notify_icon'>
+                    </div>
+                    <div class='notify_data'>
+                        <div class='title'>
+                            NO:$co  
+                        </div>
+                        <div class='sub_title'>
+                         $row[fed]
+                      </div>
+                    </div>
+                   
+                </li>  /*lol*/
+                ";
+		$co++;}
+		echo"
+                
+            </ul>
+        </div>
+    </div>
+  </div>
+  
+</div>
+";
+?>
 </body>
+</html>
 
-</html> <style>
-	#bella{background-color: rgba(255, 255, 255,4);}
-#col{color: blue;}  
+<style>
+
+
 body{
-  background: white;
-  color: black;
+  background: #dfecff;
+  color: #7f8db0;
 }
-#here{color:#000;}
-#her2{color:#000;}
 
 a{
    color: #7f8db0;
@@ -211,8 +127,8 @@ a{
 }
 
 .navbar{
-  background-color: rgba(0, 255, 255, 0.808);
-  width: 1%;
+  background: #fff;
+  width: 100%;
   height: 60px;
   padding: 0 25px;
   display: flex;
@@ -235,23 +151,19 @@ a{
 }
 
 .navbar .navbar_right .icon_wrap{
-	background-color: white;
   cursor: pointer;
 }
 
 .navbar .navbar_right .notifications{
-	background-color: white;
   margin-right: 25px;
 }
 
 .navbar .navbar_right .notifications .icon_wrap{
-	background-color: white;
   font-size: 28px;
 }
 
 .navbar .navbar_right .profile,
 .navbar .navbar_right .notifications{
-	background-color: white;
   position: relative;
 }
 
@@ -374,7 +286,6 @@ a{
 .navbar .navbar_right .icon_wrap:hover,
 .navbar .navbar_right .profile.active .icon_wrap,
 .navbar .navbar_right .notifications.active .icon_wrap{
-	background-color: white;
   color: #3b80f9;
 }
  
@@ -431,7 +342,6 @@ a{
 
 .navbar .profile.active .profile_dd,
 .navbar .notifications.active .notification_dd{
-	background-color: white;
   display: block;
 }
 
@@ -492,5 +402,4 @@ a{
 .popup .notification_dd li.title .close:hover{
   opacity: 0.5;
 }
-
 </style>

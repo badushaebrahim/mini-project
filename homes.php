@@ -6,7 +6,29 @@
 	<!--<script src="js/jquery-2.1.4.min.js"></script>-->
 	<script src="js/jquery.js" ></script>
 	<link href="css/fonts/home2.css" rel="stylesheet" type="text/css">
-	<title>home Students beta</title>
+	<title>home Students beta</title>	<script src="./js/jquery2.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".profile .icon_wrap").click(function(){
+			  $(this).parent().toggleClass("active");
+			  $(".notifications").removeClass("active");
+			});
+
+			$(".notifications .icon_wrap").click(function(){
+			  $(this).parent().toggleClass("active");
+			   $(".profile").removeClass("active");
+			});
+
+			$(".show_all .link").click(function(){
+			  $(".notifications").removeClass("active");
+			  $(".popup").show();
+			});
+
+			$(".close").click(function(){
+			  $(".popup").hide();
+			});
+		});
+	</script>
 </head>
 <body><?php
 session_start();
@@ -24,7 +46,7 @@ echo"<script>console.log('$t');</script>";
 	<div class="mainbod">
 	<div class="sidebars">
 	<div class="sidebarchild" id="inits">
-	<txt><input type="button" value="Account Settings" onclick="ping()" class="butss2"></txt></div>
+	<a href="editdet.php?id=<?php echo"$t"; ?>&ty=1"><txt><input type="button" value="Account Settings"  class="butss2"></txt></div></a>
 	<div class="sidewraper">
 	<div class="sidebarchild">
 	<txt onclick="ex()"><input type="button" value="Examination"  class="butss2"></txt></div>
@@ -37,14 +59,15 @@ echo"<script>console.log('$t');</script>";
 	<div class="sidebarchild">
 	<txt><input type="button" value="marks" onclick="marks()" class="butss2"></txt></div>
 	</div>
-	</div>
+	
 	<div class="statholder">
 	
-	</div>
+	<br><br><iframe src="testfors.php" width="300%" height=100% style="border:none	solid black;"></div>
+</iframe>
 	
 	</div>
 
-
+	</div>
 	<script>
 	
 	$("#out")  
@@ -55,7 +78,7 @@ echo"<script>console.log('$t');</script>";
 }	
 	}
 	function notf(){
-		alert("notification");
+		location.href="notif.php";
 	}
 	function showhide()
 	   {  
@@ -71,7 +94,7 @@ echo"<script>console.log('$t');</script>";
 		}  
 	   }
 	   function tomsg(){
-		   location.href='split.php';
+		   location.href='senting.php';
 	   }
 	   function ex(){
 		location.href='searchexam.php';

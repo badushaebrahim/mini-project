@@ -31,7 +31,7 @@ else{
 //echo "<script>console.log('ok not on query');</script>";
 }
 if($f['count']==0){
-  $q="insert into parentlog (name,gender,email,pass,childname,addedby)values('$Name','$Gender','$Email','$Password','$child','$sp')";
+  $q="insert into parentlog (name,gender,email,pass,childname,addedby,status)values('$Name','$Gender','$Email','$Password','$child','$sp',1)";
   
   if(($m=mysqli_query($conn,$q))){
     echo"<script>var r = confirm('registartion suscessfull want to add  more parents ');if (r == true) {location.href='regparent.php';} else{location.href='homef.php';	}</script>";

@@ -25,7 +25,7 @@ else{
 //echo "<script>console.log('ok not on query');</script>";
 }
 if($f['count']==0){
-  $q="insert into faclog (name,gender,dob,email,paswd,post)values('$Name','$Gender','$DOB','$Email','$Password','$posts')";
+  $q="insert into faclog (name,gender,dob,email,paswd,post,status)values('$Name','$Gender','$DOB','$Email','$Password','$posts',1)";
   
   if(($m=mysqli_query($conn,$q))){
     echo "<script>alert('Registration Successfull')</script>";

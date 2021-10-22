@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php
-
-?>	
+	
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -108,8 +106,11 @@ include './functionsphp/dbcheck.inc.php';?>
   
   $s=mysqli_query($conn,$q);
     if($s)
-        {
-          echo "<script>alert('Exam insertion successful')</script>";
+        {session_start();
+		$tid=$_SESSION['tid'];
+		$new="INSERT INTO `stuentnotificpoll`(`about`, `corespondinglink`, `addedby`,`madeat`) VALUES('New Exam Sheduled at','searchexam.php','$tid','0:0:0')";
+		if($push=mysqli_query($conn,$new)){
+          echo "<script>alert('Exam insertion successful')</script>";}
         }
         else
         {

@@ -1,17 +1,19 @@
-<table>
+
+<center><table>
 	<tr><th>Exam Name</th><th>subject Name</th><th>Teacher name</th><th>Date</th><th>mark</th></tr>
 <?php
 include './functionsphp/dbcheck.inc.php';
 session_start();
-$pid = $_SESSION["pid2"];
-$rm="select childname from parentlog where pid='$pid'";
+$pid = $_GET["pid2"];
+echo"<script>console.log($pid'hai')</script>";
+$rm="select * from parentlog where pid='$pid'";
 $coo=mysqli_query($conn,$rm);
 	$rom=  mysqli_fetch_array($coo);
 	//$rm="select childname   from parentlog where userid='$rom[0]'";
 //$coo=mysqli_query($conn,$rm);
 	//$rom=  mysqli_fetch_array($coo);
 	
-$ql = "SELECT * FROM `tblresult` WHERE userid = '$rom[0]' ORDER BY examdate ASC";
+$ql = "SELECT * FROM `tblresult` WHERE userid = '$rom[4]' ";
         $co=mysqli_query($conn,$ql);
 	
 	while ($row =mysqli_fetch_array($co)) {
@@ -30,10 +32,29 @@ $ql = "SELECT * FROM `tblresult` WHERE userid = '$rom[0]' ORDER BY examdate ASC"
 	    
 
 ?>
-</table>
+</table><br><input class="button" type="button" value="Print" onclick="print()">   <input class="button"  type="button" value="Back " onclick="goBack()"></center>
 <style>
+   
     td,th{
         padding:10px 10px 10px 10px;
 	border: solid;
     }
+   .button{
+	background-color: lightblue;
+	border-radius: 1vh;
+	padding: 1vh;
+   }
+   .button:hover{
+	   padding: 2vh;
+   } 
+    @media print {
+.button{
+	display: none;
+}}
+</style>
+</body>
+</html>
+<script>function goBack() {
+  window.history.back();
+}</script>
 </style>

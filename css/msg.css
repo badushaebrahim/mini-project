@@ -1,5 +1,5 @@
 body {
-  background-color: #3b76e6;
+  background-color: #e63b3b;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,15 +14,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: antiquewhite;
 }
 
 .msgholder {
   height: 70%;
   width: 100%;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .butsholder {
