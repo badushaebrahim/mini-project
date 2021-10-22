@@ -163,10 +163,10 @@ if(isset(($_POST['submit']))){
 		echo"<script>console.log('not exec');</script>";
 		
 	}
-}
+}/*
  else{
 	echo "<script>alert('invalid entry methood');</script>";
- }
+ }*/
 
 
 ?>  

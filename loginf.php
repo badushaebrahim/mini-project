@@ -160,8 +160,8 @@ if(isset(($_POST['submit']))){
 		
 	}
 }
- else{
+/* else{
 	echo "<script>alert('invalid entry methood');</script>";
 	
- }
+ }*/
 ?>

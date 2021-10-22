@@ -79,7 +79,7 @@ if(isset($_REQUEST['btnsubmit']))
 //{
   Debug_to_console($Sub);
   session_start();
-  $tid=$_SESSION['tid'];
+		$tid=$_SESSION['tid'];
   /*$l1="SELECT * FROM `tblsubject`  WHERE subjectname='$sub'";
   $s5=mysqli_query($conn,$l1);
   $r9=  mysqli_fetch_array($s5);*/
@@ -100,10 +100,12 @@ if(isset($_REQUEST['btnsubmit']))
       $da= date('Y-m-d H:i:s');
       $not="INSERT INTO `stuentnotificpoll`(`about`, `corespondinglink`, `addedby`, `madeat`) VALUES ('NEW CLASS-$Name','studcls.php',$tid,$da)";
       if($snot=mysqli_query($conn,$not)){
-
+        $new="INSERT INTO `stuentnotificpoll`(`about`, `corespondinglink`, `addedby`,`madeat`) VALUES('New Exam Sheduled','searchexam.php','$tid','0:0:0')";
+        if($shi=mysqli_query($conn,$new)){
       echo "<script>alert('Class sheduled Successfull')</script>";}
      // echo "<script>location.href='clsroom.php'</script>";
-      
+        }
+
     } 
   else
    {

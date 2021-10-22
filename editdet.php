@@ -51,7 +51,7 @@ session_start();
 					$em=$_POST['email'];
 					$pwd=$_POST['pwd'];
 					echo"<script>console.log('inpost$name,$dob,$gen,$em,$pwd') </script>";
-					$lol2="UPDATE `studlog` SET `name`=$name,`dob`=$dob,`gender`=$gen,`email`=$em,`pwd`=$pwd WHERE `uid`=$id";
+					$lol2="UPDATE `studlog` SET `name`='$name',`dob`='$dob',`gender`='$gen',`email`='$em',`pwd`='$pwd' WHERE `uid`=$id";
 					if($wrk=mysqli_query($conn,$lol2)){echo"<script>console.log('oks') </script>";}else{echo"<script>console.log('fail') </script>";}
 					
 				}
@@ -64,7 +64,7 @@ session_start();
 							echo"<tr><td>Name:</td><td><textarea name='name'>$row[name]</textarea></td></tr>";
 							echo"<tr><td>DOB:</td><td><input type='date' value='$row[dob]'name='dob'></td></tr>";
 							echo"<tr><td>Gender:</td><td><textarea name='gen'>$row[gender]</textarea></td></tr>";
-							echo"<tr><td>Gender:</td><td><textarea name='post'>$row[post]</textarea></td></tr>";
+							
 							echo"<tr><td>Email:</td><td><textarea name='email'>$row[email]</textarea></td></tr>";
 							echo"<tr><td>Password:</td><td><textarea name='pwd'>$row[paswd]</textarea></td></tr>";
 							echo"<tr><td></td><td><input name='but' type='submit'>      	<input type='button'onclick='goBack()' value='back'></td></tr>";
@@ -75,12 +75,12 @@ session_start();
 								$gen=$_POST['gen'];
 								$em=$_POST['email'];
 								$pwd=$_POST['pwd'];
-								$posts=$_POST['post'];
+								//$posts=$_POST['post'];
 								echo"<script>console.log('inpost') </script>";
 								echo"<script>console.log('$name,$dob,$gen,$em,$pwd') </script>";
 								//$lol2="UPDATE `faclog` SET `name`=$name,`dob`=$dob,`gender`=$gen,`email`=$em,`pwd`=$pwd WHERE `uid`=$id";
-								$lol2="UPDATE `faclog` SET `name`=$name,`gender`=$gen,`dob`=$dob,`email`=$em,`paswd`=$pwd,`post`=$posts WHERE `tid`=$id";
-								if($wrk=mysqli_query($conn,$lol2)){echo"<script>console.log('oks') </script>";}else{echo"<script>console.log('fail') </script>";}
+								$lol2="UPDATE `faclog` SET `name`='$name',`gender`='$gen',`dob`='$dob',`email`='$em',`paswd`='$pwd', WHERE `tid`=$id";
+								if($wrk=mysqli_query($conn,$lol2)){echo"<script>console.log('oks2') </script>";}else{echo"<script>console.log('fail2') </script>";}
 								
 							}
 							break;
@@ -105,7 +105,7 @@ session_start();
 						$pwd=$_POST['pwd'];
 						echo"<script>console.log('inpost') </script>";
 						
-						$lol2="UPDATE `parentlog` SET `name`=$name,`gender`=$gen,`email`=$em,`pass`=$pwd WHERE `pid`=$id";
+						$lol2="UPDATE `parentlog` SET `name`='$name',`gender`='$gen',`email`='$em',`pass`='$pwd' WHERE `pid`=$id";
 						if($wrk=mysqli_query($conn,$lol2)){echo"<script>console.log('oks') goBack()</script>";}else{echo"<script>console.log('fail') </script>";}
 						
 					}
