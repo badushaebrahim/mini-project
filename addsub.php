@@ -37,7 +37,7 @@ function ads(){
 	<div class="imh"><img class ="sgs" id="im"src="image/logo.svg"></div>
 	<div class="mainholder" >
 		<div class="tx"><div id="here" class="inner">Subject Addition</div></div>
-				<div class="tx"><div id="her2"onclick="notf()" class="inner"><input type="button"  class="butss"value="Home"></div></div>
+				<div class="tx"><div id="her2"onclick="goBack()" class="inner"><input type="button"  class="butss"value="Home"></div></div>
 		<div class="tx"><div id="her2"  id="out" class="inner"onclick="ping()"><input type="button"  class="butss"value="Sign out "></div></div>
 			</div></div></nav>
 <br>
@@ -121,3 +121,8 @@ echo "</table><br><br>";
         padding:10px 10px 10px 10px;
     }
 </style>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>

@@ -60,7 +60,7 @@ if(isset($_POST['sub']))
  	echo "<script>alert('user not exist')</script>";
  }}
  else {
-	 echo"<script> alert('not sub');</script>";
+	// echo"<script> alert('not sub');</script>";
  }
 ?>
 <!DOCTYPE html>
