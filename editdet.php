@@ -85,9 +85,9 @@ session_start();
 							}
 							break;
 				case 3:
-					$fc1="SELECT * FROM   `parentlog` WHERE `pid`=$id";
+					$fc1="SELECT * FROM  `parentlog` WHERE `pid`=$id";
 					$l2=mysqli_query($conn,$fc1);
-		echo"<script>console.log('$l2');</script>";
+		//echo"<script>console.log('mehere$l2');</script>";
 
 					$row2=mysqli_fetch_assoc($l2);
 					echo"<tr><td>Name3:</td><td><textarea name='name'>$row2[name]</textarea></td></tr>";

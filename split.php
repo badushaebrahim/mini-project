@@ -22,7 +22,7 @@ location.href="sentfac2.php";}
 }
 
 
-</style><style>
+
 .button {
   border-radius: 12px;
   background-color: Blue;

@@ -54,7 +54,7 @@ echo"<option  value=''>names of faculty</options>";
 echo "</select>";
      ?>
 <input type="textbox" name="msg" ><input type="submit"name="submit">                     
-<input type="button" onclick="goBack" value="back"></div></form>
+<input type="button" onclick="goBack()" value="back"></div></form>
 </body>
 </html>
 
@@ -150,3 +150,6 @@ function goBack() {
 }
 
 </style>
+<script>function goBack() {
+  window.history.back();
+}</script>

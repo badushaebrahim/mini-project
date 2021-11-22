@@ -4,7 +4,7 @@ session_start();
 
 $lo=$_GET['lo'];
 $_SESSION['bang']=$lo;
-echo"<script>console.log('$lo');</script>";
+echo"<script>console.log('me$lo');</script>";
 ?>	
 
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ echo"<script>console.log('$lo');</script>";
 	<div class="sidebarchild">
 	<txt><input type="button" value="Message faculty" onclick="ping4()" class="butss2"></txt></div><br>
 	<div class="sidebarchild">
-	<a href="editdet.php?id='<?php echo"$lo";?>&ty=3'"><txt><input type="button" value="Edit account"  class="butss2"></txt></div></a>
+	<a href="editdet.php?id=<?php echo"$lo";?>&ty=3"><txt><input type="button" value="Edit account"  class="butss2"></txt></div></a>
 	</div>
 	
 	
@@ -52,11 +52,18 @@ echo"<script>console.log('$lo');</script>";
 
  $("#out")  
  function ping4(){
-	var r = confirm("Would you like to exit ");
+	var r = confirm("Would you like to messages ");
 if (r == true) {
-	
-} else{
 	location.href='sentpar.php?pid2=<?php echo"$lo";   ?>';	
+} else{
+	
+}}
+function ping(){
+	var r = confirm("Would you like to Exit ");
+if (r == true) {
+	location.href='index.php';	
+} else{
+	
 }}
 function ping2(){
 	location.href='studresults.php?pid2=<?php echo"$lo";   ?>';
@@ -65,8 +72,9 @@ function ping2(){
 
 
  function notf(){
-	 Location.href="notif.php";
+	 location.href="notif.php";
  }
+ 
  /*function showhide()
     {  
          var div = document.getElementById("sidebars");  
