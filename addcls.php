@@ -26,7 +26,7 @@ include './functionsphp/dbcheck.inc.php';
                     $s=  mysqli_query($conn, $q);
                     while($r=  mysqli_fetch_array($s))
                     {
-			    
+                      
                         echo '<option id="subs" name="subs" value="'.$r[2].'">'.$r[0].'</option>';
                     }
                     ?></select><br>

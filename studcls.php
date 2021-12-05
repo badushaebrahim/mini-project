@@ -23,7 +23,10 @@ if (r2 != true) {
 	location.href='homes.php';	
 }}
 function ads(){
-	location.href='addcls.php';
+	location.href='sylloabusv.php';
+}
+function repo(){
+	location.href='myattent.php';
 }
 setTimeout(function() {
 location. reload();
@@ -52,7 +55,7 @@ function bck(){location.href='homes.php';}
 	<txt><input type="button" value="Syllabus" onclick="ads()" class="butss"></txt></div>
 	<div class="sidewraper">
 	<div class="sidebarchild">
-	<txt><input type="button" value="Report" onclick="ex()" class="butss"></txt></div>
+	<txt><input type="button" value="Report" onclick="repo()" class="butss"></txt></div>
 	</div>
 
 </div>
