@@ -27,6 +27,9 @@ function ads(){
 }function ex(){
 	location.href='atenreport.php';
 }
+function ex2(){
+	location.href='addsy.php';
+}
 setTimeout(function() {
 location. reload();
 }, 30000);
@@ -51,6 +54,9 @@ function bck(){location.href='addsub.php';}</script>
 	<div class="sidewraper">
 	<div class="sidebarchild">
 	<txt><input type="button" value="Detailed report" onclick="ex()" class="butss"></txt></div>
+	<br>
+	<div class="sidebarchild">
+	<txt><input type="button" value="Add Syllabus" onclick="ex2()" class="butss"></txt></div>
 	</div>
 
 </div>

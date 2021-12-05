@@ -15,7 +15,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 else{
-    echo"<script>console.log('okok conect');</script>";
+    //echo"<script>console.log('okok conect');</script>";
 }
 $result = mysqli_query($conn,"SHOW TABLES LIKE'.$table.'");
 //echo "$result";
