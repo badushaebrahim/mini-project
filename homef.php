@@ -25,7 +25,7 @@ $t= $_SESSION['tid'];
 	<div class="mainbod">
 	<div class="sidebars">
 	<div class="sidebarchild" id="inits">
-	<a href="editdet.php?id='<?php echo"$t"; ?>'&ty=2"><txt><input type="button" value="Account Settings" onclick="ping()" class="butss2"></txt></div></a>
+	<a href="editdet.php?id='<?php echo"$t"; ?>'&ty=2"><txt><input type="button" value="Account Settings"  class="butss2"></txt></div></a>
 	<div class="sidewraper">
 	<div class="sidebarchild">
 	<txt><input type="button" value="Examination" onclick="ex()" class="butss2"></txt></div>
