@@ -49,7 +49,7 @@ echo"<script>console.log('$t');</script>";
 	
 	
 
-
+<center>
 
 <br>
 <divclass name="parent">
@@ -75,13 +75,14 @@ else {echo"<center><br><br><h1>NO CONTENT </h1>🤷‍♂️🤷‍♂️🤷‍
 	background-color:lightgray;
 	margin:.5rem;
 	padding:.3rem;
-	max-width:35%;
+	max-width:50%;
 	border-radius:3vh;
   box-sizing: border-box;
   filter: drop-shadow(0px 30px 4px gray);
 }
 .parent{
   display: flex;
+  flex-direction:row;
   flex-wrap: wrap;
 }
 </style>
