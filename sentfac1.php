@@ -22,11 +22,19 @@ $re=$_SESSION['tid'];
  $sop=mysqli_query($conn,$l);
 //echo "<div class ='ms'> "; 
  while ($row2 =mysqli_fetch_array($sop)) {
+
     echo "<div class='container'> "; 
+   $mr= "SELECT `name` FROM `parentlog` WHERE `pid`=$row2[senterid]";
+   //unset($bro);
+   $bro= mysqli_query($conn,$mr);
+   $mrr=mysqli_fetch_array($bro);
+   echo "From:-$mrr[0]<center>";
+   
+   echo "<script>console.log('$mr')</script>";
     unset($username);echo"<divclass='msgss'>";
     $username = $row2['message'];
     $tid = $row2['uid'];
-    echo '<h3>'.$username.'</h3></div><br>';
+    echo '<h3>'.$username.'</h3></center></div><br>';
 }
 
 echo"<div>";

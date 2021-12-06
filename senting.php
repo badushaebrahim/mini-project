@@ -23,8 +23,12 @@ echo"<script>console.log($re'hai')</script>";
  $sop=mysqli_query($conn,$l);
 echo "<div class ='ms'> "; 
  while ($row2 =mysqli_fetch_array($sop)) {
-echo "<script>console.log('ping')</script>";
-
+echo "<script>console.log('ping')</script><div class='container'>";
+$mr= "SELECT `name` FROM `faclog` WHERE `tid`=$row2[senterid]";
+//unset($bro);
+$bro= mysqli_query($conn,$mr);
+$mrr=mysqli_fetch_array($bro);
+echo "From:-$mrr[0]<center>";
     unset($username);echo"<divclass='msgss'>";
     $username = $row2['message'];
     $tid = $row2['uid'];
@@ -38,7 +42,7 @@ echo"<div>";
 <br>
 <form method="POST" action="sent.inc.php">
 
-</div><br><br>
+</div><br><br> <center>
 <div class="butsholder">
 <?php
 include './functionsphp/dbcheck.inc.php';
@@ -54,12 +58,12 @@ echo"<option  value=''>names of faculty</options>";
 }
 echo "</select>";
      ?>
-          <input type="textbox"name="msg" >
+         <input type="textbox"name="msg" >
 <input type="submit"name="submit">    <input type="button"value="back" onclick="goBack()"></div>
-	</div></form>
+	</div></center></form>
 </body>
 </html>
-<style>
+<!--<style>
 body{
     background-color: wheat;
     display: flex;
@@ -81,8 +85,62 @@ body{
 button{
     padding: 6vh;
 }
-</style><script>
+</style>--><script>
 function goBack() {
   window.history.back();
 }
 </script>
+
+
+<style>
+/* Chat containers */
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+
+</style>
