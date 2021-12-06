@@ -19,7 +19,7 @@ $t= $_SESSION['tid'];
 	<div class="imh"><img class ="sgs" id="im"src="image/logo.svg"></div>
 	<div class="mainholder" >
 		<div class="tx"><div id="here" class="inner">home</div></div>
-				<div class="tx"><div id="her2" class="inner"><input type="button" onclick="notf()" class="butss"value="Notifcation"></div></div>
+				<!--<div class="tx"><div id="her2" class="inner"><input type="button" onclick="notf()" class="butss"value="Notifcation"></div></div>-->
 		<div class="tx"><div id="her2"  id="out" class="inner"><input type="button" onclick="ping()" class="butss"value="Sign out "></div></div>
 			</div></div></nav>
 	<div class="mainbod">
