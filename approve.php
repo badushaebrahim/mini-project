@@ -2,12 +2,14 @@
 
   include'./functionsphp/dbcheck.inc.php';
 $id=$_GET['id'];
-$ty=$GET['ty'];
+echo "$id";
+$ty=$_GET['ty'];
+echo "$ty";
 switch($ty){
 case 1:
 $qry="update `faclog` set status='0' where tid='$id'";
-$s=mysqli_query($conn,$qry);
-if($s)
+
+if(mysqli_query($conn,$qry))
     echo '<script>location.href="ap.php"</script>';
 echo $qry;
 break;//faculty

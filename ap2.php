@@ -38,7 +38,7 @@
 		echo"<tr><td>$row[0]</td><td>$row[1]</td><td>$m[name]</td><td>$m2[name]</td><td>$row[2]</td><td>$row[3]</td><td>$row[6]</td>";
 		
 
-		echo"<td>";if($row[7]==0){echo"<a src='noapp.php?id=$row[6]&ty=3'>Remove</a>";}elseif($row[7]==1){echo"<a src='approve.php?id=$row[6]&ty=3'>Approve</a>";}echo"</td><tr>";
+		echo"<td>";if($row[7]==0){echo"<a href='noapp.php?id=$row[6]&ty=3'>Remove</a>";}elseif($row[7]==1){echo"<a href='approve.php?id=$row[6]&ty=3'>Approve</a>";}echo"</td><tr>";
 	}
 	?></center></table>
 	</div>
