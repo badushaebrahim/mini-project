@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  php-apache-environment:
+    container_name: php-apache
+    build:
+            context: ./wrk
+            dockerfile: dockerfile
+    volumes:
+      - ./wrk:/var/www/html/
+    ports:
+      - 8000:80
+    depends_on:
+      - db
+
+
+  db:
+      container_name: db
+      image: mysql
+      restart: always
+      volumes:
+        - ./dbsetup/init.sql:/data/application/init.sql
+        - ./dbsetup/test.sql:/data/application/test.sql
+      environment:
+          MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD
+          MYSQL_DATABASE: test
+          MYSQL_USER: MYSQL_USER
+          MYSQL_PASSWORD: MYSQL_PASSWORD
+      command: "--init-file /data/application/init.sql && mysql -u MYSQL_USER -p MYSQL_ROOT_PASSWORD  studlog < /data/application/test.sql"
+      
+      # command: sh -c "mysql -u MYSQL_USER -p MYSQL_PASSWORD  test < file.sql"
+      ports:
+          - "9906:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - '8081:80'
+    restart: always
+    environment:
+        PMA_HOST: db
+    depends_on:
+        - db
